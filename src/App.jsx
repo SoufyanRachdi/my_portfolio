@@ -194,11 +194,11 @@ export default function App() {
             <BigTitre a="Skills" className="text-3xl md:text-4xl font-bold text-white inline-block px-3 py-1 rounded"/>
             <div className="mt-4 bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
               <div className="space-y-2">
-                <Paragraph className="text-gray-800"><span className="font-semibold">Programming Languages:</span> Java, Python, C/C++, JavaScript, GDScript</Paragraph>
+                <Paragraph className="text-gray-800"><span className="font-semibold">Programming Languages:</span> Java, Python, C/C++, JavaScript, GDScript , Php</Paragraph>
                 <Paragraph className="text-gray-800"><span className="font-semibold">Web Development:</span> HTML, CSS, React, Node.js, Laravel</Paragraph>
                 <Paragraph className="text-gray-800"><span className="font-semibold">Mobile Development:</span> Flutter, Android Studio</Paragraph>
-                <Paragraph className="text-gray-800"><span className="font-semibold">Databases:</span> MySQL, MySQL Workbench, NoSQL</Paragraph>
-                <Paragraph className="text-gray-800"><span className="font-semibold">Tools & Environments:</span> Git, GitHub, VS Code, IntelliJ IDEA, Godot, Firebase, Notion, XAMPP</Paragraph>
+                <Paragraph className="text-gray-800"><span className="font-semibold">Databases:</span> MySQL, NoSQL</Paragraph>
+                <Paragraph className="text-gray-800"><span className="font-semibold">Tools & Environments:</span> Git, GitHub, VS Code, IntelliJ IDEA, Godot, Firebase, Notion, XAMPP, PhpMyAdmin ,Wireshark</Paragraph>
                 <Paragraph className="text-gray-800"><span className="font-semibold">Soft Skills:</span> Problem Solving, Project Management, Teamwork</Paragraph>
                 <Paragraph className="text-gray-800"><span className="font-semibold">Languages:</span> French (Advanced), English (Advanced)</Paragraph>
               </div>
