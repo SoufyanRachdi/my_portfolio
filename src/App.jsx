@@ -111,6 +111,7 @@ export default function App() {
             {[
               { id: 'about', label: 'About' },
               { id: 'skills', label: 'Skills' },
+              { id: 'experiences', label: 'Experiences' },
               { id: 'projects', label: 'Projects' },
               { id: 'certifications', label: 'Certifications' },
             ].map((item) => (
@@ -176,8 +177,8 @@ export default function App() {
           
           {/* Scrollable content */}
           <div className="space-y-6">
-            <div className=" rounded-lg p-6 border border-gray-200 shadow-sm">
-              <Paragraph className="text-white leading-relaxed">
+            <div className=" rounded-lg p-6 bg-white border border-gray-200 shadow-sm">
+              <Paragraph className="text-black leading-relaxed">
                 I am a passionate and motivated Computer Science student in my third year at ISIMG, with a strong academic background in mathematics, physics, and computer science. I enjoy tackling complex problems and turning ideas into functional, high-quality software solutions.
                 <br/><br/>
                 My journey in tech started with solid foundations in programming (Java, Python, C/C++, JavaScript, GDScript) and grew through hands-on projects in web, mobile, and game development. I have built applications ranging from a restaurant management system in Java/MySQL to a cross-platform mobile app in Flutter & Firebase with an international client.
@@ -203,6 +204,16 @@ export default function App() {
                 <Paragraph className="text-gray-800"><span className="font-semibold">Languages:</span> French (Advanced), English (Advanced)</Paragraph>
               </div>
             </div>
+          </div>
+          <div className="mb-8" id="experiences">
+            <BigTitre a="Experiences" className="text-3xl md:text-4xl font-bold text-white inline-block px-3 py-1 rounded"/>
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+                <h3 className="text-xl font-semibold text-black">Active Member – Competitive Programming Club (CPC ISIMG) (2023 – 2025)</h3>
+                
+                <div className="mt-2 space-y-1">
+                 <Paragraph children="During my studies at ISIMG, I joined the Competitive Programming Club, an experience that greatly enriched both my technical and personal skills. As an active member, I took part in training sessions focused on C++, Python, and advanced problem-solving techniques. We regularly practiced on platforms such as Codeforces and LeetCode, sharpening our algorithmic thinking and speed in competitive environments. I also had the opportunity to represent the club in several competitions held in Tunis, Sfax, and Gabès, where I collaborated with teammates and challenged myself against strong participants. This experience not only improved my programming expertise but also strengthened my teamwork, persistence, and ability to perform under pressure."></Paragraph>
+                </div>
+              </div>
           </div>
           <div className="mb-8" id="projects">
             <BigTitre a="Projects" className="text-3xl md:text-4xl font-bold text-white inline-block px-3 py-1 rounded"/>
