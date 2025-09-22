@@ -109,7 +109,7 @@ export default function App() {
           {/* Category list */}
           <ul className="flex flex-col items-start gap-2 text-white/90 w-full max-w-xs pb-20" >
             {[
-              { id: 'about', label: 'About' },
+              { id: 'about', label: 'About Me' },
               { id: 'skills', label: 'Skills' },
               { id: 'experiences', label: 'Experiences' },
               { id: 'projects', label: 'Projects' },
@@ -257,7 +257,7 @@ export default function App() {
             <BigTitre a="Certifications" className="text-3xl md:text-4xl font-bold text-white inline-block px-3 py-1 rounded"/>
             <div className="mt-4 bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
               <div className="space-y-2">
-                <Paragraph className="text-gray-800">C++ Certification — CodeGym</Paragraph>
+                <Paragraph className="text-gray-800">C++ Certification — CodinGame</Paragraph>
                 <Paragraph className="text-gray-800">Problem Solving (Basic) — HackerRank</Paragraph>
                 <Paragraph className="text-gray-800">Python (Basic) — HackerRank</Paragraph>
               </div>
