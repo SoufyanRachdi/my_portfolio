@@ -135,7 +135,7 @@ export default function App() {
                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.112.82-.262.82-.582 0-.287-.01-1.047-.016-2.055-3.338.726-4.042-1.61-4.042-1.61-.546-1.386-1.333-1.756-1.333-1.756-1.09-.744.082-.729.082-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.42-1.304.763-1.604-2.665-.304-5.467-1.333-5.467-5.932 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 6.004 0c2.29-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.625-5.48 5.922.431.372.815 1.102.815 2.222 0 1.604-.015 2.896-.015 3.293 0 .322.218.699.825.58C20.565 21.796 24 17.297 24 12 24 5.37 18.63 0 12 0z"/></svg>
              </a>
              {/* Gmail */}
-             <a href="mailto:Soufyanrachdiii@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Gmail" className="hover:opacity-80 transition-opacity">
+             <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=Soufyanrachdiii@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Gmail" className="hover:opacity-80 transition-opacity">
                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.713 1.2 5.25A2 2 0 0 1 2 5h20c.282 0 .552.059.8.163L12 12.713zM22 7.117v11.633A1.25 1.25 0 0 1 20.75 20h-2.5A1.25 1.25 0 0 1 17 18.75V10.5l5-3.383zM2 7.117 7 10.5v8.25A1.25 1.25 0 0 1 5.75 20h-2.5A1.25 1.25 0 0 1 2 18.75V7.117z"/></svg>
              </a>
              {/* LinkedIn */}
