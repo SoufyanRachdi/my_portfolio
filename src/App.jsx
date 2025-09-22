@@ -193,15 +193,15 @@ export default function App() {
           <div className="mb-8" id="skills">
             <BigTitre a="Skills" className="text-3xl md:text-4xl font-bold text-white inline-block px-3 py-1 rounded"/>
             <div className="mt-4 bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <ul className="list-disc pl-6 space-y-2 text-gray-800">
-                <li><span className="font-semibold">Programming Languages:</span> Java, Python, C/C++, JavaScript, GDScript</li>
-                <li><span className="font-semibold">Web Development:</span> HTML, CSS, React, Node.js, Laravel</li>
-                <li><span className="font-semibold">Mobile Development:</span> Flutter, Android Studio</li>
-                <li><span className="font-semibold">Databases:</span> MySQL, MySQL Workbench, NoSQL</li>
-                <li><span className="font-semibold">Tools & Environments:</span> Git, GitHub, VS Code, IntelliJ IDEA, Godot, Firebase, Notion, XAMPP</li>
-                <li><span className="font-semibold">Soft Skills:</span> Problem Solving, Project Management, Teamwork</li>
-                <li><span className="font-semibold">Languages:</span> French (Advanced), English (Advanced)</li>
-              </ul>
+              <div className="space-y-2">
+                <Paragraph className="text-gray-800"><span className="font-semibold">Programming Languages:</span> Java, Python, C/C++, JavaScript, GDScript</Paragraph>
+                <Paragraph className="text-gray-800"><span className="font-semibold">Web Development:</span> HTML, CSS, React, Node.js, Laravel</Paragraph>
+                <Paragraph className="text-gray-800"><span className="font-semibold">Mobile Development:</span> Flutter, Android Studio</Paragraph>
+                <Paragraph className="text-gray-800"><span className="font-semibold">Databases:</span> MySQL, MySQL Workbench, NoSQL</Paragraph>
+                <Paragraph className="text-gray-800"><span className="font-semibold">Tools & Environments:</span> Git, GitHub, VS Code, IntelliJ IDEA, Godot, Firebase, Notion, XAMPP</Paragraph>
+                <Paragraph className="text-gray-800"><span className="font-semibold">Soft Skills:</span> Problem Solving, Project Management, Teamwork</Paragraph>
+                <Paragraph className="text-gray-800"><span className="font-semibold">Languages:</span> French (Advanced), English (Advanced)</Paragraph>
+              </div>
             </div>
           </div>
           <div className="mb-8" id="projects">
@@ -209,47 +209,47 @@ export default function App() {
             <div className="mt-4 space-y-4">
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">Freelance Flutter Developer — Kabaadhub Application</h3>
-                <p className="text-gray-700 mt-2">Flutter, Firebase — Jul 2025 – Present</p>
-                <ul className="list-disc pl-6 mt-2 text-gray-800 space-y-1">
-                  <li>Cross‑platform Android/iOS app for recycled products marketplace.</li>
-                  <li>Precise geolocation, real‑time messaging, user management, moderation, analytics.</li>
-                  <li>Delivered end‑to‑end for an international client (India).</li>
-                </ul>
+                <Paragraph className="text-gray-700 mt-2">Flutter, Firebase — Jul 2025 – Present</Paragraph>
+                <div className="mt-2 space-y-1">
+                  <Paragraph className="text-gray-800">Cross‑platform Android/iOS app for recycled products marketplace.</Paragraph>
+                  <Paragraph className="text-gray-800">Precise geolocation, real‑time messaging, user management, moderation, analytics.</Paragraph>
+                  <Paragraph className="text-gray-800">Delivered end‑to‑end for an international client (India).</Paragraph>
+                </div>
               </div>
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">2D Multiplayer Triangle Game</h3>
-                <p className="text-gray-700 mt-2">Godot, GDScript — Jun 2025 – Jul 2025</p>
-                <ul className="list-disc pl-6 mt-2 text-gray-800 space-y-1">
-                  <li>Multiplayer triangle combat with collisions and survival objective (up to ~50 players).</li>
-                  <li>Implemented movement, collision handling, core game logic; managed with Git.</li>
-                </ul>
+                <Paragraph className="text-gray-700 mt-2">Godot, GDScript — Jun 2025 – Jul 2025</Paragraph>
+                <div className="mt-2 space-y-1">
+                  <Paragraph className="text-gray-800">Multiplayer triangle combat with collisions and survival objective (up to ~50 players).</Paragraph>
+                  <Paragraph className="text-gray-800">Implemented movement, collision handling, core game logic; managed with Git.</Paragraph>
+                </div>
               </div>
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">3D Zombie Survival Game</h3>
-                <p className="text-gray-700 mt-2">Godot, GDScript — May 2025 – Jun 2025</p>
-                <ul className="list-disc pl-6 mt-2 text-gray-800 space-y-1">
-                  <li>3D movement, enemy AI (chase/attack), physics/collision, scoring and progression.</li>
-                  <li>Resource/weapon management and immersive environment.</li>
-                </ul>
+                <Paragraph className="text-gray-700 mt-2">Godot, GDScript — May 2025 – Jun 2025</Paragraph>
+                <div className="mt-2 space-y-1">
+                  <Paragraph className="text-gray-800">3D movement, enemy AI (chase/attack), physics/collision, scoring and progression.</Paragraph>
+                  <Paragraph className="text-gray-800">Resource/weapon management and immersive environment.</Paragraph>
+                </div>
               </div>
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">Restaurant Management Application (Academic Project)</h3>
-                <p className="text-gray-700 mt-2">Java, MySQL, Git/GitHub — Mar 2025 – Apr 2025</p>
-                <ul className="list-disc pl-6 mt-2 text-gray-800 space-y-1">
-                  <li>Centralized solution for customer, orders, and server monitoring.</li>
-                  <li>Object‑oriented modular design; collaborative development with Git/GitHub and MySQL Workbench.</li>
-                </ul>
+                <Paragraph className="text-gray-700 mt-2">Java, MySQL, Git/GitHub — Mar 2025 – Apr 2025</Paragraph>
+                <div className="mt-2 space-y-1">
+                  <Paragraph className="text-gray-800">Centralized solution for customer, orders, and server monitoring.</Paragraph>
+                  <Paragraph className="text-gray-800">Object‑oriented modular design; collaborative development with Git/GitHub and MySQL Workbench.</Paragraph>
+                </div>
               </div>
             </div>
           </div>
           <div className="mb-8" id="certifications">
             <BigTitre a="Certifications" className="text-3xl md:text-4xl font-bold text-white inline-block px-3 py-1 rounded"/>
             <div className="mt-4 bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <ul className="list-disc pl-6 space-y-2 text-gray-800">
-                <li>C++ Certification — CodeGym</li>
-                <li>Problem Solving (Basic) — HackerRank</li>
-                <li>Python (Basic) — HackerRank</li>
-              </ul>
+              <div className="space-y-2">
+                <Paragraph className="text-gray-800">C++ Certification — CodeGym</Paragraph>
+                <Paragraph className="text-gray-800">Problem Solving (Basic) — HackerRank</Paragraph>
+                <Paragraph className="text-gray-800">Python (Basic) — HackerRank</Paragraph>
+              </div>
             </div>
           </div>
         </div>
