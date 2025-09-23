@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import BigTitre from './components/BigTitre';
 import Paragraph from './components/Paragraph';
-
+import GithubSource from './components/Githubsource';
 export default function App() {
   const [activeSection, setActiveSection] = useState('about');
   const spotlightRef = useRef(null);
@@ -90,8 +90,8 @@ export default function App() {
         }}
       >
           <div className="w-full h-full flex flex-col items-center justify-center gap-6 bg-transparent">
-           <div className="text-[4rem] font-black leading-none text-big drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center pt-20">Soufyan Rachdi</div>
-           <div className="text-[3rem] font-black leading-none text-big drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center pb-20">COMPUTER SCIENCE STUDENT</div>
+           <div className="text-[3rem] font-black leading-none text-big drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center pt-10">Soufyan Rachdi</div>
+           <div className="text-[2rem] font-black leading-none text-big drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center pb-20">COMPUTER SCIENCE STUDENT</div>
           {/* Category list */}
           <ul className="flex flex-col items-start gap-2 text-white w-full max-w-xs bg-big rounded-xl p-4 pb-4" >
             {[
@@ -236,6 +236,11 @@ export default function App() {
                   <Paragraph className="text-smallText">Object‑oriented modular design; collaborative development with Git/GitHub and MySQL Workbench.</Paragraph>
                 </div>
               </div>
+              <GithubSource
+                source="https://github.com/SoufyanRachdi/my_portfolio"
+                title="Portfolio Source Code"
+                text="View the full source code for this portfolio on GitHub."
+              />
             </div>
           </div>
           <div className="mb-8" id="certifications">
