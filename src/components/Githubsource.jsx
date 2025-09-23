@@ -2,29 +2,20 @@ import { Github } from "lucide-react";
 
 export default function GithubSource({ source, text, className = "", title }) {
   return (
-    <div
-      className={`flex items-center justify-between p-4 rounded-2xl shadow-md border bg-white ${className}`}
+    <a
+      href={source}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`group block p-5 rounded-2xl shadow-lg border border-gray-200 bg-gradient-to-r from-white to-gray-50 hover:shadow-xl transition-shadow duration-300 ${className}`}
     >
-      <div className="flex flex-col">
-        <a
-          href={source}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-lg font-semibold text-blue-600 hover:underline"
-        >
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
           {title}
-        </a>
-        {text && <p className="text-sm text-gray-600 mt-1">{text}</p>}
+        </h3>
+        <Github className="text-gray-500 group-hover:text-gray-800 transition-colors" size={26} />
       </div>
-
-      <a
-        href={source}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="ml-4 text-gray-700 hover:text-black"
-      >
-        <Github size={28} />
-      </a>
-    </div>
+      {text && <p className="text-sm text-gray-600 mt-2">{text}</p>}
+    </a>
   );
 }
+
