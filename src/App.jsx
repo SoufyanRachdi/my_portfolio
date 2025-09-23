@@ -204,39 +204,97 @@ export default function App() {
             <BigTitre a="Projects" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
             <div className="mt-4 space-y-4">
               <GithubSource
-                source="https://github.com/SoufyanRachdi/project_app_KabaadHub/tree/main"
-                title="Freelance Flutter Developer — Kabaadhub Application"
-                text="Developed a mobile app using Flutter and Firebase for event creation, management, and user interaction. Features include user authentication, real-time updates, and push notifications. Collaborated with an international client to deliver a user-friendly solution."
-              />
-              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-                <h3 className="text-xl font-semibold text-black">2D Multiplayer Triangle Game</h3>
-                <Paragraph className="text-smallText mt-2">Godot, GDScript — Jun 2025 – Jul 2025</Paragraph>
-                <div className="mt-2 space-y-1">
-                  <Paragraph className="text-smallText">Multiplayer triangle combat with collisions and survival objective (up to ~50 players).</Paragraph>
-                  <Paragraph className="text-smallText">Implemented movement, collision handling, core game logic; managed with Git.</Paragraph>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-                <h3 className="text-xl font-semibold text-black">3D Zombie Survival Game</h3>
-                <Paragraph className="text-smallText mt-2">Godot, GDScript — May 2025 – Jun 2025</Paragraph>
-                <div className="mt-2 space-y-1">
-                  <Paragraph className="text-smallText">3D movement, enemy AI (chase/attack), physics/collision, scoring and progression.</Paragraph>
-                  <Paragraph className="text-smallText">Resource/weapon management and immersive environment.</Paragraph>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-                <h3 className="text-xl font-semibold text-black">Restaurant Management Application (Academic Project)</h3>
-                <Paragraph className="text-smallText mt-2">Java, MySQL, Git/GitHub — Mar 2025 – Apr 2025</Paragraph>
-                <div className="mt-2 space-y-1">
-                  <Paragraph className="text-smallText">Centralized solution for customer, orders, and server monitoring.</Paragraph>
-                  <Paragraph className="text-smallText">Object‑oriented modular design; collaborative development with Git/GitHub and MySQL Workbench.</Paragraph>
-                </div>
-              </div>
+  source="https://github.com/SoufyanRachdi/project_app_KabaadHub/tree/main"
+  title="Freelance Flutter Developer — Kabaadhub Application"
+  text={
+    <>
+      <p className="font-semibold text-gray-800">July 2025 - Now</p>
+      <p className="mt-2 text-gray-600">
+        Designed and developed a cross-platform mobile application (Android/iOS) using Flutter & Firebase,
+        dedicated to buying and selling recycled products. The app allows users to post ads, search with
+        advanced filters, and benefit from precise geolocation via specialized APIs.
+      </p>
+      <p className="mt-2 text-gray-600">
+        Integrated a real-time messaging system to facilitate communication between buyers and sellers.
+        Additionally, developed an admin panel in Flutter Web, enabling user management, ad moderation, issue
+        handling, and detailed statistics.
+      </p>
+      <p className="mt-2 text-gray-600">
+        This project was carried out in collaboration with an international client (India), from design to final delivery.
+      </p>
+    </>
+  }
+/>
+<GithubSource
+  source="https://github.com/SoufyanRachdi/multiplayer_triangle_game"
+  title="Personal Project – 2D Multiplayer Triangle Game (Godot, GDScript)"
+  text={
+    <>
+      <p className="font-semibold text-gray-800">june 2025 - july 2025</p>
+      <p className="mt-2 text-gray-600">
+        Developed a 2D multiplayer game where each triangle has three sides, but only one can deal damage to
+opponents. Players compete on a map of 50 participants, with the objective of surviving until the end to
+win.
+
+      </p>
+      <p className="mt-2 text-gray-600">
+      The project includes player movement, collision handling, and combat logic. Although development was
+not continued due to technical constraints, the project allowed me to strengthen my skills in game
+programming, multiplayer logic, and project management with Git.
+      </p>
+    </>
+  }
+/>
+              
               <GithubSource
-                source="https://github.com/SoufyanRachdi/my_portfolio"
-                title="Portfolio Source Code"
-                text="View the full source code for this portfolio on GitHub."
-              />
+  source="https://github.com/SoufyanRachdi/zombie-game"
+  title="Personal Project – 3D Zombie Survival Game (Godot, GDScript)
+"
+  text={
+    <>
+      <p className="font-semibold text-gray-800">may 2025 - june 2025</p>
+      <p className="mt-2 text-gray-600">
+        Designed and developed a 3D survival game using Godot and GDScript, where the player faces waves of
+zombies in an immersive environment.
+
+      </p>
+      <p className="mt-2 text-gray-600">
+        The project includes a 3D movement system, enemy AI (chasing, attacking, patrolling), as well as collision
+and physics management
+      </p>
+      <p className="mt-2 text-gray-600">
+        Implemented a scoring and progression system, along with resource and weapon management elements.
+This project allowed me to strengthen my skills in 3D development, gameplay design, and AI programming
+within a modern game engine
+      </p>
+    </>
+  }
+/>
+            <GithubSource
+  source="https://github.com/elParadigm/SystemeDeGestionDunRestaurant"
+  title="Academic Project – Restaurant Management Application (ISIMG University)"
+  text={
+    <>
+      <p className="font-semibold text-gray-800">mars 2025 - april 2025
+</p>
+      <p className="mt-2 text-gray-600">As part of my coursework, I contributed to the development of a restaurant management application built
+with Java (Swing) and a MySQL Workbench database. The goal was to create a centralized solution to
+manage the different actors and processes of a restaurant
+      </p>
+      <p className="mt-2 text-gray-600">
+        IThe application included several modules: client (menu consultation, orders), server (real-time monitoring,
+billing), and chef (dish visualization and management).
+
+      </p>
+      <p className="mt-2 text-gray-600">I contributed to object-oriented design, the implementation of a modular architecture, and used Java,
+MySQL Workbench, and Git/GitHub for collaborative development.
+This project provided me with practical experience in system modeling, event-driven programming, and
+
+      </p>
+    </>
+  }
+/>  
+             
             </div>
           </div>
           <div className="mb-8" id="certifications">
