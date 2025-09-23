@@ -72,7 +72,7 @@ export default function App() {
   return (
     <div 
       ref={containerRef}
-      className="relative bg-[#F8FAFC] fixed inset-0 overflow-hidden text-base md:text-lg"
+      className="relative bg-background fixed inset-0 overflow-hidden text-base md:text-lg"
       style={{ margin: 0, padding: 0 }}
     >
       
@@ -90,11 +90,10 @@ export default function App() {
         }}
       >
           <div className="w-full h-full flex flex-col items-center justify-center gap-6 bg-transparent">
-           <div className="text-[4rem] font-black leading-none text-[#0F172A] drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center pt-20">Soufyan Rachdi</div>
-           <div className="text-[3rem] font-black leading-none text-[#0F172A] drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center pb-20">COMPUTER SCIENCE STUDENT</div>
-          
+           <div className="text-[4rem] font-black leading-none text-big drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center pt-20">Soufyan Rachdi</div>
+           <div className="text-[3rem] font-black leading-none text-big drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center pb-20">COMPUTER SCIENCE STUDENT</div>
           {/* Category list */}
-          <ul className="flex flex-col items-start gap-2 text-white w-full max-w-xs bg-[#0F172A] rounded-xl p-4 pb-4" >
+          <ul className="flex flex-col items-start gap-2 text-white w-full max-w-xs bg-big rounded-xl p-4 pb-4" >
             {[
               { id: 'about', label: 'About Me' },
               { id: 'skills', label: 'Skills' },
@@ -103,21 +102,21 @@ export default function App() {
               { id: 'certifications', label: 'Certifications' },
             ].map((item) => (
               <li key={item.id} className="w-full">
-                <a
-                  href={`#${item.id}`}
-                  className={`block transition-all border-l-4 pl-3 py-1 rounded-r ${
-                    activeSection === item.id
-                      ? 'bg-white text-[#0F172A] border-white pl-5'
-                      : 'border-white/40 hover:bg-white/10'
-                  }`}
-                >
-                  {item.label}
-                </a>
-              </li>
+                  <a
+                    href={`#${item.id}`}
+                    className={`block transition-all border-l-4 pl-3 py-1 rounded-r ${
+                      activeSection === item.id
+                        ? 'bg-white text-big border-white pl-5'
+                        : 'border-white/40 hover:bg-white/10'
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                </li>
             ))}
           </ul>
            {/* Social Icons */}
-           <div className="flex items-center gap-5 text-white bg-[#0F172A] rounded-xl p-3">
+           <div className="flex items-center gap-5 text-white bg-big rounded-xl p-3">
              {/* GitHub */}
              <a href="https://github.com/SoufyanRachdi" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:opacity-80 transition-opacity">
                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.112.82-.262.82-.582 0-.287-.01-1.047-.016-2.055-3.338.726-4.042-1.61-4.042-1.61-.546-1.386-1.333-1.756-1.333-1.756-1.09-.744.082-.729.082-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.42-1.304.763-1.604-2.665-.304-5.467-1.333-5.467-5.932 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 6.004 0c2.29-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.625-5.48 5.922.431.372.815 1.102.815 2.222 0 1.604-.015 2.896-.015 3.293 0 .322.218.699.825.58C20.565 21.796 24 17.297 24 12 24 5.37 18.63 0 12 0z"/></svg>
@@ -159,13 +158,13 @@ export default function App() {
       >
         <div className="p-8 font-comic">
           <div className="mb-8" id="about">
-            <BigTitre a="About Me" className="text-3xl md:text-4xl font-bold text-white bg-[#0F172A] inline-block px-3 py-1 rounded"/>
+            <BigTitre a="About Me" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
           </div>
           
           {/* Scrollable content */}
           <div className="space-y-6">
             <div className=" rounded-lg p-6 bg-white border border-gray-200 shadow-sm">
-              <Paragraph className="text-[#475569] leading-relaxed">
+              <Paragraph className="text-smallText leading-relaxed">
                 I am a passionate and motivated Computer Science student in my third year at ISIMG, with a strong academic background in mathematics, physics, and computer science. I enjoy tackling complex problems and turning ideas into functional, high-quality software solutions.
                 <br/><br/>
                 My journey in tech started with solid foundations in programming (Java, Python, C/C++, JavaScript, GDScript) and grew through hands-on projects in web, mobile, and game development. I have built applications ranging from a restaurant management system in Java/MySQL to a cross-platform mobile app in Flutter & Firebase with an international client.
@@ -179,74 +178,73 @@ export default function App() {
             </div>
             </div>
           <div className="mb-8" id="skills">
-            <BigTitre a="Skills" className="text-3xl md:text-4xl font-bold text-white bg-[#0F172A] inline-block px-3 py-1 rounded"/>
+            <BigTitre a="Skills" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
             <div className="mt-4 bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
               <div className="space-y-2">
-                <Paragraph className="text-[#475569]"><span className="font-semibold">Programming Languages:</span> Java, Python, C/C++, JavaScript, GDScript , Php</Paragraph>
-                <Paragraph className="text-[#475569]"><span className="font-semibold">Web Development:</span> HTML, CSS, React, Node.js, Laravel</Paragraph>
-                <Paragraph className="text-[#475569]"><span className="font-semibold">Mobile Development:</span> Flutter, Android Studio</Paragraph>
-                <Paragraph className="text-[#475569]"><span className="font-semibold">Databases:</span> MySQL, NoSQL</Paragraph>
-                <Paragraph className="text-[#475569]"><span className="font-semibold">Tools & Environments:</span> Git, GitHub, VS Code, IntelliJ IDEA, Godot, Firebase, Notion, XAMPP, PhpMyAdmin ,Wireshark</Paragraph>
-                <Paragraph className="text-[#475569]"><span className="font-semibold">Soft Skills:</span> Problem Solving, Project Management, Teamwork</Paragraph>
-                <Paragraph className="text-[#475569]"><span className="font-semibold">Languages:</span> French (Advanced), English (Advanced)</Paragraph>
+                <Paragraph className="text-smallText"><span className="font-semibold">Programming Languages:</span> Java, Python, C/C++, JavaScript, GDScript , Php</Paragraph>
+                <Paragraph className="text-smallText"><span className="font-semibold">Web Development:</span> HTML, CSS, React, Node.js, Laravel</Paragraph>
+                <Paragraph className="text-smallText"><span className="font-semibold">Mobile Development:</span> Flutter, Android Studio</Paragraph>
+                <Paragraph className="text-smallText"><span className="font-semibold">Databases:</span> MySQL, NoSQL</Paragraph>
+                <Paragraph className="text-smallText"><span className="font-semibold">Tools & Environments:</span> Git, GitHub, VS Code, IntelliJ IDEA, Godot, Firebase, Notion, XAMPP, PhpMyAdmin ,Wireshark</Paragraph>
+                <Paragraph className="text-smallText"><span className="font-semibold">Soft Skills:</span> Problem Solving, Project Management, Teamwork</Paragraph>
+                <Paragraph className="text-smallText"><span className="font-semibold">Languages:</span> French (Advanced), English (Advanced)</Paragraph>
               </div>
             </div>
           </div>
           <div className="mb-8" id="experiences">
-            <BigTitre a="Experiences" className="text-3xl md:text-4xl font-bold text-white bg-[#0F172A] inline-block px-3 py-1 rounded"/>
+            <BigTitre a="Experiences" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">Active Member – Competitive Programming Club (CPC ISIMG) (2023 – 2025)</h3>
-                
                 <div className="mt-2 space-y-1">
-                <Paragraph className="text-[#475569]" children="During my studies at ISIMG, I joined the Competitive Programming Club, an experience that greatly enriched both my technical and personal skills. As an active member, I took part in training sessions focused on C++, Python, and advanced problem-solving techniques. We regularly practiced on platforms such as Codeforces and LeetCode, sharpening our algorithmic thinking and speed in competitive environments. I also had the opportunity to represent the club in several competitions held in Tunis, Sfax, and Gabès, where I collaborated with teammates and challenged myself against strong participants. This experience not only improved my programming expertise but also strengthened my teamwork, persistence, and ability to perform under pressure."></Paragraph>
+                <Paragraph className="text-smallText" children="During my studies at ISIMG, I joined the Competitive Programming Club, an experience that greatly enriched both my technical and personal skills. As an active member, I took part in training sessions focused on C++, Python, and advanced problem-solving techniques. We regularly practiced on platforms such as Codeforces and LeetCode, sharpening our algorithmic thinking and speed in competitive environments. I also had the opportunity to represent the club in several competitions held in Tunis, Sfax, and Gabès, where I collaborated with teammates and challenged myself against strong participants. This experience not only improved my programming expertise but also strengthened my teamwork, persistence, and ability to perform under pressure."></Paragraph>
                 </div>
               </div>
           </div>
           <div className="mb-8" id="projects">
-            <BigTitre a="Projects" className="text-3xl md:text-4xl font-bold text-white bg-[#0F172A] inline-block px-3 py-1 rounded"/>
+            <BigTitre a="Projects" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
             <div className="mt-4 space-y-4">
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">Freelance Flutter Developer — Kabaadhub Application</h3>
-                <Paragraph className="text-[#475569] mt-2">Flutter, Firebase — Jul 2025 – Present</Paragraph>
+                <Paragraph className="text-smallText mt-2">Flutter, Firebase — Jul 2025 – Present</Paragraph>
                 <div className="mt-2 space-y-1">
-                  <Paragraph className="text-[#475569]">Cross‑platform Android/iOS app for recycled products marketplace.</Paragraph>
-                  <Paragraph className="text-[#475569]">Precise geolocation, real‑time messaging, user management, moderation, analytics.</Paragraph>
-                  <Paragraph className="text-[#475569]">Delivered end‑to‑end for an international client (India).</Paragraph>
+                  <Paragraph className="text-smallText">Cross‑platform Android/iOS app for recycled products marketplace.</Paragraph>
+                  <Paragraph className="text-smallText">Precise geolocation, real‑time messaging, user management, moderation, analytics.</Paragraph>
+                  <Paragraph className="text-smallText">Delivered end‑to‑end for an international client (India).</Paragraph>
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">2D Multiplayer Triangle Game</h3>
-                <Paragraph className="text-[#475569] mt-2">Godot, GDScript — Jun 2025 – Jul 2025</Paragraph>
+                <Paragraph className="text-smallText mt-2">Godot, GDScript — Jun 2025 – Jul 2025</Paragraph>
                 <div className="mt-2 space-y-1">
-                  <Paragraph className="text-[#475569]">Multiplayer triangle combat with collisions and survival objective (up to ~50 players).</Paragraph>
-                  <Paragraph className="text-[#475569]">Implemented movement, collision handling, core game logic; managed with Git.</Paragraph>
+                  <Paragraph className="text-smallText">Multiplayer triangle combat with collisions and survival objective (up to ~50 players).</Paragraph>
+                  <Paragraph className="text-smallText">Implemented movement, collision handling, core game logic; managed with Git.</Paragraph>
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">3D Zombie Survival Game</h3>
-                <Paragraph className="text-[#475569] mt-2">Godot, GDScript — May 2025 – Jun 2025</Paragraph>
+                <Paragraph className="text-smallText mt-2">Godot, GDScript — May 2025 – Jun 2025</Paragraph>
                 <div className="mt-2 space-y-1">
-                  <Paragraph className="text-[#475569]">3D movement, enemy AI (chase/attack), physics/collision, scoring and progression.</Paragraph>
-                  <Paragraph className="text-[#475569]">Resource/weapon management and immersive environment.</Paragraph>
+                  <Paragraph className="text-smallText">3D movement, enemy AI (chase/attack), physics/collision, scoring and progression.</Paragraph>
+                  <Paragraph className="text-smallText">Resource/weapon management and immersive environment.</Paragraph>
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">Restaurant Management Application (Academic Project)</h3>
-                <Paragraph className="text-[#475569] mt-2">Java, MySQL, Git/GitHub — Mar 2025 – Apr 2025</Paragraph>
+                <Paragraph className="text-smallText mt-2">Java, MySQL, Git/GitHub — Mar 2025 – Apr 2025</Paragraph>
                 <div className="mt-2 space-y-1">
-                  <Paragraph className="text-[#475569]">Centralized solution for customer, orders, and server monitoring.</Paragraph>
-                  <Paragraph className="text-[#475569]">Object‑oriented modular design; collaborative development with Git/GitHub and MySQL Workbench.</Paragraph>
+                  <Paragraph className="text-smallText">Centralized solution for customer, orders, and server monitoring.</Paragraph>
+                  <Paragraph className="text-smallText">Object‑oriented modular design; collaborative development with Git/GitHub and MySQL Workbench.</Paragraph>
                 </div>
               </div>
             </div>
           </div>
           <div className="mb-8" id="certifications">
-            <BigTitre a="Certifications" className="text-3xl md:text-4xl font-bold text-white bg-[#0F172A] inline-block px-3 py-1 rounded"/>
+            <BigTitre a="Certifications" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
             <div className="mt-4 bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
               <div className="space-y-2">
-                <Paragraph className="text-[#475569]">C++ Certification — CodinGame</Paragraph>
-                <Paragraph className="text-[#475569]">Problem Solving (Basic) — HackerRank</Paragraph>
-                <Paragraph className="text-[#475569]">Python (Basic) — HackerRank</Paragraph>
+                <Paragraph className="text-smallText">C++ Certification — CodinGame</Paragraph>
+                <Paragraph className="text-smallText">Problem Solving (Basic) — HackerRank</Paragraph>
+                <Paragraph className="text-smallText">Python (Basic) — HackerRank</Paragraph>
               </div>
             </div>
           </div>
