@@ -203,15 +203,11 @@ export default function App() {
           <div className="mb-8" id="projects">
             <BigTitre a="Projects" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
             <div className="mt-4 space-y-4">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-                <h3 className="text-xl font-semibold text-black">Freelance Flutter Developer — Kabaadhub Application</h3>
-                <Paragraph className="text-smallText mt-2">Flutter, Firebase — Jul 2025 – Present</Paragraph>
-                <div className="mt-2 space-y-1">
-                  <Paragraph className="text-smallText">Cross‑platform Android/iOS app for recycled products marketplace.</Paragraph>
-                  <Paragraph className="text-smallText">Precise geolocation, real‑time messaging, user management, moderation, analytics.</Paragraph>
-                  <Paragraph className="text-smallText">Delivered end‑to‑end for an international client (India).</Paragraph>
-                </div>
-              </div>
+              <GithubSource
+                source="https://github.com/SoufyanRachdi/project_app_KabaadHub/tree/main"
+                title="Freelance Flutter Developer — Kabaadhub Application"
+                text="Developed a mobile app using Flutter and Firebase for event creation, management, and user interaction. Features include user authentication, real-time updates, and push notifications. Collaborated with an international client to deliver a user-friendly solution."
+              />
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">2D Multiplayer Triangle Game</h3>
                 <Paragraph className="text-smallText mt-2">Godot, GDScript — Jun 2025 – Jul 2025</Paragraph>
