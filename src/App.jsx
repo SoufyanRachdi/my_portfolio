@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import BigTitre from './components/BigTitre';
 import Paragraph from './components/Paragraph';
 import GithubSource from './components/Githubsource';
-
+import { restaurantProjectImages ,zombieGameprojectImages ,triangleGameprojectImages , kabaadhubappprojectImages} from './utils/images';
 export default function App() {
   const [activeSection, setActiveSection] = useState('about');
   const spotlightRef = useRef(null);
@@ -205,6 +205,7 @@ export default function App() {
             <BigTitre a="Projects" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
             <div className="mt-4 space-y-4">
               <GithubSource
+              photos={kabaadhubappprojectImages}
   source="https://github.com/SoufyanRachdi/project_app_KabaadHub/tree/main"
   title="Freelance Flutter Developer — Kabaadhub Application"
   text={
@@ -227,6 +228,7 @@ export default function App() {
   }
 />
 <GithubSource
+photos={triangleGameprojectImages}
   source="https://github.com/SoufyanRachdi/multiplayer_triangle_game"
   title="Personal Project – 2D Multiplayer Triangle Game (Godot, GDScript)"
   text={
@@ -248,6 +250,7 @@ programming, multiplayer logic, and project management with Git.
 />
               
               <GithubSource
+              photos={zombieGameprojectImages}
   source="https://github.com/SoufyanRachdi/zombie-game"
   title="Personal Project – 3D Zombie Survival Game (Godot, GDScript)
 "
@@ -272,7 +275,7 @@ within a modern game engine
   }
 />
             <GithubSource
-            photos={"/public/headerphoto1.png" }
+            photos={restaurantProjectImages}
   source="https://github.com/elParadigm/SystemeDeGestionDunRestaurant"
   title="Academic Project – Restaurant Management Application (ISIMG University)"
   text={
@@ -299,16 +302,47 @@ This project provided me with practical experience in system modeling, event-dri
              
             </div>
           </div>
-          <div className="mb-8" id="certifications">
-            <BigTitre a="Certifications" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
-            <div className="mt-4 bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="space-y-2">
-                <Paragraph className="text-smallText">C++ Certification — CodinGame</Paragraph>
-                <Paragraph className="text-smallText">Problem Solving (Basic) — HackerRank</Paragraph>
-                <Paragraph className="text-smallText">Python (Basic) — HackerRank</Paragraph>
-              </div>
-            </div>
-          </div>
+         <div className="mb-8" id="certifications">
+  <BigTitre
+    a="Certifications"
+    className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"
+  />
+  <div className="mt-4 bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+    <div className="space-y-2">
+      <a
+        href="https://www.codingame.com/certification/iZ_f3jSzi7dpmw6Fi_XGgQ"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center hover:text-blue-600 transition"
+      >
+        <Paragraph className="text-smallText">C++ Certification — CodinGame</Paragraph>
+        <span className="ml-2 text-sm">→</span>
+      </a>
+
+      <a
+        href="https://www.hackerrank.com/certificates/df79960f4ed9"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center hover:text-blue-600 transition"
+      >
+        <Paragraph className="text-smallText">Problem Solving (Basic) — HackerRank</Paragraph>
+        <span className="ml-2 text-sm">→</span>
+      </a>
+
+      <a
+        href="https://www.hackerrank.com/certificates/066aa343105d"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center hover:text-blue-600 transition"
+      >
+        <Paragraph className="text-smallText">Python (Basic) — HackerRank</Paragraph>
+        <span className="ml-2 text-sm">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
         </div>
       </div>
     </div>
