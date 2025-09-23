@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import BigTitre from './components/BigTitre';
 import Paragraph from './components/Paragraph';
 import GithubSource from './components/Githubsource';
+
 export default function App() {
   const [activeSection, setActiveSection] = useState('about');
   const spotlightRef = useRef(null);
@@ -271,6 +272,7 @@ within a modern game engine
   }
 />
             <GithubSource
+            photos={"/public/headerphoto1.png" }
   source="https://github.com/elParadigm/SystemeDeGestionDunRestaurant"
   title="Academic Project – Restaurant Management Application (ISIMG University)"
   text={
