@@ -210,7 +210,7 @@ export default function App() {
   title="Freelance Flutter Developer — Kabaadhub Application"
   text={
     <>
-      <p className="font-semibold text-gray-800">July 2025 - Now</p>
+      <p className="font-semibold text-gray-800">July 2024 - Now</p>
       <p className="mt-2 text-gray-600">
         Designed and developed a cross-platform mobile application (Android/iOS) using Flutter & Firebase,
         dedicated to buying and selling recycled products. The app allows users to post ads, search with
