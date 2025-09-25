@@ -4,7 +4,7 @@ import Paragraph from './components/Paragraph';
 import GithubSource from './components/Githubsource';
 import { restaurantProjectImages ,zombieGameprojectImages ,triangleGameprojectImages , kabaadhubappprojectImages} from './utils/images';
 import SocialIcon from './components/SocialIcon';
-import { socialLinks } from './utils/socialLinks';
+import { socialLinks } from './utils/socialLinks.jsx';
 export default function App() {
   const [activeSection, setActiveSection] = useState('about');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -130,6 +130,14 @@ export default function App() {
                 <a href="https://github.com/SoufyanRachdi" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-white hover:text-accent transition-colors p-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.112.82-.262.82-.582 0-.287-.01-1.047-.016-2.055-3.338.726-4.042-1.61-4.042-1.61-.546-1.386-1.333-1.756-1.333-1.756-1.09-.744.082-.729.082-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.42-1.304.763-1.604-2.665-.304-5.467-1.333-5.467-5.932 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 6.004 0c2.29-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.625-5.48 5.922.431.372.815 1.102.815 2.222 0 1.604-.015 2.896-.015 3.293 0 .322.218.699.825.58C20.565 21.796 24 17.297 24 12 24 5.37 18.63 0 12 0z"/></svg>
                 </a>
+             {/* Facebook */}
+             <a href="https://www.facebook.com/soufyan.rachdi.16" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:opacity-80 transition-opacity">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35C.593 0 0 .593 0 1.326v21.348C0 23.406.593 24 1.326 24h11.495v-9.294H9.691V11.01h3.13V8.41c0-3.1 1.893-4.787 4.658-4.787 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.764v2.313h3.588l-.467 3.696h-3.121V24h6.116C23.406 24 24 23.406 24 22.674V1.326C24 .593 23.406 0 22.675 0z"/></svg>
+             </a>
+             {/* Instagram */}
+             <a href="https://www.instagram.com/soyf_d_rachdi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:opacity-80 transition-opacity">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.325.975.975 1.263 2.242 1.325 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.325 3.608-.975.975-2.242 1.263-3.608 1.325-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.325-.975-.975-1.263-2.242-1.325-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.325-3.608.975-.975 2.242-1.263 3.608-1.325C8.416 2.175 8.796 2.163 12 2.163zm0 1.838c-3.17 0-3.548.012-4.796.07-1.042.048-1.608.223-1.984.37-.5.194-.86.426-1.237.803-.377.377-.609.737-.803 1.237-.147.376-.322.942-.37 1.984-.058 1.248-.07 1.626-.07 4.796s.012 3.548.07 4.796c.048 1.042.223 1.608.37 1.984.194.5.426.86.803 1.237.377.377.737.609 1.237.803.376.147.942.322 1.984.37 1.248.058 1.626.07 4.796.07s3.548-.012 4.796-.07c1.042-.048 1.608-.223 1.984-.37.5-.194.86-.426 1.237-.803.377-.377.609-.737.803-1.237.147-.376.322-.942.37-1.984.058-1.248.07-1.626.07-4.796s-.012-3.548-.07-4.796c-.048-1.042-.223-1.608-.37-1.984-.194-.5-.426-.86-1.237-1.237-.376-.147-.942-.322-1.984-.37-1.248-.058-1.626-.07-4.796-.07zm0 3.889a5.111 5.111 0 1 1 0 10.222 5.111 5.111 0 0 1 0-10.222zm0 1.838a3.273 3.273 0 1 0 0 6.546 3.273 3.273 0 0 0 0-6.546zm5.406-3.204a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+             </a>
                 <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=Soufyanrachdiii@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Gmail" className="text-white hover:text-accent transition-colors p-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.713 1.2 5.25A2 2 0 0 1 2 5h20c.282 0 .552.059.8.163L12 12.713zM22 7.117v11.633A1.25 1.25 0 0 1 20.75 20h-2.5A1.25 1.25 0 0 1 17 18.75V10.5l5-3.383zM2 7.117 7 10.5v8.25A1.25 1.25 0 0 1 5.75 20h-2.5A1.25 1.25 0 0 1 2 18.75V7.117z"/></svg>
                 </a>
