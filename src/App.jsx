@@ -5,6 +5,7 @@ import GithubSource from './components/Githubsource';
 import { restaurantProjectImages ,zombieGameprojectImages ,triangleGameprojectImages , kabaadhubappprojectImages} from './utils/images';
 export default function App() {
   const [activeSection, setActiveSection] = useState('about');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const spotlightRef = useRef(null);
   const containerRef = useRef(null);
   const animationFrameRef = useRef(null);
@@ -73,28 +74,84 @@ export default function App() {
   return (
     <div 
       ref={containerRef}
-      className="relative bg-background fixed inset-0 overflow-hidden text-base md:text-lg"
-      style={{ margin: 0, padding: 0 }}
+      className="relative bg-background min-h-screen text-base md:text-lg"
     >
-      
+      {/* Mobile Header */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-big shadow-lg">
+        <div className="flex items-center justify-between p-4">
+          <div className="text-white font-bold text-lg">Soufyan Rachdi</div>
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white p-2 rounded-md hover:bg-white/10 transition-colors"
+            aria-label="Toggle menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+        
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="bg-big border-t border-white/20">
+            <nav className="p-4">
+              <ul className="space-y-2">
+                {[
+                  { id: 'about', label: 'About Me' },
+                  { id: 'skills', label: 'Skills' },
+                  { id: 'experiences', label: 'Experiences' },
+                  { id: 'projects', label: 'Projects' },
+                  { id: 'certifications', label: 'Certifications' },
+                ].map((item) => (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-lg transition-all ${
+                        activeSection === item.id
+                          ? 'bg-white text-big font-semibold'
+                          : 'text-white hover:bg-white/10'
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              
+              {/* Mobile Social Icons */}
+              <div className="flex items-center justify-center gap-4 mt-6 pt-4 border-t border-white/20">
+                <a href="https://github.com/SoufyanRachdi" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-white hover:text-accent transition-colors p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.112.82-.262.82-.582 0-.287-.01-1.047-.016-2.055-3.338.726-4.042-1.61-4.042-1.61-.546-1.386-1.333-1.756-1.333-1.756-1.09-.744.082-.729.082-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.42-1.304.763-1.604-2.665-.304-5.467-1.333-5.467-5.932 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 6.004 0c2.29-1.552 3.297-1.23 3.297-1.23.653 1.652.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.807 5.625-5.48 5.922.431.372.815 1.102.815 2.222 0 1.604-.015 2.896-.015 3.293 0 .322.218.699.825.58C20.565 21.796 24 17.297 24 12 24 5.37 18.63 0 12 0z"/></svg>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=Soufyanrachdiii@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Gmail" className="text-white hover:text-accent transition-colors p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.713 1.2 5.25A2 2 0 0 1 2 5h20c.282 0 .552.059.8.163L12 12.713zM22 7.117v11.633A1.25 1.25 0 0 1 20.75 20h-2.5A1.25 1.25 0 0 1 17 18.75V10.5l5-3.383zM2 7.117 7 10.5v8.25A1.25 1.25 0 0 1 5.75 20h-2.5A1.25 1.25 0 0 1 2 18.75V7.117z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/soufyan-rachdi-996061247/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-white hover:text-accent transition-colors p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M4.983 3.5C4.983 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.483 1.12 2.483 2.5zM.5 8h4V24h-4V8zm7.5 0h3.841v2.177h.054c.534-1.012 1.84-2.08 3.788-2.08 4.05 0 4.797 2.665 4.797 6.133V24h-4v-6.672c0-1.592-.028-3.64-2.215-3.64-2.217 0-2.556 1.733-2.556 3.527V24h-3.909V8z"/></svg>
+                </a>
+                <a href="https://wa.me/21629031065" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-white hover:text-accent transition-colors p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.484A11.84 11.84 0 0 0 11.995 0C5.365 0 .032 5.333.032 11.963c0 2.108.553 4.168 1.603 5.984L0 24l6.2-1.6a11.908 11.908 0 0 0 5.795 1.479h.005c6.63 0 11.963-5.333 11.963-11.964A11.84 11.84 0 0 0 20.52 3.484zM11.995 21.8h-.004a9.77 9.77 0 0 1-4.985-1.366l-.358-.212-3.678.949.983-3.586-.233-.369a9.77 9.77 0 0 1-1.522-5.254c0-5.396 4.389-9.784 9.785-9.784a9.7 9.7 0 0 1 6.94 2.874 9.7 9.7 0 0 1 2.874 6.94c0 5.396-4.389 9.784-9.802 9.808zm5.66-7.33c-.309-.155-1.826-.902-2.109-1.003-.282-.103-.487-.155-.694.154-.204.31-.797 1.003-.977 1.209-.18.206-.36.232-.67.078-.31-.155-1.309-.48-2.495-1.532-.922-.822-1.545-1.838-1.726-2.147-.18-.31-.02-.477.135-.632.138-.137.31-.36.465-.542.155-.18.206-.309.31-.515.103-.206.052-.387-.026-.542-.077-.155-.694-1.672-.95-2.287-.25-.601-.505-.52-.694-.53l-.594-.01c-.206 0-.542.077-.825.387-.282.31-1.08 1.055-1.08 2.574s1.107 2.987 1.26 3.194c.155.206 2.18 3.33 5.28 4.666.739.319 1.316.509 1.767.653.742.236 1.416.203 1.95.123.595-.089 1.826-.746 2.085-1.468.258-.722.258-1.34.18-1.468-.078-.129-.283-.206-.592-.361z"/></svg>
+                </a>
+              </div>
+            </nav>
+          </div>
+        )}
+      </div>
 
-     
-      
-      {/* Left Div */}
-      <div 
-        className="fixed z-10"
-        style={{
-          left: 0,
-          top: 0,
-          width: '50%',
-          height: '100vh'
-        }}
-      >
-          <div className="w-full h-full flex flex-col items-center justify-center gap-6 bg-transparent">
-           <div className="text-[3rem] font-black leading-none text-big drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center pt-10">Soufyan Rachdi</div>
-           <div className="text-[2rem] font-black leading-none text-big drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center pb-20">COMPUTER SCIENCE STUDENT</div>
-          {/* Category list */}
-          <ul className="flex flex-col items-start gap-2 text-white w-full max-w-xs bg-big rounded-xl p-4 pb-4" >
+      {/* Desktop Layout */}
+      <div className="lg:flex">
+        {/* Desktop Left Sidebar */}
+        <div className="hidden lg:block lg:fixed lg:left-0 lg:top-0 lg:w-1/2 lg:h-screen lg:z-10">
+          <div className="w-full h-full flex flex-col items-center justify-center gap-6 bg-transparent px-8">
+            <div className="text-3xl xl:text-5xl font-black leading-none text-big drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center">Soufyan Rachdi</div>
+            <div className="text-xl xl:text-3xl font-black leading-none text-big drop-shadow-[0_1px_0_rgba(0,0,0,0.3)] text-center mb-8">COMPUTER SCIENCE STUDENT</div>
+            {/* Category list */}
+            <ul className="flex flex-col items-start gap-2 text-white w-full max-w-xs bg-big rounded-xl p-4">
             {[
               { id: 'about', label: 'About Me' },
               { id: 'skills', label: 'Skills' },
@@ -146,25 +203,22 @@ export default function App() {
           </div>
       </div>
       
-      {/* Right Div */}
-      <div 
-        id="right-scroll-root"
-        className="fixed overflow-y-auto z-10 scroll-smooth"
-        style={{
-          right: 0,
-          top: 0,
-          width: '50%',
-          height: '100vh'
-        }}
-      >
-        <div className="p-8 font-comic">
+        {/* Desktop Right Content */}
+        <div 
+          id="right-scroll-root"
+          className="lg:ml-[50%] lg:w-1/2 w-full overflow-y-auto scroll-smooth"
+          style={{
+            minHeight: '100vh'
+          }}
+        >
+        <div className="p-4 lg:p-8 pt-20 lg:pt-8 font-comic">
           <div className="mb-8" id="about">
-            <BigTitre a="About Me" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
+            <BigTitre a="About Me" className="text-2xl md:text-3xl lg:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
           </div>
           
           {/* Scrollable content */}
           <div className="space-y-6">
-            <div className=" rounded-lg p-6 bg-white border border-gray-200 shadow-sm">
+            <div className="rounded-lg p-4 md:p-6 bg-white border border-gray-200 shadow-sm">
               <Paragraph className="text-smallText leading-relaxed">
                 I am a passionate and motivated Computer Science student in my third year at ISIMG, with a strong academic background in mathematics, physics, and computer science. I enjoy tackling complex problems and turning ideas into functional, high-quality software solutions.
                 <br/><br/>
@@ -179,7 +233,7 @@ export default function App() {
             </div>
             </div>
           <div className="mb-8" id="skills">
-            <BigTitre a="Skills" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
+            <BigTitre a="Skills" className="text-2xl md:text-3xl lg:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
             <div className="mt-4 bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
               <div className="space-y-2">
                 <Paragraph className="text-smallText"><span className="font-semibold">Programming Languages:</span> Java, Python, C/C++, JavaScript, GDScript , Php</Paragraph>
@@ -193,7 +247,7 @@ export default function App() {
             </div>
           </div>
           <div className="mb-8" id="experiences">
-            <BigTitre a="Experiences" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
+            <BigTitre a="Experiences" className="text-2xl md:text-3xl lg:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
                 <h3 className="text-xl font-semibold text-black">Active Member – Competitive Programming Club (CPC ISIMG) (2023 – 2025)</h3>
                 <div className="mt-2 space-y-1">
@@ -202,7 +256,7 @@ export default function App() {
               </div>
           </div>
           <div className="mb-8" id="projects">
-            <BigTitre a="Projects" className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
+            <BigTitre a="Projects" className="text-2xl md:text-3xl lg:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"/>
             <div className="mt-4 space-y-4">
               <GithubSource
               photos={kabaadhubappprojectImages}
@@ -305,7 +359,7 @@ This project provided me with practical experience in system modeling, event-dri
          <div className="mb-8" id="certifications">
   <BigTitre
     a="Certifications"
-    className="text-3xl md:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"
+    className="text-2xl md:text-3xl lg:text-4xl font-bold text-white bg-big inline-block px-3 py-1 rounded border-l-8 border-accent"
   />
   <div className="mt-4 bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
     <div className="space-y-2">
@@ -342,7 +396,7 @@ This project provided me with practical experience in system modeling, event-dri
   </div>
 </div>
 
-
+        </div>
         </div>
       </div>
     </div>
