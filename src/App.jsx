@@ -3,6 +3,8 @@ import BigTitre from './components/BigTitre';
 import Paragraph from './components/Paragraph';
 import GithubSource from './components/Githubsource';
 import { restaurantProjectImages ,zombieGameprojectImages ,triangleGameprojectImages , kabaadhubappprojectImages} from './utils/images';
+import SocialIcon from './components/SocialIcon';
+import { socialLinks } from './utils/socialLinks';
 export default function App() {
   const [activeSection, setActiveSection] = useState('about');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
