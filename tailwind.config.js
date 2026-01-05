@@ -7,24 +7,39 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        comic: ['"Comic Sans MS"', 'cursive', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Outfit', 'sans-serif'],
       },
       colors: {
-        navy: '#0a192f',
-        lightNavy: '#112240',
-        lightestNavy: '#233554',
-        greenAccent: '#64ffda',
-        slate: '#8892b0',
-        lightSlate: '#a8b2d1',
-        lightestSlate: '#ccd6f6',
-        // Custom palette
-        background: '#F8FAFC', // light gray / almost white
-        big: '#0F172A', // big titles & sidebar (dark navy)
-        accent: '#38BDF8', // accent (bright cyan/blue)
-        smallText: '#475569', // small text (cool gray)
+        slate: {
+          850: '#151e32',
+          900: '#0f172a',
+          950: '#020617',
+        },
+        cyan: {
+          400: '#22d3ee',
+          500: '#06b6d4',
+        },
+        blue: {
+          500: '#3b82f6',
+          600: '#2563eb',
+        },
       },
-      boxShadow: {
-        glow: '0 0 0 1px rgba(100,255,218,0.2), 0 8px 24px rgba(2,12,27,0.7)',
+      animation: {
+        'blob': 'blob 7s infinite',
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+      },
+      keyframes: {
+        blob: {
+          '0%': { transform: 'translate(0px, 0px) scale(1)' },
+          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '100%': { transform: 'translate(0px, 0px) scale(1)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
     },
   },
