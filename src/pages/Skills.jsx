@@ -1,4 +1,5 @@
 import { projects } from "../utils/projects";
+import { Link } from "react-router-dom";
 
 const skillsData = {
     coreTech: [
@@ -59,16 +60,29 @@ export default function Skills() {
                     <div className="flex flex-wrap gap-3">
                         {skillsData.coreTech.map(skill => {
                             const count = projectCountBySkill[skill.name] || 0;
-                            return (
-                                <a
-                                    key={skill.name}
-                                    href={count > 0 ? getSkillLink(skill.name) : undefined}
-                                    className="flex flex-col items-center gap-2 px-4 py-3 bg-cyan-950/30 text-cyan-300 rounded-xl text-sm font-medium border border-cyan-900/50 hover:border-cyan-500/50 hover:bg-cyan-900/40 transition-all min-w-[120px]"
-                                >
+                            const content = (
+                                <>
                                     <img src={skill.logo} alt={skill.name} className="w-12 h-12" />
                                     <span>{skill.name}</span>
                                     <span className="text-xs text-cyan-200/80">Projects: {count}</span>
-                                </a>
+                                </>
+                            );
+                            return count > 0 ? (
+                                <Link
+                                    key={skill.name}
+                                    to={getSkillLink(skill.name)}
+                                    className="flex flex-col items-center gap-2 px-4 py-3 bg-cyan-950/30 text-cyan-300 rounded-xl text-sm font-medium border border-cyan-900/50 hover:border-cyan-500/50 hover:bg-cyan-900/40 transition-all min-w-[120px]"
+                                >
+                                    {content}
+                                </Link>
+                            ) : (
+                                <div
+                                    key={skill.name}
+                                    aria-disabled="true"
+                                    className="flex flex-col items-center gap-2 px-4 py-3 bg-cyan-950/30 text-cyan-300/50 rounded-xl text-sm font-medium border border-cyan-900/50 min-w-[120px]"
+                                >
+                                    {content}
+                                </div>
                             );
                         })}
                     </div>
@@ -78,16 +92,29 @@ export default function Skills() {
                     <div className="flex flex-wrap gap-3">
                         {skillsData.webAndMobile.map(skill => {
                             const count = projectCountBySkill[skill.name] || 0;
-                            return (
-                                <a
-                                    key={skill.name}
-                                    href={count > 0 ? getSkillLink(skill.name) : undefined}
-                                    className="flex flex-col items-center gap-2 px-4 py-3 bg-blue-950/30 text-blue-300 rounded-xl text-sm font-medium border border-blue-900/50 hover:border-blue-500/50 hover:bg-blue-900/40 transition-all min-w-[120px]"
-                                >
+                            const content = (
+                                <>
                                     <img src={skill.logo} alt={skill.name} className="w-12 h-12" />
                                     <span>{skill.name}</span>
                                     <span className="text-xs text-blue-200/80">Projects: {count}</span>
-                                </a>
+                                </>
+                            );
+                            return count > 0 ? (
+                                <Link
+                                    key={skill.name}
+                                    to={getSkillLink(skill.name)}
+                                    className="flex flex-col items-center gap-2 px-4 py-3 bg-blue-950/30 text-blue-300 rounded-xl text-sm font-medium border border-blue-900/50 hover:border-blue-500/50 hover:bg-blue-900/40 transition-all min-w-[120px]"
+                                >
+                                    {content}
+                                </Link>
+                            ) : (
+                                <div
+                                    key={skill.name}
+                                    aria-disabled="true"
+                                    className="flex flex-col items-center gap-2 px-4 py-3 bg-blue-950/30 text-blue-300/50 rounded-xl text-sm font-medium border border-blue-900/50 min-w-[120px]"
+                                >
+                                    {content}
+                                </div>
                             );
                         })}
                     </div>
@@ -97,16 +124,29 @@ export default function Skills() {
                     <div className="flex flex-wrap gap-3">
                         {skillsData.toolsAndFrameworks.map(skill => {
                             const count = projectCountBySkill[skill.name] || 0;
-                            return (
-                                <a
-                                    key={skill.name}
-                                    href={count > 0 ? getSkillLink(skill.name) : undefined}
-                                    className="flex flex-col items-center gap-2 px-4 py-3 bg-purple-950/30 text-purple-300 rounded-xl text-sm font-medium border border-purple-900/50 hover:border-purple-500/50 hover:bg-purple-900/40 transition-all min-w-[120px]"
-                                >
+                            const content = (
+                                <>
                                     <img src={skill.logo} alt={skill.name} className="w-12 h-12" />
                                     <span>{skill.name}</span>
                                     <span className="text-xs text-purple-200/80">Projects: {count}</span>
-                                </a>
+                                </>
+                            );
+                            return count > 0 ? (
+                                <Link
+                                    key={skill.name}
+                                    to={getSkillLink(skill.name)}
+                                    className="flex flex-col items-center gap-2 px-4 py-3 bg-purple-950/30 text-purple-300 rounded-xl text-sm font-medium border border-purple-900/50 hover:border-purple-500/50 hover:bg-purple-900/40 transition-all min-w-[120px]"
+                                >
+                                    {content}
+                                </Link>
+                            ) : (
+                                <div
+                                    key={skill.name}
+                                    aria-disabled="true"
+                                    className="flex flex-col items-center gap-2 px-4 py-3 bg-purple-950/30 text-purple-300/50 rounded-xl text-sm font-medium border border-purple-900/50 min-w-[120px]"
+                                >
+                                    {content}
+                                </div>
                             );
                         })}
                     </div>
