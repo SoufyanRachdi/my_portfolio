@@ -1,6 +1,9 @@
+import Hero from "../components/Hero";
+
 export default function About() {
     return (
         <section className="animate-fade-in">
+            <Hero />
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8 font-heading">About Me</h2>
             <div className="text-slate-400 leading-relaxed space-y-4">
                 <p>

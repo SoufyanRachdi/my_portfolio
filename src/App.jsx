@@ -1,11 +1,11 @@
 import { useRef, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
 import Certifications from "./pages/Certifications";
 import { socialLinks } from "./utils/socialLinks";
 
@@ -33,8 +33,6 @@ function Layout() {
 
       <Navbar />
 
-      <Hero />
-
       <div className="mx-auto max-w-screen-lg px-6 md:px-12 py-12">
         {/* Main Content */}
         <main className="min-h-[50vh]">
@@ -44,6 +42,7 @@ function Layout() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:projectId" element={<ProjectDetail />} />
             <Route path="/certification" element={<Certifications />} />
             <Route path="*" element={<Navigate to="/about" replace />} />
           </Routes>

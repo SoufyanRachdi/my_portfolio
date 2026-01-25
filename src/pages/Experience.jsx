@@ -8,7 +8,8 @@ export default function Experience() {
                 <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2" aria-label="2023 to Present">2023 — Present</header>
                 <div className="z-10 sm:col-span-6">
                     <h3 className="font-medium leading-snug text-slate-200">
-                        <div>
+                        <div className="flex items-center gap-2">
+                            <img src="/logoCpcIsimg.png" alt="CPC ISIMG" className="w-8 h-8 rounded" />
                             <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-cyan-300 focus-visible:text-cyan-300 group/link text-base" href="#" target="_blank" rel="noreferrer" aria-label="Competitive Programming Club">
                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                 <span>Competitive Programming Club (ISIMG)</span>
