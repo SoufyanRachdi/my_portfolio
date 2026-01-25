@@ -7,7 +7,7 @@ const skillsData = {
         { name: 'C/C++', logo: '/softwarelogo/c-plus-plus-programming-language-icon.svg' },
         { name: 'JavaScript', logo: '/softwarelogo/javascript-programming-language-icon.svg' },
         { name: 'TypeScript', logo: '/softwarelogo/typescript-programming-language-icon.svg' },
-        { name: 'GDScript', logo: '/softwarelogo/godot-game-engine-icon.svg' },
+        { name: 'GDScript', logo: '/softwarelogo/gdscript-icon.svg' },
         { name: 'Dart', logo: '/softwarelogo/dart-programming-language-icon.svg' },
         { name: 'PHP', logo: '/softwarelogo/php-programming-language-icon.svg' },
         { name: 'Kotlin', logo: '/softwarelogo/kotlin-programming-language-icon.svg' },
