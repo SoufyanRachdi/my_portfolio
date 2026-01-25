@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
@@ -61,6 +62,7 @@ function Layout() {
           </p>
         </footer>
       </div>
+      <Analytics />
     </div>
   );
 }
