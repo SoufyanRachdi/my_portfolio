@@ -4,7 +4,7 @@ import ProjectCard from "../components/ProjectCard";
 import { projects } from "../utils/projects";
 
 const categories = ["All", "Web", "Mobile", "Games", "Tools", "Desktop", "Business Software"];
-const statuses = ["All", "Ready to Use", "In Development", "Open Source"];
+const statuses = ["All", "Ready to Use", "In Development", "Open Source", "Freelance"];
 
 export default function Projects() {
     const [searchParams] = useSearchParams();
@@ -26,21 +26,8 @@ export default function Projects() {
         // Filter by category
         if (activeCategory !== "All") {
             list = list.filter((project) => {
-                if (activeCategory === "Web") {
-                    // Lawyer App and MkArchi Desktop are NOT web
-                    if (project.id === "mkarchi-desktop" || project.id === "lawyer-app") return false;
-                    return project.tech.some(t => ["React", "Next.js", "Symfony", "PHP", "HTML", "CSS", "TypeScript", "Tailwind"].includes(t));
-                }
-                if (activeCategory === "Mobile") return project.tech.some(t => ["Flutter", "Kotlin", "Dart"].includes(t));
-                if (activeCategory === "Games") return project.tech.some(t => ["Godot", "GDScript", "Blender"].includes(t));
-                if (activeCategory === "Tools") {
-                    // Lawyer App is NOT a tool
-                    if (project.id === "lawyer-app") return false;
-                    return project.tech.some(t => ["Python", "MkArchi CLI", "Electron"].includes(t));
-                }
-                if (activeCategory === "Desktop") return project.tech.some(t => ["Electron", "Java", "Swing", "MkArchi Desktop"].includes(t)) || project.id === "mkarchi-desktop" || project.id === "lawyer-app";
-                if (activeCategory === "Business Software") return ["car4cra", "restaurant-management", "lawyer-app"].includes(project.id);
-                return true;
+                const categories = Array.isArray(project.category) ? project.category : [project.category];
+                return categories.includes(activeCategory);
             });
         }
 
@@ -50,6 +37,7 @@ export default function Projects() {
                 if (activeStatus === "Ready to Use") return project.deployed || (!project.inDevelopment && project.link && !project.stopped);
                 if (activeStatus === "In Development") return project.inDevelopment;
                 if (activeStatus === "Open Source") return project.openSource;
+                if (activeStatus === "Freelance") return project.freelance;
                 return true;
             });
         }

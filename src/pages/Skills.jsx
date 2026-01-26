@@ -30,14 +30,17 @@ const skillsData = {
         { name: 'VS Code', logo: '/softwarelogo/visual-studio-code-icon.svg' },
         { name: 'PyCharm', logo: '/softwarelogo/pycharm-icon.svg' },
         { name: 'Android Studio', logo: '/softwarelogo/android-studio-icon.svg' },
+        { name: 'IntelliJ IDEA', logo: '/softwarelogo/intellij-idea-ide-icon.svg' },
         { name: 'MySQL', logo: '/softwarelogo/mysql-icon.svg' },
+        { name: 'MySQL Workbench', logo: '/softwarelogo/mysqlworkbench_93532.webp' },
         { name: 'SQLite', logo: '/softwarelogo/sqlite-icon.svg' },
         { name: 'Symfony', logo: '/softwarelogo/symfony-icon.svg' },
+        { name: 'Swing', logo: '/softwarelogo/java-programming-language-icon.svg' },
         { name: 'XAMPP', logo: '/softwarelogo/xampp-icon.svg' },
         { name: 'Electron', logo: '/softwarelogo/electron.svg' },
         { name: 'Godot', logo: '/softwarelogo/godot-game-engine-icon.svg' },
         { name: 'Blender', logo: '/softwarelogo/blender-icon.svg' },
-        { name: 'MkArchi Desktop', logo: '/softwarelogo/mkarchi-desktop.png' },
+        { name: 'Mkarchi', logo: '/softwarelogo/mkarchi-desktop.svg' },
     ]
 };
 

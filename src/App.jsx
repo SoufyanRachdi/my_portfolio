@@ -44,7 +44,7 @@ function Layout() {
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
-            <Route path="/certification" element={<Certifications />} />
+            <Route path="/certifications" element={<Certifications />} />
             <Route path="*" element={<Navigate to="/about" replace />} />
           </Routes>
         </main>
@@ -58,7 +58,7 @@ function Layout() {
             ))}
           </div>
           <p>
-            Designed in Figma and coded in VS Code. Built with Next.js and Tailwind CSS.
+            Designed in Figma and coded in VS Code. Built with Vite and Tailwind CSS.
           </p>
         </footer>
       </div>

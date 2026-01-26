@@ -35,8 +35,8 @@ const techLogoMap = {
     XAMPP: "/softwarelogo/xampp-icon.svg",
     PyCharm: "/softwarelogo/pycharm-icon.svg",
     Blender: "/softwarelogo/blender-icon.svg",
-    "MkArchi Desktop": "/softwarelogo/mkarchi-desktop.png",
-    "MkArchi CLI": "/softwarelogo/mkarchi-desktop.png",
+    "IntelliJ IDEA": "/softwarelogo/intellij-idea-ide-icon.svg",
+    "Mkarchi": "/softwarelogo/mkarchi-desktop.svg",
 };
 
 export default function ProjectDetail() {
@@ -55,11 +55,13 @@ export default function ProjectDetail() {
     return (
         <section className="animate-fade-in space-y-8">
             <div className="flex items-start gap-4 flex-wrap">
-                {project.logo && (
-                    <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl">
+                <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl">
+                    {project.logo ? (
                         <img src={project.logo} alt={`${project.title} logo`} className="w-16 h-16 object-contain" />
-                    </div>
-                )}
+                    ) : (
+                        <img src="/softwarelogo/no_logo.svg" alt="No logo available" className="w-16 h-16 object-contain opacity-50" />
+                    )}
+                </div>
                 <div className="flex-1 min-w-[260px]">
                     <h1 className="text-3xl font-bold text-slate-100 mb-2">{project.title}</h1>
                     <div className="flex flex-wrap gap-2 mb-4">

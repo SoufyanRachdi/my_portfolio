@@ -35,8 +35,10 @@ const techLogoMap = {
     XAMPP: '/softwarelogo/xampp-icon.svg',
     PyCharm: '/softwarelogo/pycharm-icon.svg',
     Blender: '/softwarelogo/blender-icon.svg',
-    'MkArchi Desktop': '/softwarelogo/mkarchi-desktop.png',
-    'MkArchi CLI': '/softwarelogo/mkarchi-desktop.png',
+    'Mkarchi': '/softwarelogo/mkarchi-desktop.svg',
+    'Mkarchi Desktop': '/softwarelogo/mkarchi-desktop.png',
+    'Mkarchi CLI': '/softwarelogo/mkarchi-desktop.png',
+    'IntelliJ IDEA': '/softwarelogo/intellij-idea-ide-icon.svg',
 };
 
 export default function ProjectCard({ project, index }) {
