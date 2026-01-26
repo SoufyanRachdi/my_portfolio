@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const navItems = [
-    { path: '/about', label: 'About' },
+    { path: '/', label: 'About' },
     { path: '/skills', label: 'Skills' },
     { path: '/experience', label: 'Experience' },
     { path: '/projects', label: 'Projects' },

@@ -38,14 +38,13 @@ function Layout() {
         {/* Main Content */}
         <main className="min-h-[50vh]">
           <Routes>
-            <Route path="/" element={<Navigate to="/about" replace />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/" element={<About />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
             <Route path="/certifications" element={<Certifications />} />
-            <Route path="*" element={<Navigate to="/about" replace />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
 
