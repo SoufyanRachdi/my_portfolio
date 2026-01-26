@@ -3,12 +3,6 @@ import { Heart } from 'lucide-react';
 export default function Hero() {
     return (
         <section className="relative overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24 lg:pt-16 lg:pb-32">
-            {/* Background Decorative Elements */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-cyan-500/10 blur-[120px]" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/10 blur-[120px]" />
-            </div>
-
             <div className="mx-auto flex max-w-screen-xl flex-col items-center gap-12 px-6 text-center md:px-12">
                 {/* Profile Image Section */}
                 <div className="relative">

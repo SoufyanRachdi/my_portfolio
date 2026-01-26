@@ -8,6 +8,7 @@ import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
 import Certifications from "./pages/Certifications";
+import FloatingSkills from "./components/FloatingSkills";
 import { socialLinks } from "./utils/socialLinks";
 
 function Layout() {
@@ -25,16 +26,21 @@ function Layout() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-slate-950 font-sans selection:bg-cyan-900 selection:text-white">
+    <div className="relative min-h-screen font-sans selection:bg-cyan-900 selection:text-white overflow-x-hidden">
+      {/* Background Color */}
+      <div className="fixed inset-0 bg-slate-950 -z-20" />
+
+      {/* Background Floating Skills */}
+      <FloatingSkills />
+
       {/* Spotlight Canvas */}
       <div
         ref={cursorRef}
         className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
       />
 
-      <Navbar />
-
-      <div className="mx-auto max-w-screen-lg px-6 md:px-12 py-12">
+      <div className="relative z-10 mx-auto max-w-screen-lg px-6 md:px-12 py-12">
+        <Navbar />
         {/* Main Content */}
         <main className="min-h-[50vh]">
           <Routes>
