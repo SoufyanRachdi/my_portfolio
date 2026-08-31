@@ -17,11 +17,11 @@ import {
 } from './images';
 
 export const projects = [
-    // 1. CAREDIFY (PFE & Internship Flagship)
+    // 1. CAREDIFY (PFE & Internship Flagship Ecosystem)
     {
         id: 'caredify',
-        title: 'Caredify — Remote ECG Telemetry & AI Diagnosis System',
-        tagline: 'PFE & Internship Project: Real-time cardiac telemetry via BLE, mobile waveform rendering, and cloud backend',
+        title: 'Caredify — Remote ECG Monitoring & AI Healthcare Ecosystem',
+        tagline: 'PFE & Startup Ecosystem: Wearable BLE telemetry mobile app, Node.js cloud backend, AI anomaly detection & clinician portal',
         category: ['Mobile', 'Backend'],
         description: (
             <>
@@ -29,15 +29,15 @@ export const projects = [
                     A comprehensive healthcare engineering ecosystem developed as my final-year graduation project (PFE) and software engineering internship, designed for continuous remote cardiac monitoring.
                 </p>
                 <p className="mb-2">
-                    Interfaces directly with Bluetooth Low Energy (BLE) ECG sensors to stream raw cardiac electrical signals, render real-time continuous waveform graphs on mobile devices, and compute vital metrics.
+                    Comprises a native-bridged Flutter mobile application interfacing directly with Bluetooth Low Energy (BLE) sensors to stream real-time cardiac signals, and a resilient Node.js &amp; Express.js REST API with MongoDB Atlas for secure cloud health record storage.
                 </p>
                 <p>
-                    Backed by a scalable Node.js &amp; Express.js backend with MongoDB Atlas for persistent health record storage, alongside integrated AI-assisted anomaly detection pipelines.
+                    The system integrates with startup-level AI arrhythmia diagnostic models and clinical web dashboards to assist cardiologists in early detection of cardiac conditions.
                 </p>
             </>
         ),
         problemSolved: 'Enables remote continuous cardiovascular telemetry and early detection of arrhythmias by bridging wearable BLE sensors with mobile waveform visualization and cloud backend persistence.',
-        role: 'Lead Software Engineer (PFE & Internship)',
+        role: 'Lead Mobile & Backend Software Engineer (PFE & Internship)',
         challenges: 'Maintaining high-throughput, low-latency BLE packet streaming without UI frame drops, processing continuous ECG data asynchronously, and structuring scalable MongoDB schemas for time-series biometric streams.',
         tech: ['Flutter', 'Dart', 'BLE', 'Kotlin', 'Node.js', 'Express.js', 'MongoDB', 'MongoDB Atlas', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
         images: caredifyProjectImages,
@@ -45,7 +45,47 @@ export const projects = [
         featured: true,
         pfe: true,
         internship: true,
-        priority: 1
+        privateRepo: true,
+        isEcosystem: true,
+        priority: 1,
+        ecosystem: [
+            {
+                id: 'caredify-mobile',
+                title: 'Caredify Mobile Application',
+                badge: 'My Core Part · Lead Mobile Engineer',
+                role: 'Lead Flutter & BLE Developer',
+                status: 'Core Implementation',
+                tech: ['Flutter', 'Dart', 'BLE', 'Kotlin', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+                description: 'Cross-platform mobile application interfacing directly with wearable Bluetooth Low Energy (BLE) ECG sensors. Performs high-throughput packet streaming, filtering, continuous real-time ECG waveform graphing, and on-device heart rate telemetry computation.'
+            },
+            {
+                id: 'caredify-backend',
+                title: 'Caredify Cloud Backend & REST API',
+                badge: 'My Core Part · Lead Backend Engineer',
+                role: 'Lead Backend Engineer',
+                status: 'Core Implementation',
+                tech: ['Node.js', 'Express.js', 'MongoDB', 'MongoDB Atlas', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
+                description: 'Centralized backend service responsible for patient authentication, secure biometric time-series data persistence in MongoDB Atlas, and session history management.'
+            },
+            {
+                id: 'caredify-ai',
+                title: 'AI Arrhythmia Detection Model',
+                badge: 'Interfaced Startup Component',
+                role: 'Collaborative Startup Module',
+                status: 'Integrated with API',
+                tech: ['Python', 'AI/ML', 'Biometric Signal Processing'],
+                description: 'Machine learning classification pipeline designed to ingest time-series ECG data from our backend REST API to detect cardiac anomalies and assist in early diagnosis.'
+            },
+            {
+                id: 'caredify-portal',
+                title: 'Cardiologist Clinical Web Portal',
+                badge: 'Interfaced Startup Component',
+                role: 'Collaborative Startup Module',
+                status: 'Integrated with API',
+                tech: ['React', 'Web Dashboard', 'REST APIs'],
+                description: 'Clinician web interface allowing cardiologists to inspect live and historical patient ECG strips, analyze AI diagnostic suggestions, and manage clinical patient files.'
+            }
+        ]
     },
 
     // 2. FOOTBALL MANAGER
@@ -135,117 +175,125 @@ export const projects = [
         priority: 4
     },
 
-    // 5. MKARCHI CLI
+    // 5. MKARCHI ECOSYSTEM
     {
         id: 'mkarchi',
-        title: 'Mkarchi CLI',
-        tagline: 'Developer CLI tool to scaffold and reverse-engineer directory architectures from tree definitions',
-        category: 'Tools',
+        title: 'Mkarchi — Developer Scaffolding & Architecture Ecosystem',
+        tagline: 'Multi-platform developer ecosystem: Python CLI on PyPI, Electron desktop visual workspace & Next.js docs portal',
+        category: ['Tools', 'Desktop', 'Web'],
         description: (
             <>
                 <p className="mb-2">
-                    The core command-line tool powering the Mkarchi developer ecosystem. It automates the generation of complex directory structures, boilerplates, and files from concise tree-formatted text definitions.
+                    A multi-platform developer tooling ecosystem created to automate project directory scaffolding, architectural standardization, and repository reverse-engineering from concise tree definitions.
+                </p>
+                <p className="mb-2">
+                    Encompasses a high-performance Python CLI published on PyPI, an interactive Electron desktop design workspace, and an official Next.js technical documentation and tutorial portal.
                 </p>
                 <p>
-                    Published on PyPI with smart ignore rules, template reverse-engineering from existing repos, safety constraints, and automated architecture validation.
+                    Enables engineering teams to maintain clean, consistent project structures and eliminate manual directory creation workflows.
                 </p>
             </>
         ),
         problemSolved: 'Eliminates repetitive manual directory creation and enforces standardized architectural conventions across developer teams and multi-service repositories.',
-        role: 'Creator & Lead Developer',
+        role: 'Creator & Lead Ecosystem Developer',
         challenges: 'Building a robust parser for arbitrary ASCII and indented tree formats, handling cross-platform file permissions, and safely reverse-engineering deeply nested repositories.',
-        tech: ['Python', 'PyPI', 'PyCharm', 'VS Code', 'Git', 'GitHub'],
+        tech: ['Python', 'PyPI', 'Electron', 'Next.js', 'TypeScript', 'Tailwind CSS', 'JavaScript', 'PyCharm', 'VS Code', 'Git', 'GitHub'],
         github: 'https://github.com/SoufyanRachdi/mkarchi',
-        link: 'https://www.mkarchi.me/cli',
-        images: mkarchiProjectImages,
+        link: 'https://www.mkarchi.me/',
+        images: [...mkarchiProjectImages, ...mkarchiDesktopProjectImages, ...mkarchiWebProjectImages],
         logo: '/projectsimages/mkarchi/applogo.png',
         openSource: true,
-        deployed: true
+        deployed: true,
+        isEcosystem: true,
+        priority: 5,
+        ecosystem: [
+            {
+                id: 'mkarchi-cli',
+                title: 'Mkarchi CLI Engine',
+                badge: 'Creator & Lead Developer',
+                role: 'Core CLI Engine & AST Parser',
+                status: 'Published on PyPI',
+                tech: ['Python', 'PyPI', 'PyCharm', 'VS Code', 'Git', 'GitHub'],
+                github: 'https://github.com/SoufyanRachdi/mkarchi',
+                link: 'https://www.mkarchi.me/cli',
+                description: 'Core command-line parsing engine published on PyPI. Scaffolds complex directory structures, boilerplates, and files from ASCII tree definitions with reverse-engineering capabilities.'
+            },
+            {
+                id: 'mkarchi-desktop',
+                title: 'Mkarchi Desktop Application',
+                badge: 'Creator & Lead Developer',
+                role: 'Visual Architecture Designer',
+                status: 'Published / Open Source',
+                tech: ['Electron', 'JavaScript', 'HTML', 'CSS', 'Mkarchi', 'VS Code', 'Git', 'GitHub'],
+                github: 'https://github.com/SoufyanRachdi/mkarchi_desktop',
+                download: 'https://www.mkarchi.me/desktop/downloads',
+                link: 'https://www.mkarchi.me/desktop/',
+                description: 'Cross-platform visual GUI application enabling developers to visually inspect, design, scaffold, and extract project directory blueprints.'
+            },
+            {
+                id: 'mkarchi-web',
+                title: 'Mkarchi Web & Technical Docs',
+                badge: 'Frontend & Documentation Developer',
+                role: 'Documentation & Tutorials Portal',
+                status: 'Live at mkarchi.me',
+                tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel', 'VS Code', 'Git', 'GitHub'],
+                link: 'https://www.mkarchi.me/',
+                description: 'Official landing portal and technical documentation site built with Next.js and Tailwind CSS, offering interactive syntax guides and tutorials.'
+            }
+        ]
     },
 
-    // 6. MKARCHI DESKTOP
-    {
-        id: 'mkarchi-desktop',
-        title: 'Mkarchi Desktop',
-        tagline: 'Visual GUI application for interactive project scaffolding and tree extraction',
-        category: ['Desktop', 'Tools'],
-        description: (
-            <>
-                <p className="mb-2">
-                    A desktop application companion for the Mkarchi ecosystem. It provides software developers with an interactive graphical workspace to visually inspect, design, scaffold, and extract project directory blueprints.
-                </p>
-                <p>
-                    Integrates create/apply modes, live syntax validation, and bi-directional synchronization with the Mkarchi CLI engine.
-                </p>
-            </>
-        ),
-        problemSolved: 'Offers an intuitive graphical interface for developers who prefer visual architecture design and rapid project template configuration.',
-        role: 'Creator & Lead Developer',
-        challenges: 'Interfacing the Electron render process with native desktop filesystem APIs and bundling lightweight standalone installers for multiple OS platforms.',
-        tech: ['Electron', 'JavaScript', 'HTML', 'CSS', 'Mkarchi', 'VS Code', 'Git', 'GitHub'],
-        github: 'https://github.com/SoufyanRachdi/mkarchi_desktop',
-        link: 'https://www.mkarchi.me/desktop/',
-        download: 'https://www.mkarchi.me/desktop/downloads',
-        images: mkarchiDesktopProjectImages,
-        logo: '/projectsimages/mkarchi_desktop/applogo.png',
-        openSource: true,
-        deployed: true
-    },
-
-    // 7. KABAADHUB MOBILE
+    // 6. KABAADHUB ECOSYSTEM
     {
         id: 'kabaadhub',
-        title: 'KabaadHub Mobile App',
-        tagline: 'Production Flutter & Firebase marketplace app published on Google Play Store',
-        category: 'Mobile',
+        title: 'KabaadHub — Scrap & Recycling Marketplace Ecosystem',
+        tagline: 'Commercial ecosystem: Production Flutter mobile app on Google Play with live chat + Flutter Web admin portal',
+        category: ['Mobile', 'Web', 'Business Software'],
         description: (
             <>
                 <p className="mb-2">
-                    Commercial cross-platform mobile marketplace application built for buying and selling recycled goods and materials.
+                    A commercial cross-platform marketplace ecosystem engineered for buying and selling recycled goods, scrap materials, and reusable commodities.
                 </p>
-                <p>
-                    Features real-time in-app buyer-seller chat, geolocation-based item discovery, multi-image upload workflows, and push notification alerts.
+                <p className="mb-2">
+                    Integrates a production mobile application published on the Google Play Store with real-time buyer-seller messaging and geolocation discovery, backed by a dedicated Flutter Web administrative moderation portal.
                 </p>
             </>
         ),
         problemSolved: 'Connects recyclers, scrap dealers, and everyday sellers through a localized real-time exchange marketplace with immediate messaging.',
-        role: 'Freelance Mobile Developer',
-        challenges: 'Managing real-time messaging state with Cloud Firestore, handling image caching/compression on mobile devices, and optimizing location-based queries.',
-        tech: ['Flutter', 'Dart', 'Firebase', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+        role: 'Freelance Lead Mobile & Full-Stack Developer',
+        challenges: 'Managing real-time messaging state with Cloud Firestore, handling image caching/compression on mobile devices, and building responsive data tables in Flutter Web.',
+        tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Flutter Web', 'Google Play', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
         playStore: 'https://play.google.com/store/apps/details?id=com.kabaadhub.app&pli=1',
         images: kabaadhubappprojectImages,
         logo: '/projectsimages/kabaadhub/applogo.png',
         freelance: true,
-        deployed: true
+        deployed: true,
+        isEcosystem: true,
+        priority: 6,
+        ecosystem: [
+            {
+                id: 'kabaadhub-mobile',
+                title: 'KabaadHub Mobile Marketplace App',
+                badge: 'Freelance Lead Mobile Developer',
+                role: 'Lead Mobile Developer',
+                status: 'Published on Google Play',
+                tech: ['Flutter', 'Dart', 'Firebase', 'Google Play', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+                playStore: 'https://play.google.com/store/apps/details?id=com.kabaadhub.app&pli=1',
+                description: 'Production mobile marketplace published on Google Play Store featuring real-time in-app buyer/seller messaging, geolocation discovery, and image upload pipelines.'
+            },
+            {
+                id: 'kabaadhub-admin',
+                title: 'KabaadHub Web Admin Dashboard',
+                badge: 'Freelance Full-Stack Developer',
+                role: 'Full-Stack Developer',
+                status: 'Web Administration',
+                tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Flutter Web', 'VS Code', 'Git', 'GitHub'],
+                description: 'Dedicated web dashboard built with Flutter Web and Firebase for platform administrators to moderate listings, verify merchants, and manage platform permissions.'
+            }
+        ]
     },
 
-    // 8. KABAADHUB ADMIN
-    {
-        id: 'kabaadhub-admin',
-        title: 'KabaadHub Admin Dashboard',
-        tagline: 'Web administration panel for user moderation, product approval, and analytics',
-        category: ['Web', 'Business Software'],
-        description: (
-            <>
-                <p className="mb-2">
-                    A dedicated administrative web application for managing the KabaadHub marketplace platform.
-                </p>
-                <p>
-                    Built with Flutter Web and Firebase, enabling platform operators to moderate listings, verify merchant accounts, resolve transaction disputes, and manage platform permissions in real time.
-                </p>
-            </>
-        ),
-        problemSolved: 'Gives platform administrators comprehensive oversight and rapid moderation tools to maintain marketplace quality and transaction trust.',
-        role: 'Freelance Full-Stack Developer',
-        challenges: 'Structuring role-based Firestore security rules and building responsive data-heavy data tables in Flutter Web.',
-        tech: ['Flutter', 'Dart', 'Firebase', 'VS Code', 'Git', 'GitHub'],
-        images: [],
-        logo: '/projectsimages/kabaadhub-admin-panel/applogo.png',
-        freelance: true,
-        deployed: true
-    },
-
-    // 9. LAWYER APP
+    // 7. LAWYER APP
     {
         id: 'lawyer-app',
         title: 'Lawyer Desktop Management Application',
@@ -270,7 +318,7 @@ export const projects = [
         inDevelopment: true
     },
 
-    // 10. RESTAURANT MANAGEMENT SYSTEM
+    // 8. RESTAURANT MANAGEMENT SYSTEM
     {
         id: 'restaurant-management',
         title: 'Restaurant Management System',
@@ -296,7 +344,7 @@ export const projects = [
         showcase: true
     },
 
-    // 11. CAR4CRA
+    // 9. CAR4CRA
     {
         id: 'car4cra',
         title: 'Car4Cra Automotive Platform',
@@ -324,30 +372,7 @@ export const projects = [
         showcase: true
     },
 
-    // 12. MKARCHI WEB
-    {
-        id: 'mkarchi-web',
-        title: 'Mkarchi Web & Documentation',
-        tagline: 'Official landing page and technical documentation portal for the Mkarchi ecosystem',
-        category: 'Web',
-        description: (
-            <>
-                <p>
-                    The official website and technical documentation portal for Mkarchi. Built with Next.js, TypeScript, and Tailwind CSS, offering interactive syntax guides, command references, and installation tutorials for developers.
-                </p>
-            </>
-        ),
-        problemSolved: 'Provides developers with clear documentation, quick-start guides, and command references to facilitate onboarding with the CLI and desktop tools.',
-        role: 'Frontend & Documentation Developer',
-        challenges: 'Optimizing static page generation and organizing technical markdown documentation for smooth developer reading.',
-        tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel', 'VS Code', 'Git', 'GitHub', 'HTML', 'CSS', 'Mkarchi'],
-        link: 'https://www.mkarchi.me/',
-        images: mkarchiWebProjectImages,
-        logo: '/projectsimages/mkarchi_web/applogo.png',
-        deployed: true
-    },
-
-    // 13. ZOMBIE GAME
+    // 10. ZOMBIE GAME
     {
         id: 'zombie-game',
         title: '3D Zombie Survival Prototype',
@@ -370,7 +395,7 @@ export const projects = [
         showcase: true
     },
 
-    // 14. TRIANGLE GAME
+    // 11. TRIANGLE GAME
     {
         id: 'triangle-game',
         title: 'Multiplayer Triangle Game Prototype',
@@ -393,7 +418,7 @@ export const projects = [
         showcase: true
     },
 
-    // 15. SOYF TUBE
+    // 12. SOYF TUBE
     {
         id: 'soyf-tube',
         title: 'Soyf Tube',
@@ -415,7 +440,7 @@ export const projects = [
         inDevelopment: true
     },
 
-    // 16. SOYF MUSIC
+    // 13. SOYF MUSIC
     {
         id: 'soyf-music',
         title: 'Soyf Music',

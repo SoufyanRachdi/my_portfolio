@@ -1,13 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Github, ExternalLink, Play, Download, X, ChevronLeft, ChevronRight, CheckCircle2, Layers } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink, Play, Download, X, ChevronLeft, ChevronRight, CheckCircle2, Layers, ShieldCheck, Network, Box } from 'lucide-react';
 import { projects } from '../utils/projects';
 import { getTechLogo } from '../utils/techLogos';
 
 export default function ProjectDetail() {
   const { projectId } = useParams();
   const navigate = useNavigate();
-  const project = projects.find((p) => p.id === projectId);
+  
+  // Resolve either direct project ID or any sub-module ecosystem ID
+  const project = projects.find(
+    (p) => p.id === projectId || p.ecosystem?.some((e) => e.id === projectId)
+  );
 
   const [activeImageIndex, setActiveImageIndex] = useState(null);
 
@@ -45,6 +49,7 @@ export default function ProjectDetail() {
   }
 
   const hasImages = project.images && project.images.length > 0;
+  const hasEcosystem = project.ecosystem && project.ecosystem.length > 0;
 
   return (
     <section className="animate-fade-in space-y-10 pb-16">
@@ -65,7 +70,7 @@ export default function ProjectDetail() {
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
           <div className="flex items-start gap-4">
             {project.logo ? (
-              <div className="h-16 w-16 md:h-20 md:w-20 rounded-2xl bg-slate-950 border border-slate-800 p-3 flex items-center justify-center flex-shrink-0">
+              <div className="h-16 w-16 md:h-20 md:w-20 rounded-2xl bg-slate-950 border border-slate-800 p-2.5 flex items-center justify-center flex-shrink-0 shadow-inner">
                 <img
                   src={project.logo}
                   alt={`${project.title} logo`}
@@ -82,6 +87,22 @@ export default function ProjectDetail() {
 
             <div>
               <div className="flex flex-wrap items-center gap-2 mb-2">
+                {hasEcosystem && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 text-xs font-bold uppercase tracking-wider">
+                    <Network size={12} />
+                    <span>Ecosystem · {project.ecosystem.length} Integrated Parts</span>
+                  </span>
+                )}
+                {project.pfe && (
+                  <span className="px-2.5 py-0.5 rounded-md bg-purple-500/15 text-purple-300 border border-purple-500/30 text-xs font-bold uppercase tracking-wider">
+                    PFE / Graduation
+                  </span>
+                )}
+                {project.internship && (
+                  <span className="px-2.5 py-0.5 rounded-md bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 text-xs font-bold uppercase tracking-wider">
+                    Internship
+                  </span>
+                )}
                 {project.freelance && (
                   <span className="px-2.5 py-0.5 rounded-md bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs font-bold uppercase tracking-wider">
                     Commercial / Freelance
@@ -102,9 +123,10 @@ export default function ProjectDetail() {
                     Academic Project
                   </span>
                 )}
-                {project.inDevelopment && (
-                  <span className="px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase tracking-wider">
-                    In Active Development
+                {project.privateRepo && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700 text-xs font-medium">
+                    <ShieldCheck size={13} className="text-cyan-400" />
+                    <span>Private / Proprietary Startup Repository</span>
                   </span>
                 )}
               </div>
@@ -200,6 +222,117 @@ export default function ProjectDetail() {
           </div>
         </div>
       </div>
+
+      {/* Ecosystem & Integrated Sub-Projects Breakdown (When available) */}
+      {hasEcosystem && (
+        <div className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-sm space-y-6">
+          <div className="space-y-1">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-cyan-400 font-heading">
+              <Network size={16} />
+              <span>System Ecosystem &amp; Integrated Parts</span>
+            </div>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-100 font-heading">
+              Architectural Breakdown &amp; Sub-Projects
+            </h2>
+            <p className="text-slate-400 text-xs md:text-sm leading-relaxed">
+              This system consists of multiple coordinated components, client platforms, and backend services:
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {project.ecosystem.map((mod) => (
+              <div
+                key={mod.title}
+                className="p-5 rounded-xl bg-slate-950/80 border border-slate-800 space-y-4 flex flex-col justify-between hover:border-cyan-500/40 transition-colors"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-[10px] font-bold uppercase tracking-wider">
+                      {mod.badge || mod.status}
+                    </span>
+                  </div>
+
+                  <h3 className="text-base font-bold text-slate-100 font-heading">
+                    {mod.title}
+                  </h3>
+
+                  {mod.role && (
+                    <div className="text-xs font-semibold text-slate-400">
+                      {mod.role}
+                    </div>
+                  )}
+
+                  <p className="text-slate-300 text-xs leading-relaxed">
+                    {mod.description}
+                  </p>
+                </div>
+
+                <div className="space-y-3 pt-3 border-t border-slate-800/80">
+                  {/* Action links specific to this sub-project */}
+                  <div className="flex flex-wrap gap-2">
+                    {mod.github && (
+                      <a
+                        href={mod.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-[11px] font-medium"
+                      >
+                        <Github size={12} />
+                        <span>Source</span>
+                      </a>
+                    )}
+                    {mod.link && (
+                      <a
+                        href={mod.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-[11px] font-medium"
+                      >
+                        <ExternalLink size={12} />
+                        <span>Website / Portal</span>
+                      </a>
+                    )}
+                    {mod.playStore && (
+                      <a
+                        href={mod.playStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-[11px] font-medium"
+                      >
+                        <Play size={12} />
+                        <span>Play Store</span>
+                      </a>
+                    )}
+                    {mod.download && (
+                      <a
+                        href={mod.download}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-[11px] font-medium"
+                      >
+                        <Download size={12} />
+                        <span>Downloads</span>
+                      </a>
+                    )}
+                  </div>
+
+                  {/* Tech stack badges */}
+                  <div className="flex flex-wrap gap-1">
+                    {mod.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="px-2 py-0.5 rounded bg-slate-900 text-slate-300 text-[10px] font-medium border border-slate-800"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Project Overview & Architecture Deep-Dive */}
       <div className="grid gap-6 md:grid-cols-3">

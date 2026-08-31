@@ -49,7 +49,7 @@ export default function Experience() {
                 </div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-slate-800 text-xs font-mono text-slate-400 w-fit flex-shrink-0">
                   <Calendar size={13} />
-                  <span>Final Year Stage / PFE</span>
+                  <span>Jan 2026 — Jun 2026</span>
                 </div>
               </div>
 

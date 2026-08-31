@@ -10,7 +10,6 @@ const skillGroups = [
     icon: Smartphone,
     skills: [
       { name: 'Flutter' },
-      { name: 'Dart' },
       { name: 'Kotlin' },
       { name: 'Android SDK' },
       { name: 'BLE' },

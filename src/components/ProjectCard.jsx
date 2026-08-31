@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
-import { Github, ExternalLink, Download, Play, ArrowRight, Layers, AlertCircle, Wrench } from 'lucide-react';
+import { Github, ExternalLink, Download, Play, ArrowRight, Network, ShieldCheck } from 'lucide-react';
 import { getTechLogo } from '../utils/techLogos';
 
 export default function ProjectCard({ project }) {
   const hasLogo = Boolean(project.logo);
   const isFeatured = Boolean(project.featured);
+  const hasEcosystem = Boolean(project.isEcosystem && project.ecosystem?.length);
 
   return (
     <div
@@ -46,6 +47,12 @@ export default function ProjectCard({ project }) {
 
             {/* Status & Category Badges */}
             <div className="flex flex-wrap gap-1.5">
+              {hasEcosystem && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 text-[10px] font-bold uppercase tracking-wider">
+                  <Network size={10} />
+                  <span>Ecosystem · {project.ecosystem.length} Parts</span>
+                </span>
+              )}
               {project.pfe && (
                 <span className="px-2 py-0.5 rounded-md bg-purple-500/15 text-purple-300 border border-purple-500/30 text-[10px] font-bold uppercase tracking-wider">
                   PFE / Graduation
@@ -69,6 +76,12 @@ export default function ProjectCard({ project }) {
               {project.deployed && (
                 <span className="px-2 py-0.5 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-[10px] font-bold uppercase tracking-wider">
                   Live
+                </span>
+              )}
+              {project.privateRepo && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-medium">
+                  <ShieldCheck size={11} className="text-cyan-400" />
+                  <span>Private Startup Repo</span>
                 </span>
               )}
             </div>
@@ -138,6 +151,25 @@ export default function ProjectCard({ project }) {
           {project.tagline || (typeof project.description === 'string' ? project.description : 'Explore project architecture, technical challenges, and implementation details.')}
         </p>
 
+        {/* Ecosystem Sub-Modules Preview */}
+        {hasEcosystem && (
+          <div className="mb-4 p-3 rounded-xl bg-slate-950/60 border border-slate-800/70 space-y-2">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+              System Modules / Parts:
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {project.ecosystem.map((mod) => (
+                <span
+                  key={mod.title}
+                  className="px-2 py-0.5 rounded bg-slate-900 text-slate-200 border border-slate-800 text-[11px] font-medium"
+                >
+                  {mod.title}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Richer Featured Project Highlights */}
         {isFeatured && (
           <div className="space-y-2 mb-5 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 text-xs">
@@ -192,7 +224,7 @@ export default function ProjectCard({ project }) {
             to={`/projects/${project.id}`}
             className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none rounded"
           >
-            <span>View Architecture &amp; Engineering Details</span>
+            <span>Explore All Parts &amp; Technical Architecture</span>
             <ArrowRight size={13} />
           </Link>
         </div>
