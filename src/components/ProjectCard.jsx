@@ -1,197 +1,202 @@
-import { Github, ExternalLink, Folder, Download, Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Github, ExternalLink, Download, Play, ArrowRight, Layers, AlertCircle, Wrench } from 'lucide-react';
+import { getTechLogo } from '../utils/techLogos';
 
-const techLogoMap = {
-    // ... (same as before)
-    React: '/softwarelogo/react-js-icon.svg',
-    'Node.js': '/softwarelogo/node-js-icon.svg',
-    'Tailwind': '/softwarelogo/tailwind-css-icon.svg',
-    'Tailwind CSS': '/softwarelogo/tailwind-css-icon.svg',
-    'Next.js': '/softwarelogo/nextjs.svg',
-    Flutter: '/softwarelogo/flutter-icon.svg',
-    Firebase: '/softwarelogo/google-firebase-icon.svg',
-    Java: '/softwarelogo/java-programming-language-icon.svg',
-    Python: '/softwarelogo/python-programming-language-icon.svg',
-    'C/C++': '/softwarelogo/c-plus-plus-programming-language-icon.svg',
-    JavaScript: '/softwarelogo/javascript-programming-language-icon.svg',
-    HTML: '/softwarelogo/html-icon.svg',
-    CSS: '/softwarelogo/css-icon.svg',
-    TypeScript: '/softwarelogo/typescript-programming-language-icon.svg',
-    GDScript: '/softwarelogo/godot-game-engine-icon.svg',
-    Dart: '/softwarelogo/dart-programming-language-icon.svg',
-    PHP: '/softwarelogo/php-programming-language-icon.svg',
-    Kotlin: '/softwarelogo/kotlin-programming-language-icon.svg',
-    MySQL: '/softwarelogo/mysql-icon.svg',
-    'MySQL Workbench': '/softwarelogo/mysql-icon.svg',
-    SQLite: '/softwarelogo/sqlite-icon.svg',
-    Laravel: '/softwarelogo/laravel-icon.svg',
-    Symfony: '/softwarelogo/symfony-icon.svg',
-    Electron: '/softwarelogo/electron.svg',
-    'Android Studio': '/softwarelogo/android-studio-icon.svg',
-    Godot: '/softwarelogo/godot-game-engine-icon.svg',
-    Git: '/softwarelogo/git-icon.svg',
-    GitHub: '/softwarelogo/github-icon.svg',
-    'VS Code': '/softwarelogo/visual-studio-code-icon.svg',
-    Vercel: '/softwarelogo/vercel-v0-icon.svg',
-    XAMPP: '/softwarelogo/xampp-icon.svg',
-    PyCharm: '/softwarelogo/pycharm-icon.svg',
-    Blender: '/softwarelogo/blender-icon.svg',
-    'Mkarchi': '/softwarelogo/mkarchi-desktop.svg',
-    'Mkarchi Desktop': '/softwarelogo/mkarchi-desktop.png',
-    'Mkarchi CLI': '/softwarelogo/mkarchi-desktop.png',
-    'IntelliJ IDEA': '/softwarelogo/intellij-idea-ide-icon.svg',
-};
+export default function ProjectCard({ project }) {
+  const hasLogo = Boolean(project.logo);
+  const isFeatured = Boolean(project.featured);
 
-export default function ProjectCard({ project, index }) {
-    const hasLogo = project.logo;
-    const projectHref = project.link || project.github;
+  return (
+    <div
+      className={`group relative flex flex-col h-full rounded-2xl bg-slate-900/60 border backdrop-blur-sm overflow-hidden transition-all duration-300 ${
+        isFeatured
+          ? 'border-slate-800 hover:border-cyan-500/50 shadow-lg shadow-black/20 hover:shadow-cyan-950/30'
+          : 'border-slate-800/70 hover:border-slate-700'
+      }`}
+    >
+      {/* Top accent line */}
+      <div
+        className={`h-1 w-full bg-gradient-to-r transition-all ${
+          isFeatured
+            ? 'from-cyan-500/40 via-blue-500/60 to-cyan-500/40 group-hover:via-cyan-400'
+            : 'from-transparent via-slate-800 to-transparent group-hover:via-slate-700'
+        }`}
+      />
 
-    const handleCardClick = () => {
-        if (projectHref) {
-            window.open(projectHref, '_blank');
-        }
-    };
+      <div className="p-6 md:p-7 flex flex-col flex-grow">
+        {/* Header: Logo + Status Badges + Action Buttons */}
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div className="flex items-center gap-3">
+            {hasLogo ? (
+              <div className="h-12 w-12 rounded-xl bg-slate-950/90 border border-slate-800 p-2 flex items-center justify-center flex-shrink-0 shadow-inner">
+                <img
+                  src={project.logo}
+                  alt={`${project.title} logo`}
+                  width="36"
+                  height="36"
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            ) : (
+              <div className="h-12 w-12 rounded-xl bg-slate-950/90 border border-slate-800 p-2 flex items-center justify-center flex-shrink-0 text-slate-500 font-bold text-lg font-heading">
+                {project.title.charAt(0)}
+              </div>
+            )}
 
-    const handleKeyDown = (event) => {
-        if ((event.key === 'Enter' || event.key === ' ') && projectHref) {
-            event.preventDefault();
-            window.open(projectHref, '_blank');
-        }
-    };
-
-    const stopPropagation = (event) => event.stopPropagation();
-
-    return (
-        <div
-            className="group relative animate-fade-in flex h-full"
-            style={{ animationDelay: `${index * 100}ms` }}
-            role="link"
-            tabIndex={0}
-            onClick={handleCardClick}
-            onKeyDown={handleKeyDown}
-        >
-            {/* Card Hover Glow Effect */}
-            <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 opacity-0 blur-xl transition duration-500 group-hover:opacity-100" />
-
-            <div className="relative glass overflow-hidden rounded-xl transition-all duration-300 group-hover:translate-y-[-4px] group-hover:shadow-2xl group-hover:shadow-cyan-500/10 flex flex-col w-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                <div className="p-6 md:p-8 flex flex-col h-full flex-grow">
-                    <div className="flex justify-between items-start mb-6">
-                        <div className="flex flex-wrap items-center gap-2">
-                            {hasLogo ? (
-                                <div className="p-3 bg-slate-800/50 rounded-xl overflow-hidden backdrop-blur-sm border border-slate-700/50">
-                                    <img src={project.logo} alt={`${project.title} logo`} className="w-10 h-10 object-contain" />
-                                </div>
-                            ) : (
-                                <div className="p-3 bg-slate-800/50 rounded-xl overflow-hidden backdrop-blur-sm border border-slate-700/50">
-                                    <img src="/softwarelogo/no_logo.svg" alt="No logo available" className="w-10 h-10 object-contain opacity-50" />
-                                </div>
-                            )}
-                        </div>
-                        <div className="flex gap-2">
-                            {project.github && (
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-slate-400 hover:text-cyan-400 transition-colors p-2 hover:bg-slate-800/50 rounded-full"
-                                    aria-label="View Source"
-                                    onClick={stopPropagation}
-                                >
-                                    <Github size={20} />
-                                </a>
-                            )}
-                            {project.playStore && (
-                                <a
-                                    href={project.playStore}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-slate-400 hover:text-green-400 transition-colors p-2 hover:bg-slate-800/50 rounded-full"
-                                    aria-label="Google Play Store"
-                                    onClick={stopPropagation}
-                                >
-                                    <Play size={20} />
-                                </a>
-                            )}
-                            {project.download && (
-                                <a
-                                    href={project.download}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-slate-400 hover:text-cyan-400 transition-colors p-2 hover:bg-slate-800/50 rounded-full"
-                                    aria-label="Download"
-                                    onClick={stopPropagation}
-                                >
-                                    <Download size={20} />
-                                </a>
-                            )}
-                            {project.link && (
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-slate-400 hover:text-cyan-400 transition-colors p-2 hover:bg-slate-800/50 rounded-full"
-                                    aria-label="View Project"
-                                    onClick={stopPropagation}
-                                >
-                                    <ExternalLink size={20} />
-                                </a>
-                            )}
-                        </div>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                        {project.inDevelopment && (
-                            <span className="inline-flex items-center gap-1 bg-yellow-400/10 text-yellow-300 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border border-yellow-500/20">
-                                In Development
-                            </span>
-                        )}
-                        {project.openSource && (
-                            <span className="inline-flex items-center gap-1 bg-green-400/10 text-green-300 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border border-green-500/20">
-                                Open Source
-                            </span>
-                        )}
-                        {project.stopped && (
-                            <span className="inline-flex items-center gap-1 bg-red-400/10 text-red-300 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border border-red-500/20">
-                                Dev Stopped
-                            </span>
-                        )}
-                        {project.academic && (
-                            <span className="inline-flex items-center gap-1 bg-purple-400/10 text-purple-300 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border border-purple-500/20">
-                                Academic
-                            </span>
-                        )}
-                        {project.deployed && (
-                            <span className="inline-flex items-center gap-1 bg-blue-400/10 text-blue-300 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border border-blue-500/20">
-                                Live
-                            </span>
-                        )}
-                    </div>
-
-                    <h3 className="text-xl md:text-2xl font-bold text-slate-100 mb-3 group-hover:text-cyan-400 transition-colors tracking-tight">
-                        {project.title}
-                    </h3>
-
-                    <div className="text-slate-400 text-sm leading-relaxed mb-8">
-                        {project.description}
-                    </div>
-
-                    <ul className="flex flex-wrap gap-2 pt-6 border-t border-slate-800/50 mt-auto">
-                        {project.tech.map((tech, i) => {
-                            const logo = techLogoMap[tech];
-                            return (
-                                <li
-                                    key={i}
-                                    className="flex items-center gap-1.5 text-[11px] font-medium text-slate-300 bg-slate-800/50 px-2.5 py-1 rounded-md border border-slate-700/50 hover:border-cyan-500/30 transition-colors"
-                                >
-                                    {logo && <img src={logo} alt={`${tech} logo`} className="w-3.5 h-3.5 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all" />}
-                                    <span>{tech}</span>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </div>
+            {/* Status & Category Badges */}
+            <div className="flex flex-wrap gap-1.5">
+              {project.pfe && (
+                <span className="px-2 py-0.5 rounded-md bg-purple-500/15 text-purple-300 border border-purple-500/30 text-[10px] font-bold uppercase tracking-wider">
+                  PFE / Graduation
+                </span>
+              )}
+              {project.internship && (
+                <span className="px-2 py-0.5 rounded-md bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 text-[10px] font-bold uppercase tracking-wider">
+                  Internship
+                </span>
+              )}
+              {project.freelance && (
+                <span className="px-2 py-0.5 rounded-md bg-orange-500/10 text-orange-400 border border-orange-500/20 text-[10px] font-bold uppercase tracking-wider">
+                  Commercial
+                </span>
+              )}
+              {project.openSource && (
+                <span className="px-2 py-0.5 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-bold uppercase tracking-wider">
+                  Open Source
+                </span>
+              )}
+              {project.deployed && (
+                <span className="px-2 py-0.5 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-[10px] font-bold uppercase tracking-wider">
+                  Live
+                </span>
+              )}
             </div>
+          </div>
+
+          {/* Action Links */}
+          <div className="flex items-center gap-1">
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
+                className="p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-800/80 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
+              >
+                <Github size={18} />
+              </a>
+            )}
+            {project.playStore && (
+              <a
+                href={project.playStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${project.title} on Google Play Store (opens in new tab)`}
+                className="p-2 rounded-lg text-slate-400 hover:text-green-400 hover:bg-slate-800/80 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
+              >
+                <Play size={18} />
+              </a>
+            )}
+            {project.download && (
+              <a
+                href={project.download}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Download ${project.title} (opens in new tab)`}
+                className="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/80 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
+              >
+                <Download size={18} />
+              </a>
+            )}
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${project.title} live link (opens in new tab)`}
+                className="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/80 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
+              >
+                <ExternalLink size={18} />
+              </a>
+            )}
+          </div>
         </div>
-    );
+
+        {/* Project Title */}
+        <h3 className="text-xl font-bold text-slate-100 mb-2 font-heading tracking-tight">
+          <Link
+            to={`/projects/${project.id}`}
+            className="hover:text-cyan-400 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none rounded-sm"
+          >
+            {project.title}
+          </Link>
+        </h3>
+
+        {/* Tagline */}
+        <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3">
+          {project.tagline || (typeof project.description === 'string' ? project.description : 'Explore project architecture, technical challenges, and implementation details.')}
+        </p>
+
+        {/* Richer Featured Project Highlights */}
+        {isFeatured && (
+          <div className="space-y-2 mb-5 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 text-xs">
+            {project.role && (
+              <div className="flex items-baseline gap-1.5 text-slate-400">
+                <span className="font-semibold text-slate-300">Role:</span>
+                <span className="text-slate-400 truncate">{project.role}</span>
+              </div>
+            )}
+            {project.challenges && (
+              <div className="flex items-start gap-1.5 text-slate-400">
+                <span className="font-semibold text-slate-300 flex-shrink-0">Key Challenge:</span>
+                <span className="text-slate-400 line-clamp-2">{project.challenges}</span>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Tech Stack List */}
+        <div className="mt-auto pt-4 border-t border-slate-800/60">
+          <ul className="flex flex-wrap gap-1.5 mb-4">
+            {project.tech.slice(0, isFeatured ? 8 : 6).map((tech) => {
+              const logo = getTechLogo(tech);
+              return (
+                <li
+                  key={tech}
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-950/70 text-slate-300 text-xs font-medium border border-slate-800/80"
+                >
+                  {logo && (
+                    <img
+                      src={logo}
+                      alt=""
+                      width="14"
+                      height="14"
+                      loading="lazy"
+                      className="w-3.5 h-3.5 object-contain opacity-80"
+                    />
+                  )}
+                  <span>{tech}</span>
+                </li>
+              );
+            })}
+            {project.tech.length > (isFeatured ? 8 : 6) && (
+              <li className="inline-flex items-center px-2 py-1 rounded-md bg-slate-950/40 text-slate-500 text-xs font-mono">
+                +{project.tech.length - (isFeatured ? 8 : 6)} more
+              </li>
+            )}
+          </ul>
+
+          {/* Details CTA Link */}
+          <Link
+            to={`/projects/${project.id}`}
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none rounded"
+          >
+            <span>View Architecture &amp; Engineering Details</span>
+            <ArrowRight size={13} />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
