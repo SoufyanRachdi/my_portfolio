@@ -122,6 +122,9 @@ export default function Hero({ onOpenContact }) {
           <span className="px-3 py-1 rounded-lg bg-slate-900/60 border border-slate-800/80">
             🧠 Algorithms (C++/Java)
           </span>
+          <span className="px-3 py-1 rounded-lg bg-slate-900/60 border border-slate-800/80">
+            🔍 Technical SEO &amp; Performance
+          </span>
         </div>
       </div>
     </section>

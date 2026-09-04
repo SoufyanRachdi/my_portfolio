@@ -60,6 +60,8 @@ export const techLogoMap = {
   GitHub: '/softwarelogo/github-icon.svg',
   'VS Code': '/softwarelogo/visual-studio-code-icon.svg',
   CLion: '/softwarelogo/CLion.svg',
+  'Technical SEO': '/softwarelogo/seo-icon.svg',
+  SEO: '/softwarelogo/seo-icon.svg',
   Vercel: '/softwarelogo/vercel-v0-icon.svg',
   XAMPP: '/softwarelogo/xampp-icon.svg',
   PyCharm: '/softwarelogo/pycharm-icon.svg',

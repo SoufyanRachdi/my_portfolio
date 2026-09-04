@@ -51,6 +51,7 @@ const skillGroups = [
     skills: [
       { name: 'React' },
       { name: 'Next.js' },
+      { name: 'Technical SEO' },
       { name: 'Symfony' },
       { name: 'Tailwind' },
       { name: 'Electron' },
