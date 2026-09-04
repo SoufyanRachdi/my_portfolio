@@ -1,9 +1,15 @@
-import { ArrowRight, Mail, Github, FileText, Sparkles, Download } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, Mail, Github, FileText, Sparkles } from 'lucide-react';
 
 export default function Hero({ onOpenContact }) {
+  const handleScrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative pt-6 pb-12 md:pt-10 md:pb-16 lg:pt-12 lg:pb-20">
+    <section id="home" className="scroll-mt-24 relative pt-6 pb-12 md:pt-10 md:pb-16 lg:pt-12 lg:pb-20">
       <div className="flex flex-col items-center gap-8 md:gap-10 text-center max-w-4xl mx-auto">
         {/* Profile Avatar & Status */}
         <div className="relative">
@@ -52,17 +58,24 @@ export default function Hero({ onOpenContact }) {
 
         {/* Primary and Secondary Action CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-          <Link
-            to="/projects"
+          <button
+            type="button"
+            onClick={() => handleScrollTo('projects')}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-sm shadow-lg shadow-cyan-500/20 transition-all hover:-translate-y-0.5 active:scale-95 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
           >
             <span>Explore Featured Work</span>
             <ArrowRight size={16} />
-          </Link>
+          </button>
 
           <button
             type="button"
-            onClick={onOpenContact}
+            onClick={() => {
+              if (onOpenContact) {
+                onOpenContact();
+              } else {
+                handleScrollTo('contact');
+              }
+            }}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-semibold text-sm transition-all hover:-translate-y-0.5 active:scale-95 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
           >
             <Mail size={16} className="text-cyan-400" />

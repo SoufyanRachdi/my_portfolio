@@ -88,19 +88,19 @@ export const projects = [
         ]
     },
 
-    // 2. FOOTBALL MANAGER
+    // 2. FOOTBALL MANAGER MULTIPLAYER ECOSYSTEM
     {
         id: 'football-manager',
-        title: 'Football Manager Multiplayer Game',
-        tagline: 'Real-time multiplayer club management simulation with synchronized transfer market, rooms & NestJS backend',
+        title: 'Football Manager — Multiplayer Game Ecosystem',
+        tagline: 'Multi-component ecosystem: Flutter mobile client with synchronized transfer market (mercato) & modular NestJS/Socket.IO backend',
         category: ['Mobile', 'Games', 'Backend'],
         description: (
             <>
                 <p className="mb-2">
-                    A real-time multiplayer football club management simulation game built with Flutter and a modular NestJS backend architecture.
+                    A real-time multiplayer football club management simulation ecosystem built with a cross-platform Flutter client and a modular NestJS server architecture.
                 </p>
                 <p className="mb-2">
-                    Features synchronized multiplayer match lobbies via Socket.IO, a live transfer market (mercato) with dynamic bidding mechanics, custom tactical formation builders, squad depth management, and club financial balance sheets.
+                    Features synchronized multiplayer match lobbies via Socket.IO, a live transfer market (mercato) with dynamic real-time bidding mechanics, custom tactical formation builders, squad depth management, and club financial balance sheets.
                 </p>
                 <p>
                     Employs CockroachDB to guarantee distributed ACID transactions and prevent race conditions during high-concurrency player transfer auctions and match resolution states.
@@ -110,40 +110,91 @@ export const projects = [
         problemSolved: 'Delivers an interactive, low-latency multiplayer club management experience with server-authoritative state synchronization, live transfer bidding, and distributed database consistency.',
         role: 'Full-Stack & Game Developer',
         challenges: 'Designing server-authoritative state resolution with Socket.IO, handling concurrent race conditions during player transfer auctions in CockroachDB, and building a responsive mobile game UI in Flutter.',
-        tech: ['Flutter', 'Dart', 'NestJS', 'Socket.IO', 'CockroachDB', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
+        tech: ['Flutter', 'Dart', 'NestJS', 'Socket.IO', 'CockroachDB', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
         images: footballManagerProjectImages,
         logo: '/projectsimages/football-manager/applogo.png',
         featured: true,
-        priority: 2
+        isEcosystem: true,
+        priority: 2,
+        ecosystem: [
+            {
+                id: 'football-manager-mobile',
+                title: 'Football Manager Mobile Game Client',
+                badge: 'Lead Mobile Developer',
+                role: 'Game Client & UI Architect',
+                status: 'Core Implementation',
+                tech: ['Flutter', 'Dart', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+                description: 'Cross-platform mobile game client providing tactical formation builders, squad depth management, live transfer market bidding interfaces, and real-time match visualizations.'
+            },
+            {
+                id: 'football-manager-backend',
+                title: 'NestJS Game Engine & State Server',
+                badge: 'Lead Backend Developer',
+                role: 'Game Server & Distributed DB Architect',
+                status: 'Core Implementation',
+                tech: ['NestJS', 'Socket.IO', 'CockroachDB', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
+                description: 'Modular NestJS backend orchestrating server-authoritative match room matchmaking, synchronized live transfer market auctions, and distributed ACID transactions via CockroachDB.'
+            }
+        ]
     },
 
-    // 3. QUIZAPP
+    // 3. QUIZAPP ARENA MULTIPLAYER ECOSYSTEM
     {
         id: 'quizapp',
-        title: 'Multiplayer Quiz Arena',
-        tagline: 'Live synchronized competitive quiz game with real-time room matchmaking and Supabase backend',
-        category: ['Mobile', 'Games', 'Backend'],
+        title: 'QuizApp Arena — Multiplayer Trivia Ecosystem',
+        tagline: 'Multi-component gaming ecosystem: Flutter mobile app, synchronized Node.js WebSocket backend & admin management portal',
+        category: ['Mobile', 'Games', 'Backend', 'Web'],
         description: (
             <>
                 <p className="mb-2">
-                    A real-time competitive multiplayer trivia game developed in Flutter with a Node.js / Express.js and Socket.IO backend service, integrated with Supabase.
+                    A real-time competitive multiplayer trivia game ecosystem developed in Flutter with a Node.js / Express.js and Socket.IO backend service, integrated with Supabase and a dedicated administrative management dashboard.
                 </p>
                 <p className="mb-2">
                     Supports instant multiplayer room matchmaking, synchronized sub-second question countdown timers, real-time score broadcasting across connected clients, and dynamic category-based question catalogs.
                 </p>
                 <p>
-                    Demonstrates full-stack mobile engineering spanning frontend state synchronization, WebSocket communication channels, and cloud database persistence.
+                    Demonstrates full-stack engineering spanning synchronized mobile state, WebSocket channels, cloud database persistence, and administrative content curation.
                 </p>
             </>
         ),
         problemSolved: 'Provides a low-latency real-time multiplayer quiz environment with synchronized timers, room matchmaking, and cloud database persistence.',
         role: 'Full-Stack & Mobile Developer',
         challenges: 'Synchronizing sub-second countdown timers across mobile clients via WebSockets and handling graceful client reconnection states during active matches.',
-        tech: ['Flutter', 'Dart', 'Node.js', 'Express.js', 'Socket.IO', 'Supabase', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
+        tech: ['Flutter', 'Dart', 'Node.js', 'Express.js', 'Socket.IO', 'Supabase', 'Flutter Web', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
         images: quizAppProjectImages,
         logo: '/projectsimages/quizapp/applogo.png',
         featured: true,
-        priority: 3
+        isEcosystem: true,
+        priority: 3,
+        ecosystem: [
+            {
+                id: 'quizapp-mobile',
+                title: 'QuizApp Arena Mobile Client',
+                badge: 'Lead Mobile Developer',
+                role: 'Mobile Client & Real-Time Sync',
+                status: 'Core Implementation',
+                tech: ['Flutter', 'Dart', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+                description: 'Competitive multiplayer mobile app featuring sub-second countdown timers, dynamic category catalogs, live score broadcasts, and match arenas.'
+            },
+            {
+                id: 'quizapp-backend',
+                title: 'Node.js & Socket.IO Match Service',
+                badge: 'Lead Backend Developer',
+                role: 'Real-Time Server & WebSocket Architect',
+                status: 'Core Implementation',
+                tech: ['Node.js', 'Express.js', 'Socket.IO', 'Supabase', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
+                description: 'High-throughput WebSocket backend orchestrating real-time room matchmaking, synchronized countdown timer events, and persistent score leaderboards via Supabase.'
+            },
+            {
+                id: 'quizapp-admin',
+                title: 'QuizApp Admin Web Dashboard',
+                badge: 'Full-Stack Developer',
+                role: 'Admin Dashboard & Content Management',
+                status: 'Web Administration',
+                tech: ['Flutter Web', 'Supabase', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
+                description: 'Web administration panel for quiz curators to author question banks, categorize trivia catalogs, review match analytics, and moderate player accounts.'
+            }
+        ]
     },
 
     // 4. ANTI-SCROLL

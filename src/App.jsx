@@ -1,16 +1,40 @@
 import { useState, useRef, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Link, useLocation, useNavigate } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import ContactModal from './components/ContactModal';
 import FloatingSkills from './components/FloatingSkills';
-import About from './pages/About';
-import Skills from './pages/Skills';
-import Experience from './pages/Experience';
-import Projects from './pages/Projects';
+import Home from './pages/Home';
 import ProjectDetail from './pages/ProjectDetail';
-import Certifications from './pages/Certifications';
 import { socialLinks } from './utils/socialLinks';
+
+function FooterLink({ id, label }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        window.history.replaceState(null, '', `#${id}`);
+      }
+    } else {
+      navigate(`/#${id}`);
+    }
+  };
+
+  return (
+    <a
+      href={`#${id}`}
+      onClick={handleClick}
+      className="hover:text-cyan-400 transition-colors cursor-pointer"
+    >
+      {label}
+    </a>
+  );
+}
 
 function Layout() {
   const cursorRef = useRef(null);
@@ -55,18 +79,14 @@ function Layout() {
       />
 
       {/* Main Page Layout Wrapper */}
-      <div className="relative z-10 mx-auto max-w-screen-lg px-4 sm:px-6 md:px-8 py-6 md:py-8 flex flex-col min-h-screen">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 md:px-8 py-6 md:py-8 flex flex-col min-h-screen">
         <Navbar onOpenContact={openContact} />
 
         {/* Main Content Area */}
         <main id="main-content" tabIndex={-1} className="flex-grow focus:outline-none">
           <Routes>
-            <Route path="/" element={<About onOpenContact={openContact} />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/" element={<Home onOpenContact={openContact} />} />
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
-            <Route path="/certifications" element={<Certifications />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
@@ -90,19 +110,25 @@ function Layout() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-slate-400">
-            <Link to="/" className="hover:text-slate-200 transition-colors">About</Link>
+            <FooterLink id="home" label="Home" />
             <span>·</span>
-            <Link to="/skills" className="hover:text-slate-200 transition-colors">Skills</Link>
+            <FooterLink id="about" label="About" />
             <span>·</span>
-            <Link to="/projects" className="hover:text-slate-200 transition-colors">Projects</Link>
+            <FooterLink id="projects" label="Projects" />
             <span>·</span>
-            <Link to="/experience" className="hover:text-slate-200 transition-colors">Experience</Link>
+            <FooterLink id="experience" label="Experience" />
             <span>·</span>
-            <Link to="/certifications" className="hover:text-slate-200 transition-colors">Certifications</Link>
+            <FooterLink id="education" label="Education" />
+            <span>·</span>
+            <FooterLink id="skills" label="Skills" />
+            <span>·</span>
+            <FooterLink id="certifications" label="Certifications" />
+            <span>·</span>
+            <FooterLink id="contact" label="Contact" />
           </div>
 
           <p className="text-slate-500">
-            &copy; {new Date().getFullYear()} Soufyan Rachdi. Built with React, Vite &amp; Tailwind CSS.
+            &copy; {new Date().getFullYear()} Soufyan Rachdi · Computer Science Graduate &amp; Software Developer. Built with React, Vite &amp; Tailwind CSS.
           </p>
         </footer>
       </div>
