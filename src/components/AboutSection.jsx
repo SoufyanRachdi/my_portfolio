@@ -13,7 +13,7 @@ export default function AboutSection() {
           Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Focus &amp; Architecture</span>
         </h2>
         <p className="text-slate-400 max-w-3xl text-sm md:text-base leading-relaxed">
-          I am a Computer Science graduate from the <span className="text-slate-200 font-medium">Higher Institute of Computer Science and Multimedia of Gabès (ISIMG)</span>. I combine rigorous academic foundations in algorithms, relational databases, and operating systems with production experience building full-stack web platforms, real-time backend microservices, and cross-platform mobile apps with hardware BLE integration.
+          I am a Tunisian Computer Science graduate from the <span className="text-slate-200 font-medium">Higher Institute of Computer Science and Multimedia of Gabès (ISIMG)</span>, based in <span className="text-slate-200 font-medium">Médenine &amp; Gabès, Tunisia</span>. As a Junior Full-Stack &amp; Mobile Developer, I combine rigorous academic foundations in algorithms, relational databases, and operating systems with production experience building cross-platform <span className="text-slate-200 font-medium">Flutter applications</span>, <span className="text-slate-200 font-medium">Node.js &amp; NestJS backend microservices</span>, real-time WebSockets, and hardware BLE IoT telemetry.
         </p>
       </div>
 

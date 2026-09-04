@@ -38,7 +38,7 @@ export default function Hero({ onOpenContact }) {
         <div className="space-y-4 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
             <Sparkles size={14} />
-            <span>Computer Science Graduate · ISIMG</span>
+            <span>Computer Science Graduate · ISIMG (Tunisia)</span>
           </div>
 
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-tight">
@@ -46,7 +46,7 @@ export default function Hero({ onOpenContact }) {
           </h1>
 
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-300 font-heading">
-            Full-Stack &amp; Mobile Software Developer
+            Junior Full-Stack &amp; Flutter Mobile Developer
           </h2>
 
           <p className="mx-auto max-w-2xl text-slate-400 text-base md:text-lg leading-relaxed font-normal">
