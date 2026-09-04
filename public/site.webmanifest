@@ -1,0 +1,21 @@
+{
+  "name": "Soufyan Rachdi — Developer Portfolio",
+  "short_name": "Soufyan Rachdi",
+  "description": "Portfolio of Soufyan Rachdi, Tunisian Computer Science Graduate, Junior Full-Stack & Mobile Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "icons": [
+    {
+      "src": "/headerphoto.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/headerphoto.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

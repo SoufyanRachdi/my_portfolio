@@ -32,6 +32,20 @@ export default function ProjectDetail() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activeImageIndex, project]);
 
+  // Dynamic SEO metadata for case study indexing
+  useEffect(() => {
+    if (project) {
+      document.title = `${project.title} — Case Study & Architecture | Soufyan Rachdi`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute('content', `${project.subtitle} Built with ${project.tech.slice(0, 5).join(', ')} by Soufyan Rachdi.`);
+      }
+    }
+    return () => {
+      document.title = 'Soufyan Rachdi — Full-Stack & Mobile Flutter Developer | Portfolio';
+    };
+  }, [project]);
+
   if (!project) {
     return (
       <section className="py-16 text-center space-y-4 animate-fade-in">
