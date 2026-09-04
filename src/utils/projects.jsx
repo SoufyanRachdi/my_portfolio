@@ -73,8 +73,8 @@ export const projects = [
                 badge: 'Interfaced Startup Component',
                 role: 'Collaborative Startup Module',
                 status: 'Integrated with API',
-                tech: ['Python', 'AI/ML', 'Biometric Signal Processing'],
-                description: 'Machine learning classification pipeline designed to ingest time-series ECG data from our backend REST API to detect cardiac anomalies and assist in early diagnosis.'
+                tech: ['Python', 'Keras', 'Anaconda', 'AI/ML', 'Biometric Signal Processing'],
+                description: 'Machine learning classification pipeline developed in Python using Keras and Anaconda environment, designed to ingest time-series ECG data from our backend REST API to detect cardiac anomalies and assist in early diagnosis.'
             },
             {
                 id: 'caredify-portal',
@@ -92,7 +92,7 @@ export const projects = [
     {
         id: 'football-manager',
         title: 'Football Manager — Multiplayer Game Ecosystem',
-        tagline: 'Multi-component ecosystem: Flutter mobile client with synchronized transfer market (mercato) & modular NestJS/Socket.IO backend',
+        tagline: 'Multi-component ecosystem: Flutter mobile client with synchronized transfer market (mercato) & modular NestJS, Prisma, Redis, BullMQ & Render backend',
         category: ['Mobile', 'Games', 'Backend'],
         description: (
             <>
@@ -103,14 +103,14 @@ export const projects = [
                     Features synchronized multiplayer match lobbies via Socket.IO, a live transfer market (mercato) with dynamic real-time bidding mechanics, custom tactical formation builders, squad depth management, and club financial balance sheets.
                 </p>
                 <p>
-                    Employs CockroachDB to guarantee distributed ACID transactions and prevent race conditions during high-concurrency player transfer auctions and match resolution states.
+                    Employs Prisma ORM with CockroachDB for distributed ACID transactions, Redis caching for fast session state, BullMQ background job queues for scheduled match simulations and auction expiration timers, deployed on Render cloud infrastructure.
                 </p>
             </>
         ),
-        problemSolved: 'Delivers an interactive, low-latency multiplayer club management experience with server-authoritative state synchronization, live transfer bidding, and distributed database consistency.',
+        problemSolved: 'Delivers an interactive, low-latency multiplayer club management experience with server-authoritative state synchronization, live transfer bidding, Redis caching, BullMQ auction job queues, and distributed database consistency.',
         role: 'Full-Stack & Game Developer',
-        challenges: 'Designing server-authoritative state resolution with Socket.IO, handling concurrent race conditions during player transfer auctions in CockroachDB, and building a responsive mobile game UI in Flutter.',
-        tech: ['Flutter', 'Dart', 'NestJS', 'Socket.IO', 'CockroachDB', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+        challenges: 'Designing server-authoritative state resolution with Socket.IO, orchestrating asynchronous auction expiration timers using BullMQ & Redis, and guaranteeing ACID consistency during high-concurrency player transfers via Prisma & CockroachDB.',
+        tech: ['Flutter', 'Dart', 'NestJS', 'Socket.IO', 'Prisma', 'CockroachDB', 'Redis', 'BullMQ', 'Render', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
         images: footballManagerProjectImages,
         logo: '/projectsimages/football-manager/applogo.png',
         featured: true,
@@ -132,8 +132,8 @@ export const projects = [
                 badge: 'Lead Backend Developer',
                 role: 'Game Server & Distributed DB Architect',
                 status: 'Core Implementation',
-                tech: ['NestJS', 'Socket.IO', 'CockroachDB', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
-                description: 'Modular NestJS backend orchestrating server-authoritative match room matchmaking, synchronized live transfer market auctions, and distributed ACID transactions via CockroachDB.'
+                tech: ['NestJS', 'Socket.IO', 'Prisma', 'CockroachDB', 'Redis', 'BullMQ', 'Render', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
+                description: 'Modular NestJS backend orchestrating server-authoritative match room matchmaking, synchronized live transfer market auctions, Redis in-memory caching, BullMQ delayed job processing, and distributed ACID transactions via Prisma & CockroachDB deployed on Render.'
             }
         ]
     },
