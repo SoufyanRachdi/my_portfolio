@@ -248,51 +248,99 @@
   <body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
     <!-- Server-Side Crawler Fallback Content for Non-JS Search Engine Spiders -->
     <div id="root">
-      <header style="padding: 20px; text-align: center;">
-        <h1>Soufyan Rachdi</h1>
-        <h2>Full-Stack &amp; Flutter Mobile Developer</h2>
+      <nav aria-label="Fallback Navigation" style="padding: 12px 20px; text-align: center; border-bottom: 1px solid #1e293b;">
+        <a href="#home" style="margin: 0 10px; color: #38bdf8; text-decoration: none;">Home</a>
+        <a href="#about" style="margin: 0 10px; color: #38bdf8; text-decoration: none;">About</a>
+        <a href="#skills" style="margin: 0 10px; color: #38bdf8; text-decoration: none;">Skills</a>
+        <a href="#projects" style="margin: 0 10px; color: #38bdf8; text-decoration: none;">Projects</a>
+        <a href="#experience" style="margin: 0 10px; color: #38bdf8; text-decoration: none;">Experience</a>
+        <a href="#contact" style="margin: 0 10px; color: #38bdf8; text-decoration: none;">Contact</a>
+        <a href="/cv.pdf" style="margin: 0 10px; color: #38bdf8; text-decoration: none;">Curriculum Vitae</a>
+      </nav>
+
+      <header id="home" style="padding: 30px 20px; text-align: center; max-width: 900px; margin: 0 auto;">
+        <h1>Soufyan Rachdi — Full-Stack &amp; Flutter Mobile Developer</h1>
         <p>
-          Computer Science graduate from the Higher Institute of Computer Science and Multimedia of Gabès (ISIMG), based in Médenine &amp; Gabès, Tunisia. Specializing in cross-platform mobile apps with Flutter &amp; Dart, backend services with Node.js &amp; NestJS, real-time WebSockets, and Bluetooth Low Energy (BLE) telemetry.
+          Welcome to the official portfolio of Soufyan Rachdi, a Tunisian Computer Science graduate from the Higher Institute of Computer Science and Multimedia of Gabès (ISIMG), based in Médenine and Gabès, Tunisia. Soufyan Rachdi is a Full-Stack and Flutter Mobile Developer specializing in cross-platform mobile applications, scalable Node.js and NestJS backend APIs, distributed databases, real-time WebSockets, and Bluetooth Low Energy (BLE) IoT telemetry systems.
+        </p>
+        <p>
+          Explore verified open-source repositories and profiles:
+          <a href="https://github.com/SoufyanRachdi" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; margin: 0 8px;">GitHub Profile</a> ·
+          <a href="https://www.linkedin.com/in/soufyan-rachdi-996061247/" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; margin: 0 8px;">LinkedIn Profile</a> ·
+          <a href="https://pypi.org/project/mkarchi/" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; margin: 0 8px;">Mkarchi on PyPI</a> ·
+          <a href="https://play.google.com/store/apps/details?id=com.app.kabaadhub" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; margin: 0 8px;">KabaadHub on Google Play</a>
         </p>
       </header>
+
       <main style="padding: 20px; max-width: 900px; margin: 0 auto;">
-        <section>
-          <h2>Featured Software Engineering Projects</h2>
-          <ul>
-            <li>
-              <a href="/projects/caredify"><strong>Caredify</strong></a> — Healthcare IoT telemetry ecosystem streaming live ECG cardiac waveforms over BLE to a Node.js/MongoDB Atlas cloud backend.
-            </li>
-            <li>
-              <a href="/projects/football-manager"><strong>Football Manager</strong></a> — Multiplayer real-time tactical game with NestJS, Socket.IO, Prisma ORM, and CockroachDB distributed transactions.
-            </li>
-            <li>
-              <a href="/projects/kabaadhub"><strong>KabaadHub</strong></a> — Production recycling marketplace mobile application published on the Google Play Store built with Flutter and Firebase.
-            </li>
-            <li>
-              <a href="/projects/mkarchi"><strong>Mkarchi</strong></a> — Open-source developer CLI and architecture scaffolding ecosystem published on PyPI.
-            </li>
-            <li>
-              <a href="/projects/quizapp"><strong>QuizApp Arena</strong></a> — Real-time multiplayer trivia arena with Socket.IO countdown synchronization and Supabase.
-            </li>
-            <li>
-              <a href="/projects/anti-scroll"><strong>Anti-Scroll</strong></a> — Native Android digital wellbeing utility built with Java and Android Accessibility Service.
-            </li>
-            <li>
-              <a href="/projects/restaurant-management"><strong>Restaurant Management System</strong></a> — Desktop enterprise management system built in Java Swing MVC with MySQL.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Academic Education &amp; Diplomas</h2>
-          <ul>
-            <li><strong>Licence in Computer Science</strong> — Higher Institute of Computer Science and Multimedia of Gabès (ISIMG), 2026.</li>
-            <li><strong>Baccalauréat in Computer Science</strong> — Lycée Route de Gabès (Mention Bien, 15.79/20), 2023.</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Core Technical Stack &amp; Skills</h2>
+        <section id="about" style="margin-bottom: 30px;">
+          <h2>Engineering Profile &amp; Technical Background</h2>
           <p>
-            Flutter, Dart, Node.js, Express.js, NestJS, React, Next.js, Socket.IO, Bluetooth Low Energy (BLE), MongoDB Atlas, CockroachDB, Prisma ORM, Redis, BullMQ, PostgreSQL, Supabase, Java, Kotlin, Python, C++, Technical SEO, Git, GitHub, Linux.
+            Soufyan Rachdi combines solid academic foundations in computer science, data structures, algorithms, and relational database design with practical production engineering experience. With a Licence in Computer Science from ISIMG (2026) and a Baccalauréat in Computer Science with Honors (Mention Bien, 15.79/20, 2023), Soufyan specializes in building maintainable software architectures. His focus spans cross-platform mobile development with Flutter and Dart, backend microservices with Node.js and NestJS, real-time event-driven systems using Socket.IO, distributed transactions with CockroachDB and Prisma ORM, and wearable BLE medical telemetry.
+          </p>
+        </section>
+
+        <section id="projects" style="margin-bottom: 30px;">
+          <h2>Featured Software Engineering Projects &amp; Case Studies</h2>
+          <ul>
+            <li style="margin-bottom: 12px;">
+              <a href="/projects/caredify" style="color: #38bdf8; font-weight: bold;">Caredify Healthcare Telemetry</a> — Remote ECG cardiac monitoring platform streaming biometric waveforms over BLE to a cloud Node.js and MongoDB Atlas backend with automated arrhythmia anomaly detection. Learn more on the official <a href="https://www.linkedin.com/company/caredify-396/posts/?feedView=all" target="_blank" rel="noopener noreferrer" style="color: #38bdf8;">Caredify LinkedIn Company Page</a>.
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="/projects/football-manager" style="color: #38bdf8; font-weight: bold;">Football Manager Multiplayer Game</a> — Real-time tactical football ecosystem featuring NestJS match state coordination, Socket.IO bidirectional event sync, CockroachDB distributed ACID transactions, Prisma ORM, Redis session caching, and BullMQ task queues.
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="/projects/kabaadhub" style="color: #38bdf8; font-weight: bold;">KabaadHub Commercial Marketplace</a> — Commercial scrap and recycling marketplace published on the Google Play Store, engineered with Flutter, Firebase authentication, real-time geolocation filtering, and an administrative moderation dashboard.
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="/projects/mkarchi" style="color: #38bdf8; font-weight: bold;">Mkarchi Developer Tooling Ecosystem</a> — Open-source developer scaffolding engine published on PyPI as a Python CLI, accompanied by an Electron desktop workspace and Next.js documentation portal.
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="/projects/quizapp" style="color: #38bdf8; font-weight: bold;">QuizApp Arena</a> — Real-time competitive trivia platform with sub-second synchronized game timers, built with Flutter, Node.js Socket.IO server, and Supabase cloud persistence.
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="/projects/anti-scroll" style="color: #38bdf8; font-weight: bold;">Anti-Scroll Digital Wellbeing</a> — Native Android accessibility utility developed in Java utilizing the Android Accessibility Service API to detect and prevent compulsive short-form video doomscrolling.
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="/projects/restaurant-management" style="color: #38bdf8; font-weight: bold;">Restaurant Management System</a> — Enterprise desktop management solution built in Java Swing MVC with MySQL database persistence and printable receipt reporting.
+            </li>
+          </ul>
+        </section>
+
+        <section id="experience" style="margin-bottom: 30px;">
+          <h2>Professional Experience &amp; Internships</h2>
+          <ul>
+            <li style="margin-bottom: 12px;">
+              <span style="font-weight: 600; color: #e2e8f0;">Software Engineering Intern (Graduation Project / PFE) — Caredify</span> (Jan 2026 – Jun 2026): Led the end-to-end architecture of a Bluetooth Low Energy (BLE) mobile telemetry application in Flutter, integrating real-time ECG signal processing, secure token-based authentication, and Node.js backend cloud synchronization.
+            </li>
+            <li style="margin-bottom: 12px;">
+              <span style="font-weight: 600; color: #e2e8f0;">Freelance Mobile &amp; Full-Stack Developer</span> (2024 – Present): Delivered bespoke production mobile applications, high-performance RESTful APIs, and responsive web portals for international clients with automated CI/CD and Technical SEO optimization.
+            </li>
+          </ul>
+        </section>
+
+        <section id="skills" style="margin-bottom: 30px;">
+          <h2>Core Technical Stack &amp; Competencies</h2>
+          <p>
+            <strong>Full-Stack &amp; Mobile Technologies:</strong> Flutter, Dart, Android SDK, Java, Kotlin, Node.js, Express.js, NestJS, React, Next.js, Vite, Tailwind CSS, Electron, Socket.IO WebSockets, Bluetooth Low Energy (BLE), PostgreSQL, CockroachDB, MongoDB Atlas, Prisma ORM, Redis, BullMQ, Supabase, Python, C++, Linux, Git, GitHub Actions, Technical SEO.
+          </p>
+        </section>
+
+        <section id="education" style="margin-bottom: 30px;">
+          <h2>Academic Degrees &amp; Credentials</h2>
+          <ul>
+            <li><strong>Licence in Computer Science</strong> — Higher Institute of Computer Science and Multimedia of Gabès (ISIMG), University of Gabès, Tunisia (2026).</li>
+            <li><strong>Baccalauréat in Computer Science</strong> — Lycée Route de Gabès (Mention Bien, 15.79/20), Médenine, Tunisia (2023).</li>
+          </ul>
+        </section>
+
+        <section id="contact" style="margin-bottom: 30px;">
+          <h2>Contact &amp; Hiring Inquiries</h2>
+          <p>
+            Soufyan Rachdi is actively available for Full-Stack Developer, Mobile Developer (Flutter/Android), and Software Engineering opportunities in Tunisia (Tunis, Sousse, Sfax, Gabès), European nearshore teams, and international remote positions.
+          </p>
+          <p>
+            Reach out directly via email at <a href="mailto:rachdisoufyan@gmail.com" style="color: #38bdf8;">rachdisoufyan@gmail.com</a> or phone/WhatsApp at <a href="tel:+21650393278" style="color: #38bdf8;">+216 50 393 278</a>.
           </p>
         </section>
       </main>
