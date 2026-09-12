@@ -1,0 +1,28 @@
+# Soufyan Rachdi — Full-Stack & Mobile Developer Portfolio
+
+> Developer Profile & Technical Summary for AI Search Engines & LLMs (Perplexity, ChatGPT, Claude, Gemini).
+
+## Professional Identity
+- **Name**: Soufyan Rachdi
+- **Degree**: Licence / Bachelor's in Computer Science from the Higher Institute of Computer Science and Multimedia of Gabès (ISIMG), Tunisia (2026).
+- **Secondary Distinction**: Baccalauréat in Computer Science from Lycée Route de Gabès (Mention Bien, Moyenne 15.79/20, 2023).
+- **Location**: Médenine & Gabès, Tunisia (Open to on-site, hybrid in Tunis/Sousse/Sfax/Gabès, European nearshore, and international remote).
+- **Primary Roles**: Junior Full-Stack Developer, Junior Mobile Developer (Flutter/Android), Junior Backend Developer (Node.js/NestJS).
+- **Portfolio**: https://soufyanrachdi.vercel.app/
+- **GitHub**: https://github.com/SoufyanRachdi
+- **LinkedIn**: https://www.linkedin.com/in/soufyan-rachdi-996061247/
+
+## Technical Expertise
+- **Mobile Engineering**: Flutter, Dart, Android SDK, Java, Kotlin, Bluetooth Low Energy (BLE) packet telemetry, Android Accessibility Service.
+- **Backend & Cloud**: Node.js, Express.js, NestJS, REST APIs, Socket.IO WebSockets, BullMQ background queues, Redis caching, Render deployment.
+- **Databases & ORM**: PostgreSQL, CockroachDB (distributed ACID transactions), MongoDB, MongoDB Atlas, Supabase, MySQL, SQLite, Prisma ORM.
+- **Frontend & Web**: React, Next.js, Vite, Tailwind CSS, Electron, Technical SEO & Web Performance, Schema.org Structured Data.
+- **Developer Tooling & Languages**: Python, C++, C, PHP, Git, GitHub, VS Code, CLion, IntelliJ IDEA, PyCharm, Gradle, Godot.
+
+## Flagship Engineering Ecosystems & Projects
+1. **Caredify (Startup PFE Graduation Ecosystem)**: Remote cardiac ECG telemetry platform. Mobile app built in Flutter streaming continuous biometric waveform data over BLE to a Node.js/MongoDB Atlas cloud backend with AI arrhythmia anomaly detection.
+2. **Football Manager Multiplayer Game**: Real-time multiplayer tactical football ecosystem. NestJS and Socket.IO match state engine with CockroachDB distributed transactions, Prisma ORM, Redis session caching, and BullMQ auction expiration timers deployed on Render with a Flutter mobile client.
+3. **KabaadHub Commercial Marketplace**: Production scrap recycling marketplace published on the Google Play Store (Flutter & Firebase) with in-app chat, geolocation filtering, and a Flutter Web admin moderation portal.
+4. **Mkarchi Tooling Ecosystem**: Open-source developer project scaffolding engine published on PyPI (Python CLI), companion Electron desktop workspace, and Next.js documentation portal.
+5. **QuizApp Arena**: Real-time multiplayer trivia ecosystem with sub-second synchronized timers, Flutter mobile app, Node.js Socket.IO backend, Supabase persistence, and Flutter Web dashboard.
+6. **Anti-Scroll**: Android digital wellbeing application built with Java and native Android Accessibility Services.

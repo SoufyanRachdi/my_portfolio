@@ -156,7 +156,7 @@ export default function SkillsSection({ onSelectSkill }) {
                         {logo ? (
                           <img
                             src={logo}
-                            alt=""
+                            alt={`${skill.name} icon`}
                             width="20"
                             height="20"
                             loading="lazy"

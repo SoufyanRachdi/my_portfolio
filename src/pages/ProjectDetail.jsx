@@ -222,7 +222,7 @@ export default function ProjectDetail() {
                   {logo && (
                     <img
                       src={logo}
-                      alt=""
+                      alt={`${tech} icon`}
                       width="14"
                       height="14"
                       loading="lazy"

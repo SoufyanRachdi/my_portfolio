@@ -6,6 +6,7 @@ import ContactModal from './components/ContactModal';
 import FloatingSkills from './components/FloatingSkills';
 import Home from './pages/Home';
 import ProjectDetail from './pages/ProjectDetail';
+import NotFound from './pages/NotFound';
 import { socialLinks } from './utils/socialLinks';
 
 function FooterLink({ id, label }) {
@@ -87,7 +88,7 @@ function Layout() {
           <Routes>
             <Route path="/" element={<Home onOpenContact={openContact} />} />
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
 
