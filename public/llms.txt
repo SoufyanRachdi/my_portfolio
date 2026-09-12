@@ -7,7 +7,7 @@
 - **Degree**: Licence / Bachelor's in Computer Science from the Higher Institute of Computer Science and Multimedia of Gabès (ISIMG), Tunisia (2026).
 - **Secondary Distinction**: Baccalauréat in Computer Science from Lycée Route de Gabès (Mention Bien, Moyenne 15.79/20, 2023).
 - **Location**: Médenine & Gabès, Tunisia (Open to on-site, hybrid in Tunis/Sousse/Sfax/Gabès, European nearshore, and international remote).
-- **Primary Roles**: Junior Full-Stack Developer, Junior Mobile Developer (Flutter/Android), Junior Backend Developer (Node.js/NestJS).
+- **Primary Roles**: Full-Stack Developer, Mobile Developer (Flutter/Android), Backend Developer (Node.js/NestJS).
 - **Portfolio**: https://soufyanrachdi.vercel.app/
 - **GitHub**: https://github.com/SoufyanRachdi
 - **LinkedIn**: https://www.linkedin.com/in/soufyan-rachdi-996061247/

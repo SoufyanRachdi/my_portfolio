@@ -46,7 +46,7 @@ export default function Hero({ onOpenContact }) {
           </h1>
 
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-300 font-heading">
-            Junior Full-Stack &amp; Flutter Mobile Developer
+            Full-Stack &amp; Flutter Mobile Developer
           </h2>
 
           <p className="mx-auto max-w-2xl text-slate-400 text-base md:text-lg leading-relaxed font-normal">
