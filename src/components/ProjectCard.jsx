@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Github, ExternalLink, Download, Play, ArrowRight, Network, ShieldCheck } from 'lucide-react';
+import { Github, ExternalLink, Download, Play, ArrowRight, Network, ShieldCheck, Linkedin } from 'lucide-react';
 import { getTechLogo } from '../utils/techLogos';
 
 export default function ProjectCard({ project }) {
@@ -131,6 +131,17 @@ export default function ProjectCard({ project }) {
                 className="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/80 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
               >
                 <ExternalLink size={18} />
+              </a>
+            )}
+            {project.linkedin && (
+              <a
+                href={project.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${project.title} company on LinkedIn (opens in new tab)`}
+                className="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/80 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
+              >
+                <Linkedin size={18} />
               </a>
             )}
           </div>

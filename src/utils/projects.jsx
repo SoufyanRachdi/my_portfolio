@@ -42,6 +42,7 @@ export const projects = [
         tech: ['Flutter', 'Dart', 'BLE', 'Kotlin', 'Node.js', 'Express.js', 'MongoDB', 'MongoDB Atlas', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
         images: caredifyProjectImages,
         logo: '/caredify.png',
+        linkedin: 'https://www.linkedin.com/company/caredify-396/posts/?feedView=all',
         featured: true,
         pfe: true,
         internship: true,
