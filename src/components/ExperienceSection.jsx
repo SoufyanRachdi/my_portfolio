@@ -1,4 +1,4 @@
-import { Briefcase, Trophy, Calendar, ArrowRight, Sparkles } from 'lucide-react';
+import { Briefcase, Trophy, Calendar, ArrowRight, Sparkles, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ExperienceSection() {
@@ -79,13 +79,25 @@ export default function ExperienceSection() {
                   ))}
                 </div>
 
-                <Link
-                  to="/projects/caredify"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <span>View Case Study</span>
-                  <ArrowRight size={13} />
-                </Link>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://www.linkedin.com/company/caredify-396/posts/?feedView=all"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-cyan-400 transition-colors"
+                    aria-label="View Caredify company profile on LinkedIn (opens in new tab)"
+                  >
+                    <Linkedin size={13} />
+                    <span>Company Page</span>
+                  </a>
+                  <Link
+                    to="/projects/caredify"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    <span>View Case Study</span>
+                    <ArrowRight size={13} />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

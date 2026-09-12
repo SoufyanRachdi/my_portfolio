@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Github, ExternalLink, Play, Download, X, ChevronLeft, ChevronRight, CheckCircle2, Layers, ShieldCheck, Network, Box } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink, Play, Download, X, ChevronLeft, ChevronRight, CheckCircle2, Layers, ShieldCheck, Network, Box, Linkedin } from 'lucide-react';
 import { projects } from '../utils/projects';
 import { getTechLogo } from '../utils/techLogos';
 
@@ -201,6 +201,17 @@ export default function ProjectDetail() {
               >
                 <Github size={14} />
                 <span>Source Code</span>
+              </a>
+            )}
+            {project.linkedin && (
+              <a
+                href={project.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs transition-all focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none"
+              >
+                <Linkedin size={14} className="text-cyan-400" />
+                <span>Company on LinkedIn</span>
               </a>
             )}
           </div>
