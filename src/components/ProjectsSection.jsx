@@ -5,7 +5,7 @@ import { projects } from '../utils/projects';
 
 const categories = ['All', 'Mobile', 'Backend', 'Tools', 'Desktop', 'Business Software', 'Games'];
 const statuses = ['All', 'Featured / Flagship', 'Live / Production', 'Open Source', 'Commercial / Client', 'Academic / PFE'];
-const PRIMARY_PROJECT_IDS = ['caredify', 'mkarchi', 'kabaadhub'];
+const PRIMARY_PROJECT_IDS = ['kabaadhub', 'caredify', 'enkivo', 'mkarchi', 'football-manager'];
 
 export default function ProjectsSection({ selectedSkill, onClearSkill }) {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -69,14 +69,14 @@ export default function ProjectsSection({ selectedSkill, onClearSkill }) {
     return list;
   }, [selectedSkill, activeCategory, activeStatus, sortBy]);
 
-  // If no filters are active and user hasn't expanded, display only the 3 flagship ecosystems
+  // If no filters are active and user hasn't expanded, display only the flagship ecosystems
   const displayedProjects = useMemo(() => {
     if (hasActiveFilters || isExpanded) {
       return filteredProjects;
     }
-    // Show only the 3 primary flagship ecosystems: Caredify, Mkarchi, KabaadHub
+    // Show only the primary flagship ecosystems: KabaadHub, Caredify, Enkivo, Mkarchi, Football Manager
     const primaryOnly = filteredProjects.filter((p) => PRIMARY_PROJECT_IDS.includes(p.id));
-    return primaryOnly.length > 0 ? primaryOnly : filteredProjects.slice(0, 3);
+    return primaryOnly.length > 0 ? primaryOnly : filteredProjects.slice(0, PRIMARY_PROJECT_IDS.length);
   }, [filteredProjects, hasActiveFilters, isExpanded]);
 
   const remainingCount = filteredProjects.length - displayedProjects.length;
@@ -197,7 +197,7 @@ export default function ProjectsSection({ selectedSkill, onClearSkill }) {
           </div>
 
           {/* Show More / Show Less Projects Button */}
-          {!hasActiveFilters && filteredProjects.length > 3 && (
+          {!hasActiveFilters && filteredProjects.length > PRIMARY_PROJECT_IDS.length && (
             <div className="text-center pt-2">
               <button
                 type="button"

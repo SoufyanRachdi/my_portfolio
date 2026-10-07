@@ -17,22 +17,22 @@ A modern, high-performance, single-page developer portfolio showcasing multi-com
 
 ## 🚀 Key Engineering Ecosystems Showcased
 
-1. **Caredify (Startup & PFE Graduation Ecosystem)**:
+1. **KabaadHub Commercial Marketplace**:
+   - Production recycling marketplace published on the **Google Play Store** (**Flutter & Firebase**).
+   - Dedicated web moderation portal (**Flutter Web**).
+2. **Caredify (Startup & PFE Graduation Ecosystem)**:
    - Wearable Bluetooth Low Energy (BLE) ECG telemetry streaming in **Flutter & Dart**.
    - Cloud REST API & session history in **Node.js, Express.js & MongoDB Atlas**.
    - Interfaced with Python **Keras / Anaconda** AI arrhythmia detection and clinical web portal.
-2. **Football Manager Multiplayer Game**:
-   - Synchronized match lobbies & live transfer market (mercato) with dynamic bidding.
-   - **NestJS**, **Socket.IO**, **Prisma ORM**, **CockroachDB** (distributed ACID transactions), **Redis** caching, and **BullMQ** background queues deployed on **Render**.
 3. **Enkivo Esports Trivia & Gaming Ecosystem**:
    - 5 game modes (Solo, Casual, Ranked, 10-player Battle Royale, Custom Rooms) across **Flutter**, **Next.js 14**, and **Cloudflare Workers**.
    - Server-authoritative **NestJS 11** game engine, **Socket.IO** (34+ events), **Prisma ORM** (26 models), **Supabase Postgres**, atomic **Redis** Lua queues, and 26-language AI localization deployed on **Render**.
 4. **Mkarchi Tooling Ecosystem**:
    - Multi-platform project scaffolding engine published on **PyPI** (**Python**).
    - Visual GUI workspace (**Electron**) and documentation portal (**Next.js & Tailwind CSS**).
-5. **KabaadHub Commercial Marketplace**:
-   - Production recycling marketplace published on the **Google Play Store** (**Flutter & Firebase**).
-   - Dedicated web moderation portal (**Flutter Web**).
+5. **Football Manager Multiplayer Game**:
+   - Synchronized match lobbies & live transfer market (mercato) with dynamic bidding.
+   - **NestJS**, **Socket.IO**, **Prisma ORM**, **CockroachDB** (distributed ACID transactions), **Redis** caching, and **BullMQ** background queues deployed on **Render**.
 
 ---
 

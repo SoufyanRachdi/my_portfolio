@@ -17,7 +17,59 @@ import {
 } from './images';
 
 export const projects = [
-    // 1. CAREDIFY (PFE & Internship Flagship Ecosystem)
+    // 1. KABAADHUB ECOSYSTEM (Flagship Priority #1)
+    {
+        id: 'kabaadhub',
+        title: 'KabaadHub — Scrap & Recycling Marketplace Ecosystem',
+        tagline: 'Commercial ecosystem: Production Flutter mobile app on Google Play with live chat + Flutter Web admin portal',
+        category: ['Mobile', 'Web', 'Business Software'],
+        description: (
+            <>
+                <p className="mb-2">
+                    A commercial cross-platform marketplace ecosystem engineered for buying and selling recycled goods, scrap materials, and reusable commodities.
+                </p>
+                <p className="mb-2">
+                    Integrates a production mobile application published on the Google Play Store with real-time buyer-seller messaging and geolocation discovery, backed by a dedicated Flutter Web administrative moderation portal.
+                </p>
+            </>
+        ),
+        problemSolved: 'Connects recyclers, scrap dealers, and everyday sellers through a localized real-time exchange marketplace with immediate messaging.',
+        role: 'Freelance Lead Mobile & Full-Stack Developer',
+        challenges: 'Managing real-time messaging state with Cloud Firestore, handling image caching/compression on mobile devices, and building responsive data tables in Flutter Web.',
+        tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Flutter Web', 'Google Play', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+        playStore: 'https://play.google.com/store/apps/details?id=com.kabaadhub.app&pli=1',
+        images: kabaadhubappprojectImages,
+        logo: '/projectsimages/kabaadhub/applogo.png',
+        featured: true,
+        freelance: true,
+        deployed: true,
+        isEcosystem: true,
+        privateRepo: true,
+        priority: 1,
+        ecosystem: [
+            {
+                id: 'kabaadhub-mobile',
+                title: 'KabaadHub Mobile Marketplace App',
+                badge: 'Freelance Lead Mobile Developer',
+                role: 'Lead Mobile Developer',
+                status: 'Published on Google Play',
+                tech: ['Flutter', 'Dart', 'Firebase', 'Google Play', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+                playStore: 'https://play.google.com/store/apps/details?id=com.kabaadhub.app&pli=1',
+                description: 'Production mobile marketplace published on Google Play Store featuring real-time in-app buyer/seller messaging, geolocation discovery, and image upload pipelines.'
+            },
+            {
+                id: 'kabaadhub-admin',
+                title: 'KabaadHub Web Admin Dashboard',
+                badge: 'Freelance Full-Stack Developer',
+                role: 'Full-Stack Developer',
+                status: 'Web Administration',
+                tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Flutter Web', 'VS Code', 'Git', 'GitHub'],
+                description: 'Dedicated web dashboard built with Flutter Web and Firebase for platform administrators to moderate listings, verify merchants, and manage platform permissions.'
+            }
+        ]
+    },
+
+    // 2. CAREDIFY (PFE & Internship Flagship Ecosystem - Priority #2)
     {
         id: 'caredify',
         title: 'Caredify — Remote ECG Monitoring & AI Healthcare Ecosystem',
@@ -48,7 +100,7 @@ export const projects = [
         internship: true,
         privateRepo: true,
         isEcosystem: true,
-        priority: 1,
+        priority: 2,
         ecosystem: [
             {
                 id: 'caredify-mobile',
@@ -89,58 +141,7 @@ export const projects = [
         ]
     },
 
-    // 2. FOOTBALL MANAGER MULTIPLAYER ECOSYSTEM
-    {
-        id: 'football-manager',
-        title: 'Football Manager — Multiplayer Game Ecosystem',
-        tagline: 'Multi-component ecosystem: Flutter mobile client with synchronized transfer market (mercato) & modular NestJS, Prisma, Redis, BullMQ & Render backend',
-        category: ['Mobile', 'Games', 'Backend'],
-        description: (
-            <>
-                <p className="mb-2">
-                    A real-time multiplayer football club management simulation ecosystem built with a cross-platform Flutter client and a modular NestJS server architecture.
-                </p>
-                <p className="mb-2">
-                    Features synchronized multiplayer match lobbies via Socket.IO, a live transfer market (mercato) with dynamic real-time bidding mechanics, custom tactical formation builders, squad depth management, and club financial balance sheets.
-                </p>
-                <p>
-                    Employs Prisma ORM with CockroachDB for distributed ACID transactions, Redis caching for fast session state, BullMQ background job queues for scheduled match simulations and auction expiration timers, deployed on Render cloud infrastructure.
-                </p>
-            </>
-        ),
-        problemSolved: 'Delivers an interactive, low-latency multiplayer club management experience with server-authoritative state synchronization, live transfer bidding, Redis caching, BullMQ auction job queues, and distributed database consistency.',
-        role: 'Full-Stack & Game Developer',
-        challenges: 'Designing server-authoritative state resolution with Socket.IO, orchestrating asynchronous auction expiration timers using BullMQ & Redis, and guaranteeing ACID consistency during high-concurrency player transfers via Prisma & CockroachDB.',
-        tech: ['Flutter', 'Dart', 'NestJS', 'Socket.IO', 'Prisma', 'CockroachDB', 'Redis', 'BullMQ', 'Render', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
-        images: footballManagerProjectImages,
-        logo: '/projectsimages/football-manager/applogo.png',
-        featured: true,
-        isEcosystem: true,
-        privateRepo: true,
-        priority: 2,
-        ecosystem: [
-            {
-                id: 'football-manager-mobile',
-                title: 'Football Manager Mobile Game Client',
-                badge: 'Lead Mobile Developer',
-                role: 'Game Client & UI Architect',
-                status: 'Core Implementation',
-                tech: ['Flutter', 'Dart', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
-                description: 'Cross-platform mobile game client providing tactical formation builders, squad depth management, live transfer market bidding interfaces, and real-time match visualizations.'
-            },
-            {
-                id: 'football-manager-backend',
-                title: 'NestJS Game Engine & State Server',
-                badge: 'Lead Backend Developer',
-                role: 'Game Server & Distributed DB Architect',
-                status: 'Core Implementation',
-                tech: ['NestJS', 'Socket.IO', 'Prisma', 'CockroachDB', 'Redis', 'BullMQ', 'Render', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
-                description: 'Modular NestJS backend orchestrating server-authoritative match room matchmaking, synchronized live transfer market auctions, Redis in-memory caching, BullMQ delayed job processing, and distributed ACID transactions via Prisma & CockroachDB deployed on Render.'
-            }
-        ]
-    },
-
-    // 3. ENKIVO MULTIPLAYER ESPORTS ECOSYSTEM
+    // 3. ENKIVO MULTIPLAYER ESPORTS ECOSYSTEM (Flagship Priority #3)
     {
         id: 'enkivo',
         aliases: ['quizapp'],
@@ -213,37 +214,7 @@ export const projects = [
         ]
     },
 
-    // 4. ANTI-SCROLL
-    {
-        id: 'anti-scroll',
-        title: 'Anti-Scroll Android Utility',
-        tagline: 'Native Android systems utility using Accessibility Services to monitor and regulate addictive scrolling patterns',
-        category: ['Mobile', 'Tools'],
-        description: (
-            <>
-                <p className="mb-2">
-                    A native Android systems utility engineered in Java leveraging the Android Accessibility Service API to monitor window events and intercept compulsive, repetitive short-form video scrolling.
-                </p>
-                <p className="mb-2">
-                    Employs background window state detection, event filtering, configurable time-based intervention thresholds, and battery-efficient event hooks without polling.
-                </p>
-                <p>
-                    Demonstrates deep understanding of native Android operating system internals, background service lifecycles, and OS-level accessibility event listeners.
-                </p>
-            </>
-        ),
-        problemSolved: 'Helps users curb digital distraction by detecting infinite-scroll behaviors across targeted apps and triggering configurable gentle friction interventions.',
-        role: 'Android Systems Developer',
-        challenges: 'Designing high-frequency AccessibilityEvent filters with minimal battery and CPU overhead while safely adhering to Android runtime security sandboxes.',
-        tech: ['Java', 'Android SDK', 'Accessibility Service', 'Android Studio', 'Gradle', 'VS Code', 'Git', 'GitHub'],
-        images: antiScrollProjectImages,
-        logo: '/projectsimages/anti-scroll/applogo.png',
-        featured: true,
-        privateRepo: true,
-        priority: 4
-    },
-
-    // 5. MKARCHI ECOSYSTEM
+    // 4. MKARCHI ECOSYSTEM (Flagship Priority #4)
     {
         id: 'mkarchi',
         title: 'Mkarchi — Developer Scaffolding & Architecture Ecosystem',
@@ -270,10 +241,11 @@ export const projects = [
         link: 'https://www.mkarchi.me/',
         images: [...mkarchiProjectImages, ...mkarchiDesktopProjectImages, ...mkarchiWebProjectImages],
         logo: '/projectsimages/mkarchi/applogo.png',
+        featured: true,
         openSource: true,
         deployed: true,
         isEcosystem: true,
-        priority: 5,
+        priority: 4,
         ecosystem: [
             {
                 id: 'mkarchi-cli',
@@ -311,55 +283,85 @@ export const projects = [
         ]
     },
 
-    // 6. KABAADHUB ECOSYSTEM
+    // 5. FOOTBALL MANAGER MULTIPLAYER ECOSYSTEM (Flagship Priority #5)
     {
-        id: 'kabaadhub',
-        title: 'KabaadHub — Scrap & Recycling Marketplace Ecosystem',
-        tagline: 'Commercial ecosystem: Production Flutter mobile app on Google Play with live chat + Flutter Web admin portal',
-        category: ['Mobile', 'Web', 'Business Software'],
+        id: 'football-manager',
+        title: 'Football Manager — Multiplayer Game Ecosystem',
+        tagline: 'Multi-component ecosystem: Flutter mobile client with synchronized transfer market (mercato) & modular NestJS, Prisma, Redis, BullMQ & Render backend',
+        category: ['Mobile', 'Games', 'Backend'],
         description: (
             <>
                 <p className="mb-2">
-                    A commercial cross-platform marketplace ecosystem engineered for buying and selling recycled goods, scrap materials, and reusable commodities.
+                    A real-time multiplayer football club management simulation ecosystem built with a cross-platform Flutter client and a modular NestJS server architecture.
                 </p>
                 <p className="mb-2">
-                    Integrates a production mobile application published on the Google Play Store with real-time buyer-seller messaging and geolocation discovery, backed by a dedicated Flutter Web administrative moderation portal.
+                    Features synchronized multiplayer match lobbies via Socket.IO, a live transfer market (mercato) with dynamic real-time bidding mechanics, custom tactical formation builders, squad depth management, and club financial balance sheets.
+                </p>
+                <p>
+                    Employs Prisma ORM with CockroachDB for distributed ACID transactions, Redis caching for fast session state, BullMQ background job queues for scheduled match simulations and auction expiration timers, deployed on Render cloud infrastructure.
                 </p>
             </>
         ),
-        problemSolved: 'Connects recyclers, scrap dealers, and everyday sellers through a localized real-time exchange marketplace with immediate messaging.',
-        role: 'Freelance Lead Mobile & Full-Stack Developer',
-        challenges: 'Managing real-time messaging state with Cloud Firestore, handling image caching/compression on mobile devices, and building responsive data tables in Flutter Web.',
-        tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Flutter Web', 'Google Play', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
-        playStore: 'https://play.google.com/store/apps/details?id=com.kabaadhub.app&pli=1',
-        images: kabaadhubappprojectImages,
-        logo: '/projectsimages/kabaadhub/applogo.png',
-        freelance: true,
-        deployed: true,
+        problemSolved: 'Delivers an interactive, low-latency multiplayer club management experience with server-authoritative state synchronization, live transfer bidding, Redis caching, BullMQ auction job queues, and distributed database consistency.',
+        role: 'Full-Stack & Game Developer',
+        challenges: 'Designing server-authoritative state resolution with Socket.IO, orchestrating asynchronous auction expiration timers using BullMQ & Redis, and guaranteeing ACID consistency during high-concurrency player transfers via Prisma & CockroachDB.',
+        tech: ['Flutter', 'Dart', 'NestJS', 'Socket.IO', 'Prisma', 'CockroachDB', 'Redis', 'BullMQ', 'Render', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+        images: footballManagerProjectImages,
+        logo: '/projectsimages/football-manager/applogo.png',
+        featured: true,
         isEcosystem: true,
         privateRepo: true,
-        priority: 6,
+        priority: 5,
         ecosystem: [
             {
-                id: 'kabaadhub-mobile',
-                title: 'KabaadHub Mobile Marketplace App',
-                badge: 'Freelance Lead Mobile Developer',
-                role: 'Lead Mobile Developer',
-                status: 'Published on Google Play',
-                tech: ['Flutter', 'Dart', 'Firebase', 'Google Play', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
-                playStore: 'https://play.google.com/store/apps/details?id=com.kabaadhub.app&pli=1',
-                description: 'Production mobile marketplace published on Google Play Store featuring real-time in-app buyer/seller messaging, geolocation discovery, and image upload pipelines.'
+                id: 'football-manager-mobile',
+                title: 'Football Manager Mobile Game Client',
+                badge: 'Lead Mobile Developer',
+                role: 'Game Client & UI Architect',
+                status: 'Core Implementation',
+                tech: ['Flutter', 'Dart', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+                description: 'Cross-platform mobile game client providing tactical formation builders, squad depth management, live transfer market bidding interfaces, and real-time match visualizations.'
             },
             {
-                id: 'kabaadhub-admin',
-                title: 'KabaadHub Web Admin Dashboard',
-                badge: 'Freelance Full-Stack Developer',
-                role: 'Full-Stack Developer',
-                status: 'Web Administration',
-                tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Flutter Web', 'VS Code', 'Git', 'GitHub'],
-                description: 'Dedicated web dashboard built with Flutter Web and Firebase for platform administrators to moderate listings, verify merchants, and manage platform permissions.'
+                id: 'football-manager-backend',
+                title: 'NestJS Game Engine & State Server',
+                badge: 'Lead Backend Developer',
+                role: 'Game Server & Distributed DB Architect',
+                status: 'Core Implementation',
+                tech: ['NestJS', 'Socket.IO', 'Prisma', 'CockroachDB', 'Redis', 'BullMQ', 'Render', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
+                description: 'Modular NestJS backend orchestrating server-authoritative match room matchmaking, synchronized live transfer market auctions, Redis in-memory caching, BullMQ delayed job processing, and distributed ACID transactions via Prisma & CockroachDB deployed on Render.'
             }
         ]
+    },
+
+    // 6. ANTI-SCROLL
+    {
+        id: 'anti-scroll',
+        title: 'Anti-Scroll Android Utility',
+        tagline: 'Native Android systems utility using Accessibility Services to monitor and regulate addictive scrolling patterns',
+        category: ['Mobile', 'Tools'],
+        description: (
+            <>
+                <p className="mb-2">
+                    A native Android systems utility engineered in Java leveraging the Android Accessibility Service API to monitor window events and intercept compulsive, repetitive short-form video scrolling.
+                </p>
+                <p className="mb-2">
+                    Employs background window state detection, event filtering, configurable time-based intervention thresholds, and battery-efficient event hooks without polling.
+                </p>
+                <p>
+                    Demonstrates deep understanding of native Android operating system internals, background service lifecycles, and OS-level accessibility event listeners.
+                </p>
+            </>
+        ),
+        problemSolved: 'Helps users curb digital distraction by detecting infinite-scroll behaviors across targeted apps and triggering configurable gentle friction interventions.',
+        role: 'Android Systems Developer',
+        challenges: 'Designing high-frequency AccessibilityEvent filters with minimal battery and CPU overhead while safely adhering to Android runtime security sandboxes.',
+        tech: ['Java', 'Android SDK', 'Accessibility Service', 'Android Studio', 'Gradle', 'VS Code', 'Git', 'GitHub'],
+        images: antiScrollProjectImages,
+        logo: '/projectsimages/anti-scroll/applogo.png',
+        featured: true,
+        privateRepo: true,
+        priority: 6
     },
 
     // 7. LAWYER APP
