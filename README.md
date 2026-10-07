@@ -24,9 +24,9 @@ A modern, high-performance, single-page developer portfolio showcasing multi-com
 2. **Football Manager Multiplayer Game**:
    - Synchronized match lobbies & live transfer market (mercato) with dynamic bidding.
    - **NestJS**, **Socket.IO**, **Prisma ORM**, **CockroachDB** (distributed ACID transactions), **Redis** caching, and **BullMQ** background queues deployed on **Render**.
-3. **QuizApp Arena Multiplayer Ecosystem**:
-   - Sub-second synchronized countdown timers, live leaderboards, and category catalogs.
-   - **Flutter**, **Node.js / Express.js**, **Socket.IO**, **Supabase**, and **Flutter Web** administration portal.
+3. **Enkivo Esports Trivia & Gaming Ecosystem**:
+   - 5 game modes (Solo, Casual, Ranked, 10-player Battle Royale, Custom Rooms) across **Flutter**, **Next.js 14**, and **Cloudflare Workers**.
+   - Server-authoritative **NestJS 11** game engine, **Socket.IO** (34+ events), **Prisma ORM** (26 models), **Supabase Postgres**, atomic **Redis** Lua queues, and 26-language AI localization deployed on **Render**.
 4. **Mkarchi Tooling Ecosystem**:
    - Multi-platform project scaffolding engine published on **PyPI** (**Python**).
    - Visual GUI workspace (**Electron**) and documentation portal (**Next.js & Tailwind CSS**).

@@ -74,6 +74,9 @@ export const techLogoMap = {
   Swing: '/softwarelogo/java-programming-language-icon.svg',
   JDBC: '/softwarelogo/mysql-icon.svg',
   'REST APIs': '/softwarelogo/node-js-icon.svg',
+  Cloudflare: '/softwarelogo/cloudflare.svg',
+  'Cloudflare Workers': '/softwarelogo/cloudflare.svg',
+  'Howler.js': '/softwarelogo/javascript-programming-language-icon.svg',
 };
 
 export const getTechLogo = (tech) => techLogoMap[tech] || null;

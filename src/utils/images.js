@@ -6,9 +6,11 @@ export const footballManagerProjectImages = Object.values(
   import.meta.glob('/public/projectsimages/football-manager/*.{png,jpg,jpeg,svg}', { eager: true })
 ).map((m) => m.default);
 
-export const quizAppProjectImages = Object.values(
-  import.meta.glob('/public/projectsimages/quizapp/*.{png,jpg,jpeg,svg}', { eager: true })
+export const enkivoProjectImages = Object.values(
+  import.meta.glob('/public/projectsimages/enkivo/*.{png,jpg,jpeg,svg}', { eager: true })
 ).map((m) => m.default);
+
+export const quizAppProjectImages = enkivoProjectImages;
 
 export const antiScrollProjectImages = Object.values(
   import.meta.glob('/public/projectsimages/anti-scroll/*.{png,jpg,jpeg,svg}', { eager: true })

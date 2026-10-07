@@ -8,9 +8,12 @@ export default function ProjectDetail() {
   const { projectId } = useParams();
   const navigate = useNavigate();
   
-  // Resolve either direct project ID or any sub-module ecosystem ID
+  // Resolve either direct project ID, aliases, or any sub-module ecosystem ID
   const project = projects.find(
-    (p) => p.id === projectId || p.ecosystem?.some((e) => e.id === projectId)
+    (p) =>
+      p.id === projectId ||
+      p.aliases?.includes(projectId) ||
+      p.ecosystem?.some((e) => e.id === projectId)
   );
 
   const [activeImageIndex, setActiveImageIndex] = useState(null);

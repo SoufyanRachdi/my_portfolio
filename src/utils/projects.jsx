@@ -1,7 +1,7 @@
 import {
     caredifyProjectImages,
     footballManagerProjectImages,
-    quizAppProjectImages,
+    enkivoProjectImages,
     antiScrollProjectImages,
     restaurantProjectImages,
     zombieGameprojectImages,
@@ -114,6 +114,7 @@ export const projects = [
         tech: ['Flutter', 'Dart', 'NestJS', 'Socket.IO', 'Prisma', 'CockroachDB', 'Redis', 'BullMQ', 'Render', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
         images: footballManagerProjectImages,
         logo: '/projectsimages/football-manager/applogo.png',
+        github: 'https://github.com/SoufyanRachdi/footmanagergame_backend',
         featured: true,
         isEcosystem: true,
         priority: 2,
@@ -124,6 +125,7 @@ export const projects = [
                 badge: 'Lead Mobile Developer',
                 role: 'Game Client & UI Architect',
                 status: 'Core Implementation',
+                github: 'https://github.com/SoufyanRachdi/footmanagergame_mobile',
                 tech: ['Flutter', 'Dart', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
                 description: 'Cross-platform mobile game client providing tactical formation builders, squad depth management, live transfer market bidding interfaces, and real-time match visualizations.'
             },
@@ -133,67 +135,86 @@ export const projects = [
                 badge: 'Lead Backend Developer',
                 role: 'Game Server & Distributed DB Architect',
                 status: 'Core Implementation',
+                github: 'https://github.com/SoufyanRachdi/footmanagergame_backend',
                 tech: ['NestJS', 'Socket.IO', 'Prisma', 'CockroachDB', 'Redis', 'BullMQ', 'Render', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
                 description: 'Modular NestJS backend orchestrating server-authoritative match room matchmaking, synchronized live transfer market auctions, Redis in-memory caching, BullMQ delayed job processing, and distributed ACID transactions via Prisma & CockroachDB deployed on Render.'
             }
         ]
     },
 
-    // 3. QUIZAPP ARENA MULTIPLAYER ECOSYSTEM
+    // 3. ENKIVO MULTIPLAYER ESPORTS ECOSYSTEM
     {
-        id: 'quizapp',
-        title: 'QuizApp Arena — Multiplayer Trivia Ecosystem',
-        tagline: 'Multi-component gaming ecosystem: Flutter mobile app, synchronized Node.js WebSocket backend & admin management portal',
+        id: 'enkivo',
+        aliases: ['quizapp'],
+        title: 'Enkivo — Real-Time Multiplayer Trivia & Esports Gaming Platform',
+        tagline: 'Multi-platform competitive trivia ecosystem: Flutter mobile client, Next.js web player, NestJS real-time game engine & Next.js admin dashboard',
         category: ['Mobile', 'Games', 'Backend', 'Web'],
         description: (
             <>
                 <p className="mb-2">
-                    A real-time competitive multiplayer trivia game ecosystem developed in Flutter with a Node.js / Express.js and Socket.IO backend service, integrated with Supabase and a dedicated administrative management dashboard.
+                    A production-grade, real-time multiplayer trivia and competitive gaming platform architected across 4 synchronized sub-projects: an esports Flutter mobile client, a responsive Next.js 14 web player, an event-driven NestJS 11 game engine with Redis state management, and a comprehensive Next.js administration portal.
                 </p>
                 <p className="mb-2">
-                    Supports instant multiplayer room matchmaking, synchronized sub-second question countdown timers, real-time score broadcasting across connected clients, and dynamic category-based question catalogs.
+                    Features 5 distinct game modes (Solo Practice, 1v1 Casual, Ranked Competitive, 10-player Battle Royale with progressive elimination, and Private Custom Rooms with invite codes). The server-authoritative game loop coordinates countdown timers, scoring, anti-cheat validation, and live scoreboards via Socket.IO and atomic Redis Lua scripts.
                 </p>
                 <p>
-                    Demonstrates full-stack engineering spanning synchronized mobile state, WebSocket channels, cloud database persistence, and administrative content curation.
+                    Includes an in-game economy (4 currencies: Energy, Gold, Diamonds, XP) with 7-day streak rewards, global leaderboards cached in Redis, automated AI question translation across 26 languages, and automated CI/CD deployments to Render and Cloudflare Workers.
                 </p>
             </>
         ),
-        problemSolved: 'Provides a low-latency real-time multiplayer quiz environment with synchronized timers, room matchmaking, and cloud database persistence.',
-        role: 'Full-Stack & Mobile Developer',
-        challenges: 'Synchronizing sub-second countdown timers across mobile clients via WebSockets and handling graceful client reconnection states during active matches.',
-        tech: ['Flutter', 'Dart', 'Node.js', 'Express.js', 'Socket.IO', 'Supabase', 'Flutter Web', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
-        images: quizAppProjectImages,
-        logo: '/projectsimages/quizapp/applogo.png',
+        problemSolved: 'Eliminates client-side desynchronization and cheat vulnerabilities in real-time mobile trivia through a server-authoritative game state loop, atomic Redis Lua queue matchmaking, and sub-second WebSocket broadcasts across 10-player lobbies.',
+        role: 'Platform Architect, Full-Stack & Flutter Engineer',
+        challenges: 'Synchronizing sub-second question countdowns and live leaderboards without race conditions using Redis Lua scripts and Sorted Sets, handling mid-game player reconnection with complete state restoration (25-retry failover), automating 26-language AI question translation, and resolving Cloudflare Workers SPA routing for Flutter Web.',
+        tech: ['Flutter', 'Dart', 'NestJS', 'TypeScript', 'Next.js', 'React', 'Socket.IO', 'Redis', 'Prisma', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Cloudflare Workers', 'Render', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+        images: enkivoProjectImages,
+        logo: '/enkivo.png',
+        link: 'https://enkivo.soufyanrachdiii.workers.dev',
+        github: 'https://github.com/SoufyanRachdi/enkivo-backend',
         featured: true,
+        deployed: true,
         isEcosystem: true,
         priority: 3,
         ecosystem: [
             {
-                id: 'quizapp-mobile',
-                title: 'QuizApp Arena Mobile Client',
+                id: 'enkivo-backend',
+                title: 'Enkivo NestJS Real-Time Game Engine & API',
+                badge: 'Core Backend Architect',
+                role: 'Backend Architect & Game Loop Engine',
+                status: 'Core Implementation',
+                github: 'https://github.com/SoufyanRachdi/enkivo-backend',
+                tech: ['NestJS', 'TypeScript', 'Prisma', 'Supabase', 'PostgreSQL', 'Redis', 'Socket.IO', 'Render', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
+                description: 'Event-driven NestJS 11 backend service featuring 66 REST endpoints across 12 controllers, 34+ WebSocket events, server-authoritative game loop, atomic Redis Lua matchmaking queues, 26-model PostgreSQL schema via Prisma, automated AI translation engine, rate-limited auth (5 req/min), and scheduled match cleanup jobs deployed on Render.'
+            },
+            {
+                id: 'enkivo-mobile',
+                title: 'Enkivo Flutter Mobile & Web Esports Client',
                 badge: 'Lead Mobile Developer',
-                role: 'Mobile Client & Real-Time Sync',
-                status: 'Core Implementation',
-                tech: ['Flutter', 'Dart', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
-                description: 'Competitive multiplayer mobile app featuring sub-second countdown timers, dynamic category catalogs, live score broadcasts, and match arenas.'
+                role: 'Flutter Game Client Architect',
+                status: 'Core Implementation & Cloudflare Deployed',
+                github: 'https://github.com/SoufyanRachdi/enkivo-mobile',
+                link: 'https://enkivo.soufyanrachdiii.workers.dev',
+                tech: ['Flutter', 'Dart', 'Provider', 'Socket.IO', 'Cloudflare Workers', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
+                description: 'Esports-themed Flutter client featuring 25 screens across 5 game modes (Solo, Casual, Ranked, Battle Royale, Custom Rooms). Provides instant 1-tap guest play, Facebook OAuth, 26-language localization, Web Audio/SFX suite, and automated GitHub Actions CI/CD to Cloudflare Workers.'
             },
             {
-                id: 'quizapp-backend',
-                title: 'Node.js & Socket.IO Match Service',
-                badge: 'Lead Backend Developer',
-                role: 'Real-Time Server & WebSocket Architect',
+                id: 'enkivo-web',
+                title: 'Enkivo Next.js Web Gaming Client',
+                badge: 'Full-Stack Web Developer',
+                role: 'Next.js Web Client Engineer',
                 status: 'Core Implementation',
-                tech: ['Node.js', 'Express.js', 'Socket.IO', 'Supabase', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
-                description: 'High-throughput WebSocket backend orchestrating real-time room matchmaking, synchronized countdown timer events, and persistent score leaderboards via Supabase.'
+                github: 'https://github.com/SoufyanRachdi/enkivo-web',
+                tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Socket.IO', 'Howler.js', 'VS Code', 'Git', 'GitHub'],
+                description: 'High-performance web gaming client built on Next.js 14 App Router, providing zero-friction instant browser play with dynamic category selection, live countdown timers, and responsive glassmorphism UI.'
             },
             {
-                id: 'quizapp-admin',
-                title: 'QuizApp Admin Web Dashboard',
+                id: 'enkivo-admin',
+                title: 'Enkivo Next.js Admin & Curation Dashboard',
                 badge: 'Full-Stack Developer',
                 role: 'Admin Dashboard & Content Management',
-                status: 'Web Administration',
-                tech: ['Flutter Web', 'Supabase', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
-                description: 'Web administration panel for quiz curators to author question banks, categorize trivia catalogs, review match analytics, and moderate player accounts.'
+                status: 'Back-Office Portal',
+                github: 'https://github.com/SoufyanRachdi/enkivo-admin',
+                tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
+                description: 'Centralized back-office portal across 8 routes for managing the 900+ question bank, automated AI multi-language translation, live matchmaking queue monitoring, active game inspection, and server metrics.'
             }
         ]
     },
@@ -223,6 +244,7 @@ export const projects = [
         tech: ['Java', 'Android SDK', 'Accessibility Service', 'Android Studio', 'Gradle', 'VS Code', 'Git', 'GitHub'],
         images: antiScrollProjectImages,
         logo: '/projectsimages/anti-scroll/applogo.png',
+        github: 'https://github.com/SoufyanRachdi/anti_scroll',
         featured: true,
         priority: 4
     },
@@ -316,6 +338,7 @@ export const projects = [
         challenges: 'Managing real-time messaging state with Cloud Firestore, handling image caching/compression on mobile devices, and building responsive data tables in Flutter Web.',
         tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Flutter Web', 'Google Play', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
         playStore: 'https://play.google.com/store/apps/details?id=com.kabaadhub.app&pli=1',
+        github: 'https://github.com/SoufyanRachdi/project_app_KabaadHub',
         images: kabaadhubappprojectImages,
         logo: '/projectsimages/kabaadhub/applogo.png',
         freelance: true,
@@ -329,6 +352,7 @@ export const projects = [
                 badge: 'Freelance Lead Mobile Developer',
                 role: 'Lead Mobile Developer',
                 status: 'Published on Google Play',
+                github: 'https://github.com/SoufyanRachdi/project_app_KabaadHub',
                 tech: ['Flutter', 'Dart', 'Firebase', 'Google Play', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
                 playStore: 'https://play.google.com/store/apps/details?id=com.kabaadhub.app&pli=1',
                 description: 'Production mobile marketplace published on Google Play Store featuring real-time in-app buyer/seller messaging, geolocation discovery, and image upload pipelines.'
@@ -339,6 +363,7 @@ export const projects = [
                 badge: 'Freelance Full-Stack Developer',
                 role: 'Full-Stack Developer',
                 status: 'Web Administration',
+                github: 'https://github.com/SoufyanRachdi/project_app_KabaadHub',
                 tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Flutter Web', 'VS Code', 'Git', 'GitHub'],
                 description: 'Dedicated web dashboard built with Flutter Web and Firebase for platform administrators to moderate listings, verify merchants, and manage platform permissions.'
             }
