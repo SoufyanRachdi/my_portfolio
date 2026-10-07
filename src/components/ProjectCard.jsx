@@ -24,6 +24,22 @@ export default function ProjectCard({ project }) {
         }`}
       />
 
+      {/* Multi-Device Ecosystem Showcase Cover */}
+      {project.coverImage && (
+        <Link
+          to={`/projects/${project.id}`}
+          className="relative block aspect-[16/9] w-full overflow-hidden bg-slate-950 border-b border-slate-800/80 group/cover"
+        >
+          <img
+            src={project.coverImage}
+            alt={`${project.title} multi-device ecosystem showcase`}
+            loading="lazy"
+            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-40 group-hover:opacity-10 transition-opacity" />
+        </Link>
+      )}
+
       <div className="p-6 md:p-7 flex flex-col flex-grow">
         {/* Header: Logo + Status Badges + Action Buttons */}
         <div className="flex items-start justify-between gap-4 mb-4">

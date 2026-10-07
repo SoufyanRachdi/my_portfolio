@@ -260,6 +260,20 @@ export default function ProjectDetail() {
         </div>
       </div>
 
+      {/* Flagship Multi-Device Ecosystem Showcase Banner */}
+      {project.coverImage && (
+        <div className="relative rounded-2xl overflow-hidden border border-slate-800/80 bg-slate-950 shadow-2xl shadow-black/50 group">
+          <img
+            src={project.coverImage}
+            alt={`${project.title} multi-device architecture showcase`}
+            className="w-full h-auto object-cover object-center"
+          />
+          <div className="absolute bottom-3 right-3 px-3 py-1.5 rounded-xl bg-slate-950/85 backdrop-blur-md border border-slate-800 text-[11px] font-semibold text-slate-300 shadow-lg">
+            Multi-Device Architecture Overview
+          </div>
+        </div>
+      )}
+
       {/* Ecosystem & Integrated Sub-Projects Breakdown (When available) */}
       {hasEcosystem && (
         <div className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-sm space-y-6">
