@@ -238,8 +238,8 @@ export const projects = [
         tech: ['Java', 'Android SDK', 'Accessibility Service', 'Android Studio', 'Gradle', 'VS Code', 'Git', 'GitHub'],
         images: antiScrollProjectImages,
         logo: '/projectsimages/anti-scroll/applogo.png',
-        github: 'https://github.com/SoufyanRachdi/anti_scroll',
         featured: true,
+        privateRepo: true,
         priority: 4
     },
 
@@ -332,12 +332,12 @@ export const projects = [
         challenges: 'Managing real-time messaging state with Cloud Firestore, handling image caching/compression on mobile devices, and building responsive data tables in Flutter Web.',
         tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Flutter Web', 'Google Play', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
         playStore: 'https://play.google.com/store/apps/details?id=com.kabaadhub.app&pli=1',
-        github: 'https://github.com/SoufyanRachdi/project_app_KabaadHub',
         images: kabaadhubappprojectImages,
         logo: '/projectsimages/kabaadhub/applogo.png',
         freelance: true,
         deployed: true,
         isEcosystem: true,
+        privateRepo: true,
         priority: 6,
         ecosystem: [
             {
@@ -346,7 +346,6 @@ export const projects = [
                 badge: 'Freelance Lead Mobile Developer',
                 role: 'Lead Mobile Developer',
                 status: 'Published on Google Play',
-                github: 'https://github.com/SoufyanRachdi/project_app_KabaadHub',
                 tech: ['Flutter', 'Dart', 'Firebase', 'Google Play', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
                 playStore: 'https://play.google.com/store/apps/details?id=com.kabaadhub.app&pli=1',
                 description: 'Production mobile marketplace published on Google Play Store featuring real-time in-app buyer/seller messaging, geolocation discovery, and image upload pipelines.'
@@ -357,7 +356,6 @@ export const projects = [
                 badge: 'Freelance Full-Stack Developer',
                 role: 'Full-Stack Developer',
                 status: 'Web Administration',
-                github: 'https://github.com/SoufyanRachdi/project_app_KabaadHub',
                 tech: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Flutter Web', 'VS Code', 'Git', 'GitHub'],
                 description: 'Dedicated web dashboard built with Flutter Web and Firebase for platform administrators to moderate listings, verify merchants, and manage platform permissions.'
             }
