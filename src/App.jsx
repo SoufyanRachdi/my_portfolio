@@ -87,6 +87,7 @@ function Layout() {
         <main id="main-content" tabIndex={-1} className="flex-grow focus:outline-none">
           <Routes>
             <Route path="/" element={<Home onOpenContact={openContact} />} />
+            <Route path="/projects" element={<Navigate to="/#projects" replace />} />
             <Route path="/projects/:projectId" element={<ProjectDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

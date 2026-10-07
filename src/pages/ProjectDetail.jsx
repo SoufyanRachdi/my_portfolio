@@ -18,6 +18,14 @@ export default function ProjectDetail() {
 
   const [activeImageIndex, setActiveImageIndex] = useState(null);
 
+  const handleBack = () => {
+    if (window.history.state && window.history.state.idx > 0) {
+      navigate(-1);
+    } else {
+      navigate('/#projects');
+    }
+  };
+
   // Keyboard navigation for screenshot lightbox
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -54,13 +62,14 @@ export default function ProjectDetail() {
       <section className="py-16 text-center space-y-4 animate-fade-in">
         <h1 className="text-2xl font-bold text-slate-100 font-heading">Project Not Found</h1>
         <p className="text-slate-400 text-sm">The project you are looking for does not exist or has been moved.</p>
-        <Link
-          to="/projects"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-sm font-semibold"
+        <button
+          type="button"
+          onClick={handleBack}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-sm font-semibold cursor-pointer"
         >
           <ArrowLeft size={16} />
-          <span>Back to All Projects</span>
-        </Link>
+          <span>Back to Projects</span>
+        </button>
       </section>
     );
   }
@@ -74,8 +83,8 @@ export default function ProjectDetail() {
       <div>
         <button
           type="button"
-          onClick={() => navigate('/projects')}
-          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-cyan-400 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none rounded"
+          onClick={handleBack}
+          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-cyan-400 transition-colors focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:outline-none rounded cursor-pointer"
         >
           <ArrowLeft size={14} />
           <span>Back to Projects</span>
@@ -143,7 +152,7 @@ export default function ProjectDetail() {
                 {project.privateRepo && (
                   <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700 text-xs font-medium">
                     <ShieldCheck size={13} className="text-cyan-400" />
-                    <span>Private / Proprietary Startup Repository</span>
+                    <span>Private / Proprietary Repository</span>
                   </span>
                 )}
               </div>

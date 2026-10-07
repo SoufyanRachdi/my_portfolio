@@ -114,9 +114,9 @@ export const projects = [
         tech: ['Flutter', 'Dart', 'NestJS', 'Socket.IO', 'Prisma', 'CockroachDB', 'Redis', 'BullMQ', 'Render', 'REST APIs', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
         images: footballManagerProjectImages,
         logo: '/projectsimages/football-manager/applogo.png',
-        github: 'https://github.com/SoufyanRachdi/footmanagergame_backend',
         featured: true,
         isEcosystem: true,
+        privateRepo: true,
         priority: 2,
         ecosystem: [
             {
@@ -125,7 +125,6 @@ export const projects = [
                 badge: 'Lead Mobile Developer',
                 role: 'Game Client & UI Architect',
                 status: 'Core Implementation',
-                github: 'https://github.com/SoufyanRachdi/footmanagergame_mobile',
                 tech: ['Flutter', 'Dart', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
                 description: 'Cross-platform mobile game client providing tactical formation builders, squad depth management, live transfer market bidding interfaces, and real-time match visualizations.'
             },
@@ -135,7 +134,6 @@ export const projects = [
                 badge: 'Lead Backend Developer',
                 role: 'Game Server & Distributed DB Architect',
                 status: 'Core Implementation',
-                github: 'https://github.com/SoufyanRachdi/footmanagergame_backend',
                 tech: ['NestJS', 'Socket.IO', 'Prisma', 'CockroachDB', 'Redis', 'BullMQ', 'Render', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
                 description: 'Modular NestJS backend orchestrating server-authoritative match room matchmaking, synchronized live transfer market auctions, Redis in-memory caching, BullMQ delayed job processing, and distributed ACID transactions via Prisma & CockroachDB deployed on Render.'
             }
@@ -169,10 +167,10 @@ export const projects = [
         images: enkivoProjectImages,
         logo: '/enkivo.png',
         link: 'https://enkivo.soufyanrachdiii.workers.dev',
-        github: 'https://github.com/SoufyanRachdi/enkivo-backend',
         featured: true,
         deployed: true,
         isEcosystem: true,
+        privateRepo: true,
         priority: 3,
         ecosystem: [
             {
@@ -181,7 +179,6 @@ export const projects = [
                 badge: 'Core Backend Architect',
                 role: 'Backend Architect & Game Loop Engine',
                 status: 'Core Implementation',
-                github: 'https://github.com/SoufyanRachdi/enkivo-backend',
                 tech: ['NestJS', 'TypeScript', 'Prisma', 'Supabase', 'PostgreSQL', 'Redis', 'Socket.IO', 'Render', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
                 description: 'Event-driven NestJS 11 backend service featuring 66 REST endpoints across 12 controllers, 34+ WebSocket events, server-authoritative game loop, atomic Redis Lua matchmaking queues, 26-model PostgreSQL schema via Prisma, automated AI translation engine, rate-limited auth (5 req/min), and scheduled match cleanup jobs deployed on Render.'
             },
@@ -191,7 +188,6 @@ export const projects = [
                 badge: 'Lead Mobile Developer',
                 role: 'Flutter Game Client Architect',
                 status: 'Core Implementation & Cloudflare Deployed',
-                github: 'https://github.com/SoufyanRachdi/enkivo-mobile',
                 link: 'https://enkivo.soufyanrachdiii.workers.dev',
                 tech: ['Flutter', 'Dart', 'Provider', 'Socket.IO', 'Cloudflare Workers', 'Android Studio', 'VS Code', 'Git', 'GitHub'],
                 description: 'Esports-themed Flutter client featuring 25 screens across 5 game modes (Solo, Casual, Ranked, Battle Royale, Custom Rooms). Provides instant 1-tap guest play, Facebook OAuth, 26-language localization, Web Audio/SFX suite, and automated GitHub Actions CI/CD to Cloudflare Workers.'
@@ -202,7 +198,6 @@ export const projects = [
                 badge: 'Full-Stack Web Developer',
                 role: 'Next.js Web Client Engineer',
                 status: 'Core Implementation',
-                github: 'https://github.com/SoufyanRachdi/enkivo-web',
                 tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Socket.IO', 'Howler.js', 'VS Code', 'Git', 'GitHub'],
                 description: 'High-performance web gaming client built on Next.js 14 App Router, providing zero-friction instant browser play with dynamic category selection, live countdown timers, and responsive glassmorphism UI.'
             },
@@ -212,7 +207,6 @@ export const projects = [
                 badge: 'Full-Stack Developer',
                 role: 'Admin Dashboard & Content Management',
                 status: 'Back-Office Portal',
-                github: 'https://github.com/SoufyanRachdi/enkivo-admin',
                 tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'REST APIs', 'VS Code', 'Git', 'GitHub'],
                 description: 'Centralized back-office portal across 8 routes for managing the 900+ question bank, automated AI multi-language translation, live matchmaking queue monitoring, active game inspection, and server metrics.'
             }

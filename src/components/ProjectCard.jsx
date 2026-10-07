@@ -81,7 +81,7 @@ export default function ProjectCard({ project }) {
               {project.privateRepo && (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-medium">
                   <ShieldCheck size={11} className="text-cyan-400" />
-                  <span>Private Startup Repo</span>
+                  <span>Private Repo</span>
                 </span>
               )}
             </div>
