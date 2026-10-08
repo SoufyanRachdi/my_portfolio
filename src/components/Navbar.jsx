@@ -9,7 +9,7 @@ const navLinks = [
   { id: 'experience', label: 'Experience' },
   { id: 'education', label: 'Education' },
   { id: 'skills', label: 'Skills' },
-  { id: 'certifications', label: 'Certifications' },
+  { id: 'certifications', label: 'Awards & Certs' },
   { id: 'contact', label: 'Contact' },
 ];
 

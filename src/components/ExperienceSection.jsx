@@ -1,4 +1,4 @@
-import { Briefcase, Trophy, Calendar, ArrowRight, Sparkles, Linkedin } from 'lucide-react';
+import { Briefcase, Trophy, Calendar, ArrowRight, Sparkles, Linkedin, Medal, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ExperienceSection() {
@@ -195,19 +195,35 @@ export default function ExperienceSection() {
                   <h3 className="text-lg md:text-xl font-bold text-slate-100 font-heading">
                     Competitive Programming Club (ISIMG CPC)
                   </h3>
-                  <div className="text-sm font-semibold text-slate-400">
-                    Active Competitor &amp; Problem Solver
+                  <div className="text-sm font-semibold text-cyan-400">
+                    Competitive Programming Manager &amp; Contest Competitor
                   </div>
                 </div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-slate-800 text-xs font-mono text-slate-400 w-fit">
                   <Calendar size={13} />
-                  <span>2023 — Present</span>
+                  <span>Sep 2024 — Feb 2026</span>
                 </div>
               </div>
 
               <p className="text-slate-300 text-sm leading-relaxed mt-3">
-                Sharpened algorithmic problem solving, time-complexity analysis, and optimization through weekly training sessions on C++, Python, graph traversal, and dynamic programming.
+                Organized algorithmic training workshops and programming contests, mentored university students in advanced data structures and complexity analysis, and actively represented ISIMG in national and regional collegiate programming contests.
               </p>
+
+              {/* Contest Honors Badges */}
+              <div className="pt-3 flex flex-wrap gap-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold">
+                  <Trophy size={13} className="text-amber-400" />
+                  <span>1st Place — ISIMG LPC 1.0 (Team CPC0, 2024)</span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold">
+                  <Medal size={13} className="text-cyan-400" />
+                  <span>5th Place — CODE BREAK! (FSS)</span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-semibold">
+                  <Award size={13} className="text-sky-400" />
+                  <span>35th Place — TCPC (Tunisian Collegiate Programming Contest)</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

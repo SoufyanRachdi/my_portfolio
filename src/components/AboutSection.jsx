@@ -67,7 +67,7 @@ export default function AboutSection() {
             Algorithmic Problem Solving
           </h3>
           <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            Trained in competitive programming through the ISIMG Competitive Programming Club (CPC), solving complex algorithmic problems in <span className="text-slate-200 font-medium">C++ and Python</span> focusing on graph traversal, dynamic programming, and computational efficiency.
+            Competitive programmer and former CPC Manager trained in algorithms, graph theory, and dynamic programming in <span className="text-slate-200 font-medium">C++ and Python</span>. Ranked <span className="text-slate-200 font-medium">1st Place at ISIMG LPC 1.0</span>, <span className="text-slate-200 font-medium">5th at CODE BREAK! (FSS)</span>, and <span className="text-slate-200 font-medium">35th nationwide at TCPC</span>.
           </p>
         </div>
       </div>
