@@ -243,7 +243,7 @@ export const projects = [
         github: 'https://github.com/SoufyanRachdi/mkarchi',
         link: 'https://www.mkarchi.me/',
         images: [...mkarchiProjectImages, ...mkarchiDesktopProjectImages, ...mkarchiWebProjectImages],
-        coverImage: '/projectsimages/mkarchi/showcase.jpg',
+        coverImage: '/projectsimages/mkarchi/mkarchi_website.png',
         logo: '/projectsimages/mkarchi/applogo.png',
         featured: true,
         openSource: true,
