@@ -1,0 +1,139 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1.3cm,top=1.1cm,bottom=1.1cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{accent}{RGB}{125,82,160}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Section style: purple title + line
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}[\vspace{-0.6em}\textcolor{accent}{\titlerule}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Bullet lists
+\setlist[itemize]{leftmargin=1.1em,itemsep=1.5pt,topsep=2pt,parsep=0pt}
+
+% Entry: \entry{Title}{Date}{Subtitle / tech stack}
+\newcommand{\entry}[3]{%
+  \vspace{4pt}
+  \textbf{#1}\hfill\textbf{#2}\\
+  {\small #3}\par
+}
+\newcommand{\role}[2]{%
+  \vspace{4pt}
+  \textbf{#1}\hfill\textbf{#2}\par
+}
+
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+  {\fontsize{24}{28}\selectfont\bfseries\color{accent} SOUFYAN RACHDI}\\[3pt]
+  \href{https://maps.google.com/?q=Medenine%2C+Tunisia}{Medenine, Tunisia} \,|\, \href{https://wa.me/21629031065}{+216 29 031 065} \,|\,
+  \href{mailto:soufyanrachdiii@gmail.com}{soufyanrachdiii@gmail.com}\\[2pt]
+  \href{https://github.com/SoufyanRachdi}{GitHub} \,|\,
+  \href{https://www.linkedin.com/in/soufyan-rachdi-996061247/}{LinkedIn} \,|\,
+  \href{https://soufyanrachdi.vercel.app/}{Portfolio}
+\end{center}
+
+% ---------- SUMMARY ----------
+\section*{SUMMARY}
+Full Stack \& Mobile Developer building real-time, cross-platform apps with Flutter, Node.js and NestJS. Shipped products from BLE health monitoring to live multiplayer games; now pursuing a research Master's in AI at ISIMG.
+
+% ---------- EXPERIENCE ----------
+\section*{EXPERIENCE}
+\role{\href{https://www.linkedin.com/company/caredify-396/posts/?feedView=all}{Software Engineering Intern | Caredify}}{Jan 2026 -- Jun 2026}
+Built the Flutter patient app and backend APIs for an AI-assisted remote ECG monitoring platform.
+
+\role{\href{https://www.facebook.com/profile.php?id=100087466104285}{Competitive Programming Manager | CPC ISIMG}}{Sep 2024 -- Feb 2026}
+Organized programming workshops and contests, and mentored students in algorithms and problem-solving.
+
+% ---------- PROJECTS (PAGE 1) ----------
+\section*{PROJECTS}
+
+\entry{\href{https://www.linkedin.com/company/caredify-396/posts/?feedView=all}{Caredify} --- AI-Assisted Remote ECG Monitoring Platform}{Jan 2026 -- Jun 2026}
+{Flutter $\bullet$ Kotlin $\bullet$ Node.js $\bullet$ Express.js $\bullet$ MongoDB $\bullet$ Python/TensorFlow $\bullet$ BLE $\bullet$ Render}
+\begin{itemize}
+  \item Worked in a team on an end-to-end cardiac monitoring system: wearable Movesense ECG sensor, Flutter patient app, Node.js backend (32 endpoints, 6 collections), AI classifier, and cardiologist dashboard.
+  \item Built the Flutter app with BLE streaming from the sensor, live ECG waveform, background monitoring (Android foreground service), GPS map, and nearby hospital search.
+  \item Built the backend that sends ECG data to a Python AI service (ResNet-1D model, 5 arrhythmia classes, 98.73\% test accuracy on the MIT-BIH dataset).
+  \item Implemented the emergency flow: an alert only fires after 3 consecutive dangerous readings (to avoid false alarms), then a 60-second cardiologist review, then an SMS with GPS location to emergency contacts.
+\end{itemize}
+
+\entry{\href{https://soufyanrachdi.vercel.app/projects/enkivo}{Enkivo} --- Real-Time Multiplayer Quiz Platform}{Jul 2026 -- now}
+{Flutter $\bullet$ NestJS $\bullet$ Next.js $\bullet$ Socket.IO $\bullet$ Redis $\bullet$ Prisma $\bullet$ Supabase $\bullet$ Render $\bullet$ Cloudflare}
+\begin{itemize}
+  \item Building a multiplayer quiz game with 5 modes (solo, casual, ranked, battle royale up to 10 players, private rooms) on mobile (25 screens), web, and an admin dashboard.
+  \item Built a server-controlled game loop with Socket.IO rooms and Redis: the server handles questions, timing and scoring, so players can't cheat.
+  \item Designed matchmaking with atomic Redis scripts, automatic mid-game reconnection, and cleanup of abandoned matches.
+  \item Backend with 66 REST endpoints and a 26-model database; includes an in-game economy, leaderboards, friends, and support for 26 languages.
+\end{itemize}
+
+\entry{\href{https://soufyanrachdi.vercel.app/projects/football-manager}{Football Manager} --- Multiplayer Football Management Game}{Aug 2026 -- now}
+{Flutter (BLoC) $\bullet$ NestJS $\bullet$ Socket.IO $\bullet$ Redis $\bullet$ BullMQ $\bullet$ Prisma $\bullet$ CockroachDB $\bullet$ Render}
+\begin{itemize}
+  \item Building a real-time multiplayer football manager: 8-player lobbies (AI bots fill empty spots), a live transfer auction, and 28-match round-robin leagues.
+  \item Built the auction engine with atomic Redis Lua scripts: automatic refunds for outbid players, anti-snipe timer extensions, and no race conditions between bidders.
+  \item Built a match simulation engine (Poisson-based) that uses ratings, morale, fatigue, chemistry and tactics, streamed live minute by minute over WebSockets.
+  \item Added self-recovery: the server restores unfinished leagues after a restart, and a watchdog unfreezes stuck phases. Also enforced single-device login. 79 automated tests.
+\end{itemize}
+
+% ---------- PAGE 2 ----------
+\clearpage
+
+\section*{PROJECTS (Continued)}
+
+\entry{\href{https://play.google.com/store/apps/details?id=com.kabaadhub.app}{KabaadHub} --- Recyclable Materials Marketplace (freelance)}{Jul 2025 -- Sep 2025}
+{Flutter $\bullet$ Riverpod $\bullet$ Firebase $\bullet$ Cloud Functions $\bullet$ Google AdMob}
+\begin{itemize}
+  \item Built a scrap marketplace app (36 screens) with listings, chat, push notifications, and search sorted by distance.
+  \item Added sign-in with email, phone OTP, Google, and guest mode, plus admin moderation of every new listing.
+  \item Wrote 15 Firebase Cloud Functions and security rules for notifications, account deletion, and user data protection.
+  \item Built a Flutter Web admin dashboard (users, moderation, analytics, broadcasts) and AdMob ads that can be switched remotely without a new app release.
+\end{itemize}
+
+\entry{\href{https://www.mkarchi.me/}{Mkarchi} --- Multi-Platform Developer Tooling Ecosystem}{2025 -- Present}
+{Python $\bullet$ PyPI $\bullet$ Electron $\bullet$ Next.js $\bullet$ AST Parsing $\bullet$ TypeScript $\bullet$ Tailwind CSS}
+\begin{itemize}
+  \item Authored and published an open-source Python CLI package on PyPI to automate project scaffolding and repository architecture reverse-engineering from concise tree definitions.
+  \item Engineered an Electron desktop visual workspace for blueprint editing alongside the official Next.js web portal at \href{https://www.mkarchi.me/}{mkarchi.me}.
+\end{itemize}
+
+% ---------- EDUCATION ----------
+\section*{EDUCATION}
+\role{Master of Science in Computer Science \& Multimedia (Research Track in AI) | ISIMG}{2026 -- Present}
+Research-track program focused on AI: machine learning, multimedia data processing (image and video), natural language processing, data mining and fusion, and biometric signal processing.
+
+\role{Bachelor's Degree in Computer Science (Licence Informatique) | ISIMG}{2025 -- 2026}
+Specialization in software engineering, distributed architectures, and databases. Graduation project (PFE): Caredify, an AI-assisted remote ECG telemetry platform.
+
+\role{Integrated Preparatory Cycle (MPI: Math, Physics \& Computer Science) | ISIMG}{2023 -- 2025}
+Two years of intensive foundational studies in advanced mathematics, physics, data structures, and algorithmic complexity.
+
+\role{Baccalaureate in Computer Science | Lycée Route de Gabès (LRG)}{2022 -- 2023}
+Graduated with Good (Bien) honors (Moyenne 15.79/20).
+
+% ---------- SKILLS ----------
+\section*{SKILLS}
+\begin{itemize}
+  \item \textbf{Languages:} Python $\bullet$ Dart $\bullet$ TypeScript $\bullet$ JavaScript $\bullet$ C++ $\bullet$ Java
+  \item \textbf{Frameworks:} Flutter $\bullet$ NestJS $\bullet$ Node.js/Express $\bullet$ Next.js $\bullet$ React $\bullet$ Riverpod $\bullet$ BLoC
+  \item \textbf{Real-time \& Data:} Socket.IO $\bullet$ Redis $\bullet$ BullMQ $\bullet$ Prisma $\bullet$ PostgreSQL/CockroachDB $\bullet$ MongoDB $\bullet$ Firebase $\bullet$ Supabase
+  \item \textbf{AI \& Hardware:} TensorFlow/Keras $\bullet$ BLE $\bullet$ Kotlin
+  \item \textbf{Tools:} Git $\bullet$ GitHub $\bullet$ Docker
+  \item \textbf{Spoken languages:} English, French, Arabic
+  \item \textbf{Certifications:} CodinGame C++, HackerRank Problem Solving, HackerRank Python
+  \item \textbf{Awards:} 1st Place Winner --- ISIMG Local Programming Contest 1.0 (Team CPC0, 2024) $\bullet$ 5th Place --- CODE BREAK! (FSS) $\bullet$ 35th Place --- TCPC (Tunisian Collegiate Programming Contest)
+\end{itemize}
+
+\end{document}
