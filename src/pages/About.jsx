@@ -15,7 +15,7 @@ export default function About({ onOpenContact }) {
             Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Focus &amp; Architecture</span>
           </h2>
           <p className="text-slate-400 text-sm md:text-base leading-relaxed">
-            Combining Computer Science graduation foundations with production software development across mobile, backend, and real-time distributed systems.
+            Combining Master's in AI research foundations with production software development across mobile, backend, and real-time distributed systems.
           </p>
         </div>
 

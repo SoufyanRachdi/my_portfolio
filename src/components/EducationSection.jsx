@@ -18,7 +18,70 @@ export default function EducationSection() {
       </div>
 
       <div className="space-y-6">
-        {/* 1. Higher Education: ISIMG Bachelor / Licence */}
+        {/* 1. Master of Science: ISIMG AI Research Track */}
+        <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-slate-900/90 via-slate-900/60 to-cyan-950/20 border border-cyan-500/40 backdrop-blur-sm space-y-5 hover:border-cyan-400 transition-colors shadow-lg shadow-cyan-950/20">
+          <div className="flex items-start gap-4">
+            <img
+              src="/isimg.png"
+              alt="ISIMG logo"
+              width="56"
+              height="56"
+              loading="lazy"
+              className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-slate-950 p-1.5 border border-cyan-500/40 object-contain flex-shrink-0 shadow-inner"
+            />
+            <div className="flex-1 min-w-0">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className="text-lg md:text-xl font-bold text-white font-heading">
+                      Master of Science in Computer Science &amp; Multimedia (Research Track)
+                    </h3>
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/40 text-[10px] font-bold uppercase tracking-wider">
+                      <Sparkles size={12} className="text-cyan-400" />
+                      <span>AI Research Track · 2026 — Present</span>
+                    </span>
+                  </div>
+                  <div className="text-sm font-semibold text-cyan-400 mt-1">
+                    Higher Institute of Computer Science and Multimedia of Gabès (ISIMG)
+                  </div>
+                </div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-slate-800 text-xs font-mono text-cyan-400 w-fit flex-shrink-0">
+                  <Calendar size={13} />
+                  <span>2026 — Present</span>
+                </div>
+              </div>
+
+              <p className="text-slate-300 text-sm md:text-base leading-relaxed mt-3">
+                Pursuing an advanced research Master's degree focused on <span className="text-slate-100 font-medium">Artificial Intelligence &amp; Deep Learning</span>, multimedia data processing (computer vision, image &amp; video analysis), Natural Language Processing (NLP), data mining &amp; fusion, and biometric signal processing.
+              </p>
+
+              <div className="space-y-2.5 mt-4">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                  Research &amp; Advanced Domains:
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    'Machine Learning & Deep Learning (ResNet, CNN, RNN)',
+                    'Biometric Signal & Time-Series Processing',
+                    'Computer Vision & Multimedia Processing',
+                    'Natural Language Processing (NLP)',
+                    'Data Mining & Information Fusion',
+                    'Advanced Algorithms & Optimization'
+                  ].map((c) => (
+                    <span
+                      key={c}
+                      className="px-2.5 py-1 rounded-md bg-slate-950/80 border border-cyan-500/30 text-cyan-300 text-xs font-medium"
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 2. Higher Education: ISIMG Bachelor / Licence & MPI */}
         <div className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-sm space-y-5 hover:border-cyan-500/30 transition-colors">
           <div className="flex items-start gap-4">
             <img
@@ -34,7 +97,7 @@ export default function EducationSection() {
                 <div>
                   <div className="flex items-center gap-2 flex-wrap">
                     <h3 className="text-lg md:text-xl font-bold text-slate-100 font-heading">
-                      Licence / Bachelor's Degree in Computer Science
+                      Bachelor's Degree in Computer Science (Licence) &amp; Integrated Preparatory Cycle (MPI)
                     </h3>
                     <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold uppercase tracking-wider">
                       <CheckCircle2 size={12} />
@@ -47,12 +110,12 @@ export default function EducationSection() {
                 </div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-slate-800 text-xs font-mono text-slate-400 w-fit flex-shrink-0">
                   <Calendar size={13} />
-                  <span>Graduated / Completed</span>
+                  <span>2023 — 2026</span>
                 </div>
               </div>
 
               <p className="text-slate-300 text-sm md:text-base leading-relaxed mt-3">
-                Graduated with a comprehensive curriculum covering software engineering principles, algorithms &amp; complexity analysis, data structures, relational database systems (SQL), network protocols, operating systems, and distributed application development.
+                Graduated with a comprehensive curriculum covering software engineering principles, algorithms &amp; complexity analysis, data structures, relational database systems (SQL), network protocols, operating systems, and distributed application development. Graduation Project (PFE): Caredify AI-assisted remote ECG telemetry platform.
               </p>
 
               <div className="space-y-2.5 mt-4">

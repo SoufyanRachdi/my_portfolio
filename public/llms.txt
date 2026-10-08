@@ -4,10 +4,13 @@
 
 ## Professional Identity
 - **Name**: Soufyan Rachdi
-- **Degree**: Licence / Bachelor's in Computer Science from the Higher Institute of Computer Science and Multimedia of Gabès (ISIMG), Tunisia (2026).
+- **Current Degree**: Master of Science in Computer Science & Multimedia (AI Research Track) at the Higher Institute of Computer Science and Multimedia of Gabès (ISIMG), Tunisia (2026 – Present). Focus on ML, Signal Processing, Computer Vision & NLP.
+- **Undergraduate Degree**: Bachelor's in Computer Science & Integrated Preparatory Cycle (MPI) from ISIMG, Tunisia (2023 – 2026).
 - **Secondary Distinction**: Baccalauréat in Computer Science from Lycée Route de Gabès (Mention Bien, Moyenne 15.79/20, 2023).
 - **Location**: Médenine & Gabès, Tunisia (Open to on-site, hybrid in Tunis/Sousse/Sfax/Gabès, European nearshore, and international remote).
-- **Primary Roles**: Full-Stack Developer, Mobile Developer (Flutter/Android), Backend Developer (Node.js/NestJS).
+- **Email**: soufyanrachdiii@gmail.com
+- **WhatsApp / Phone**: +216 29 031 065
+- **Primary Roles**: Full-Stack Developer, Mobile Developer (Flutter/Android), Backend Developer (Node.js/NestJS), AI & Research Software Engineer.
 - **Portfolio**: https://soufyanrachdi.vercel.app/
 - **GitHub**: https://github.com/SoufyanRachdi
 - **LinkedIn**: https://www.linkedin.com/in/soufyan-rachdi-996061247/

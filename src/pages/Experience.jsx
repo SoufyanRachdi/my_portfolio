@@ -147,12 +147,64 @@ export default function Experience() {
           <span>Academic Education &amp; Graduation</span>
         </div>
 
+        {/* Master's Degree */}
+        <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-slate-900/90 via-slate-900/60 to-cyan-950/20 border border-cyan-500/40 backdrop-blur-sm space-y-5 shadow-lg shadow-cyan-950/20">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <div className="flex items-center gap-2 flex-wrap">
+                <h2 className="text-lg md:text-xl font-bold text-white font-heading">
+                  Master of Science in Computer Science &amp; Multimedia (Research Track)
+                </h2>
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/40 text-[10px] font-bold uppercase tracking-wider">
+                  <Sparkles size={12} className="text-cyan-400" />
+                  <span>AI Research Track</span>
+                </span>
+              </div>
+              <div className="text-sm font-semibold text-cyan-400 mt-1">
+                Higher Institute of Computer Science and Multimedia of Gabès (ISIMG)
+              </div>
+            </div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-slate-800 text-xs font-mono text-cyan-400 w-fit">
+              <Calendar size={13} />
+              <span>2026 — Present</span>
+            </div>
+          </div>
+
+          <p className="text-slate-300 text-sm md:text-base leading-relaxed">
+            Pursuing an advanced research Master's degree focused on Artificial Intelligence &amp; Deep Learning, multimedia data processing (computer vision, image &amp; video analysis), Natural Language Processing (NLP), data mining, and biometric signal processing.
+          </p>
+
+          <div className="space-y-2.5">
+            <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              Research &amp; Advanced Domains:
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {[
+                'Machine Learning & Deep Learning (ResNet, CNN, RNN)',
+                'Biometric Signal & Time-Series Processing',
+                'Computer Vision & Multimedia Processing',
+                'Natural Language Processing (NLP)',
+                'Data Mining & Information Fusion',
+                'Advanced Algorithms & Optimization'
+              ].map((c) => (
+                <span
+                  key={c}
+                  className="px-2.5 py-1 rounded-md bg-slate-950/80 border border-cyan-500/30 text-cyan-300 text-xs font-medium"
+                >
+                  {c}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Bachelor's Degree / Licence */}
         <div className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-sm space-y-5">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <h2 className="text-lg md:text-xl font-bold text-slate-100 font-heading">
-                  Licence / Bachelor's Degree in Computer Science
+                  Bachelor's Degree in Computer Science (Licence) &amp; Integrated Preparatory Cycle (MPI)
                 </h2>
                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold uppercase tracking-wider">
                   <CheckCircle2 size={12} />
@@ -165,7 +217,7 @@ export default function Experience() {
             </div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-slate-800 text-xs font-mono text-slate-400 w-fit">
               <Calendar size={13} />
-              <span>Completed / Graduated</span>
+              <span>2023 — 2026</span>
             </div>
           </div>
 
